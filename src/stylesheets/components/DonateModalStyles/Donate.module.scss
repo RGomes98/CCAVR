@@ -238,3 +238,33 @@
     min-width: 12rem;
   }
 }
+
+@media (width <= 65rem) and (height <= 38.125rem) {
+  .modal {
+    width: 90%;
+    height: 90%;
+    min-width: 31.25rem;
+    flex-direction: row;
+    padding: 3rem 4rem 3rem 2rem;
+  }
+
+  .donateDetailsWrapper {
+    gap: 0.5rem;
+  }
+
+  .detailsHeading {
+    font-size: var.$medium-text;
+  }
+
+  .boldText {
+    font-size: var.$regular-text;
+  }
+
+  .secondaryWrapper {
+    gap: 0.5rem;
+  }
+
+  .secondaryWrapper .boldText {
+    font-size: var.$small-text;
+  }
+}
