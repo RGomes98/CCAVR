@@ -25,6 +25,12 @@
   }
 }
 
+.wrapper a:hover {
+  svg {
+    fill: var.$dark-blue;
+  }
+}
+
 .wrapper :nth-child(1) {
   svg {
     height: 1.75rem;
@@ -35,12 +41,6 @@
 .wrapper :nth-child(3) {
   svg {
     height: 1.85rem;
-  }
-}
-
-.wrapper a:hover {
-  svg {
-    fill: var.$dark-blue;
   }
 }
 
