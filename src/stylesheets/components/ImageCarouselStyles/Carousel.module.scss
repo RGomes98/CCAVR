@@ -6,6 +6,7 @@
   min-height: 85vh;
   overflow: hidden;
   position: relative;
+  padding-bottom: 10rem;
   flex-direction: column;
   background-size: cover;
   background-position: center;
@@ -59,6 +60,22 @@
   }
 }
 
+@media (height <= 53.125rem) and (width >= 52.5rem) {
+  .logo {
+    margin: 5.5rem 0 0 8.5rem;
+  }
+
+  .cloud {
+    height: 13.8rem;
+  }
+}
+
+@media (height <= 48rem) and (width >= 52.5rem) {
+  .logo {
+    margin: 0 0 0 8.5rem;
+  }
+}
+
 @media (width <= 52.5rem) {
   .imageCarousel {
     align-items: center;
@@ -66,22 +83,16 @@
   }
 
   .logo {
-    margin: 0 0 8rem;
+    margin: unset;
   }
 
-  .cloud {
-    height: 12rem;
-  }
-}
-
-@media (height <= 50rem) and (width >= 52.5rem) {
-  .logo {
-    margin: 5.5rem 0 0 8.5rem;
-  }
-}
-
-@media (height <= 50rem) {
   .cloud {
     height: 13.8rem;
+  }
+}
+
+@media (height <= 48rem) {
+  .imageCarousel {
+    padding: 6rem 0 16rem;
   }
 }
