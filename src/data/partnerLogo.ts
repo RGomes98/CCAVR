@@ -1,0 +1,25 @@
+const basePath = '/logos/partners/';
+
+export const partnerLogo = [
+  `${basePath}csn.png`,
+  `${basePath}prefeituraVoltaRedonda.png`,
+  `${basePath}unifoa.png`,
+  `${basePath}unimed.png`,
+  `${basePath}smac.png`,
+  `${basePath}cafeFavorito.png`,
+  `${basePath}fundacaoCSN.png`,
+  `${basePath}governoEstadualRJ.png`,
+  `${basePath}sindpass.png`,
+  `${basePath}cafeFarao.png`,
+  `${basePath}cmdca.png`,
+  `${basePath}extra.png`,
+  `${basePath}institutoCuidar.png`,
+  `${basePath}transegur.png`,
+  `${basePath}consea.png`,
+  `${basePath}elite.png`,
+  `${basePath}cimentoTupi.png`,
+  `${basePath}loteRJ.png`,
+  `${basePath}cmas.png`,
+  `${basePath}pastoralDaCrianca.png`,
+  `${basePath}fia.png`,
+];

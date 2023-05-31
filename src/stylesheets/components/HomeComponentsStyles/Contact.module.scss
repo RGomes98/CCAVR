@@ -1,0 +1,153 @@
+@use '../../variables' as var;
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0 16rem;
+  flex-direction: column;
+  background-color: var.$primary-blue;
+}
+
+.heading {
+  font-weight: 400;
+  color: var.$white;
+  margin-bottom: 4rem;
+  font-size: var.$section-heading-clamp;
+}
+
+.form {
+  gap: 1rem;
+  width: 90%;
+  display: flex;
+  max-width: 66rem;
+  align-items: center;
+  border-radius: 0.8rem;
+  padding: 1.5rem 2.5rem;
+  flex-direction: column;
+  color: var.$black-font;
+  background-color: var.$light-blue;
+  box-shadow: var.$standard-box-shadow;
+}
+
+.userDetailsWrapper {
+  gap: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail {
+  width: 50%;
+  gap: 0.2rem;
+  display: flex;
+  font-weight: 400;
+  flex-direction: column;
+  font-size: var.$medium-text;
+}
+
+.detailText {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.detailContent {
+  border: none;
+  color: inherit;
+  height: 2.5rem;
+  font-size: inherit;
+  outline: transparent;
+  border-radius: 0.2rem;
+}
+
+.messageWrapper {
+  gap: 0.2rem;
+  width: 100%;
+  display: flex;
+  font-weight: 400;
+  flex-direction: column;
+  font-size: var.$medium-text;
+}
+
+.messageText {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.messageContent {
+  resize: none;
+  border: none;
+  height: 15rem;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  outline: transparent;
+  border-radius: 0.2rem;
+}
+
+.button {
+  border: none;
+  width: 7.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  color: var.$white;
+  font-family: inherit;
+  align-self: flex-end;
+  border-radius: 0.2rem;
+  font-size: var.$regular-text;
+  box-shadow: var.$standard-box-shadow;
+  background-color: var.$secondary-blue;
+}
+
+.bar {
+  width: 100%;
+  opacity: 0.5;
+  border-top: 2px solid var.$grey;
+}
+
+.adressWrapper {
+  gap: 2rem;
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.adress {
+  width: 50%;
+  text-align: center;
+}
+
+.boldText {
+  font-weight: 500;
+  font-size: var.$big-text;
+}
+
+.text {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.mailto {
+  word-break: break-all;
+  color: var.$blue-font;
+}
+
+@media (width <= 43.75rem) {
+  .userDetailsWrapper {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .detail {
+    width: 100%;
+  }
+
+  .adressWrapper {
+    gap: 1rem;
+    margin-top: unset;
+    flex-direction: column;
+  }
+
+  .adress {
+    width: 100%;
+  }
+}

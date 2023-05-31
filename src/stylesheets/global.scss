@@ -1,0 +1,23 @@
+@use '../stylesheets/variables' as var;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: var.$regular-text;
+  font-family: var.$poppins-font;
+  background-color: var.$light-blue;
+}
+
+#root {
+  overflow: clip;
+}

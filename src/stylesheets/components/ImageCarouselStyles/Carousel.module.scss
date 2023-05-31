@@ -1,0 +1,87 @@
+@use '../../variables' as var;
+
+.imageCarousel {
+  width: 100%;
+  display: flex;
+  min-height: 85vh;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.8s;
+}
+
+.imageCarousel::before {
+  width: 0;
+  height: 0;
+  z-index: -5;
+  overflow: hidden;
+  position: absolute;
+  content: url('/images/carousel/image1.webp') url('/images/carousel/image2.webp')
+    url('/images/carousel/image3.webp') url('/images/carousel/image4.webp')
+    url('/images/carousel/image5.webp') url('/images/carousel/image6.webp')
+    url('/images/carousel/image7.webp');
+}
+
+.logo {
+  width: 90%;
+  height: auto;
+  max-width: 24rem;
+  user-select: none;
+  transition: all 0.3s;
+  border-radius: 0.4rem;
+  margin: 8rem 0 0 8.5rem;
+  box-shadow: var.$standard-box-shadow;
+  background-color: var.$transparent-white;
+  backdrop-filter: blur(10px) drop-shadow(var.$standard-box-shadow);
+}
+
+.cloud {
+  bottom: 0;
+  width: 100%;
+  height: 17rem;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: showCloud ease 0.6s;
+  filter: drop-shadow(var.$standard-box-shadow);
+  background-image: url('/logos/svgs/cloud.svg');
+}
+
+@keyframes showCloud {
+  from {
+    transform: translateY(25%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (width <= 52.5rem) {
+  .imageCarousel {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    margin: 0 0 8rem;
+  }
+
+  .cloud {
+    height: 12rem;
+  }
+}
+
+@media (height <= 50rem) and (width >= 52.5rem) {
+  .logo {
+    margin: 5.5rem 0 0 8.5rem;
+  }
+}
+
+@media (height <= 50rem) {
+  .cloud {
+    height: 13.8rem;
+  }
+}

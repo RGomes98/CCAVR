@@ -1,0 +1,39 @@
+@use '../../variables' as var;
+
+.container {
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  top: 8.95rem;
+  display: flex;
+  position: absolute;
+  max-width: 21.875rem;
+  justify-content: center;
+  padding: 4.5rem 2rem 2rem;
+  transition: transform 0.6s;
+  transform: translateX(200%);
+  background-color: var.$blue;
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.visible {
+  transform: translateX(0);
+}
+
+.wrapper {
+  gap: 2rem;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+@media (width <= 22.8rem) {
+  .container {
+    top: 10.5rem;
+    width: 100vw;
+    height: 100vh;
+    max-width: unset;
+    padding: 6rem 2rem 0;
+  }
+}

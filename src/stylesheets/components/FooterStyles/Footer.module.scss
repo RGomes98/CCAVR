@@ -1,0 +1,100 @@
+@use '../../variables' as var;
+
+.container {
+  gap: 3rem;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 2rem 3rem;
+  justify-content: center;
+  filter: drop-shadow(var.$standard-box-shadow);
+}
+
+.wrapper {
+  z-index: 1;
+  gap: 0.7rem;
+  display: flex;
+  align-items: center;
+
+  svg {
+    fill: var.$secondary-blue;
+    filter: drop-shadow(var.$standard-box-shadow);
+  }
+}
+
+.wrapper :nth-child(1) {
+  svg {
+    height: 1.75rem;
+  }
+}
+
+.wrapper :nth-child(2),
+.wrapper :nth-child(3) {
+  svg {
+    height: 1.85rem;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  z-index: 1;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -0.04rem;
+  color: var.$secondary-blue;
+  font-size: var.$medium-text;
+}
+
+.cloud {
+  width: 40rem;
+  height: 30rem;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var.$light-blue;
+}
+
+.cloud:nth-of-type(1) {
+  left: -9rem;
+  bottom: -8.5rem;
+}
+
+.cloud:nth-of-type(2) {
+  left: 13rem;
+  bottom: -12.5rem;
+}
+.cloud:nth-of-type(3) {
+  bottom: -12.5rem;
+}
+.cloud:nth-of-type(4) {
+  right: 13rem;
+  bottom: -11.5rem;
+}
+.cloud:nth-of-type(5) {
+  right: -8rem;
+  bottom: -8.5rem;
+}
+
+@media (width <= 95rem) {
+  .cloud:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media (width <= 75.5rem) {
+  .cloud:nth-of-type(2) {
+    display: none;
+  }
+}
+
+@media (width <= 49.0625rem) {
+  .cloud:nth-of-type(1) {
+    display: none;
+  }
+}

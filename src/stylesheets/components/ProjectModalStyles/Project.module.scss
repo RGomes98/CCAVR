@@ -1,0 +1,87 @@
+@use '../../variables' as var;
+
+.modal {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  border: none;
+  display: flex;
+  padding: 2rem;
+  color: var.$white;
+  max-width: 800px;
+  text-align: center;
+  align-items: center;
+  border-radius: 0.6rem;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+  animation: modalFadeIn 0.2s forwards;
+  background-color: var.$secondary-blue;
+}
+
+.modal::backdrop {
+  backdrop-filter: blur(1px);
+  background-color: var.$light-shadow;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.heading {
+  max-width: 90%;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-size: var.$medium-heading;
+}
+
+.description {
+  font-weight: 300;
+  text-align: justify;
+}
+
+.closeButton {
+  top: 0.5rem;
+  border: none;
+  right: 0.5rem;
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.3s;
+  background-color: transparent;
+
+  svg {
+    fill: var.$white;
+  }
+}
+
+.closeButton:hover {
+  transform: scale(1.15);
+}
+
+@media (width <= 52.5rem) {
+  .modal {
+    max-width: 90%;
+  }
+
+  .heading {
+    font-size: var.$small-heading;
+  }
+
+  .description {
+    font-size: var.$regular-text;
+  }
+}
+
+@media (width <= 28.125rem) {
+  .heading {
+    font-size: var.$extra-small-heading;
+  }
+
+  .description {
+    font-size: var.$small-text;
+  }
+}

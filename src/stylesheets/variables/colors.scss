@@ -1,0 +1,28 @@
+// Color
+$grey: hsl(0, 0%, 68%);
+$white: hsl(0, 0%, 100%);
+$blue: hsl(197, 51%, 64%);
+$light-blue: hsl(197, 51%, 92%);
+$primary-blue: hsl(197, 51%, 56%);
+$secondary-blue: hsl(197, 51%, 40%);
+
+//Transparent Color
+$transparent-white: hsl(0, 0%, 100%, 0.3);
+$transparent-secondary-blue: hsl(197, 51%, 40%, 0.3);
+
+//Font Color
+$black-font: hsl(0, 0%, 20%);
+$blue-font: hsl(197, 51%, 36%);
+
+// Shadow Strength
+$light-shadow: hsla(0, 0%, 20%, 0.15);
+$medium-shadow: hsla(0, 0%, 20%, 0.25);
+
+// Box Shadow
+$light-box-shadow: 3px 3px 12px $light-shadow;
+$standard-box-shadow: 3px 3px 8px $light-shadow;
+$medium-box-shadow: 3px 3px 12px $medium-shadow;
+$heavy-box-shadow: 3px 3px 8px $medium-shadow;
+
+//Text Shadow
+$standard-text-shadow: 3px 3px 2px $medium-shadow;
