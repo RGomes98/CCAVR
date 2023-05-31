@@ -13,12 +13,12 @@
   background-color: transparent;
 
   svg {
+    rotate: 270deg;
     border-radius: 50%;
-    transform: rotate(270deg);
     fill: var.$secondary-blue;
-    transition: transform 0.3s;
     box-shadow: var.$heavy-box-shadow;
     background-color: var.$light-blue;
+    transition: rotate 0.3s, scale 0.3s;
   }
 }
 
@@ -29,6 +29,7 @@
 
 .button {
   svg:hover {
-    transform: scale(1.1) rotate(270deg);
+    scale: 1.1;
+    rotate: 270deg;
   }
 }

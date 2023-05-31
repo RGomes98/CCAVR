@@ -50,7 +50,7 @@
   font-family: inherit;
   border-radius: 0.4rem;
   justify-content: center;
-  transition: transform 0.2s;
+  transition: scale 0.2s;
   font-size: var.$regular-heading;
   box-shadow: var.$medium-box-shadow;
   background-color: var.$secondary-blue;
@@ -62,7 +62,7 @@
 }
 
 .project:hover {
-  transform: scale(1.05);
+  scale: 1.05;
 }
 
 .logoCurumim {

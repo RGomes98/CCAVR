@@ -7,15 +7,18 @@
   border: none;
   display: flex;
   padding: 2rem;
-  color: var.$white;
   max-width: 800px;
+  color: var.$white;
   text-align: center;
   align-items: center;
+  translate: -50% -50%;
   border-radius: 0.6rem;
   flex-direction: column;
-  transform: translate(-50%, -50%);
-  animation: modalFadeIn 0.2s forwards;
   background-color: var.$secondary-blue;
+}
+
+.modal[open] {
+  animation: modalFadeIn 0.2s forwards;
 }
 
 .modal::backdrop {
@@ -25,10 +28,10 @@
 
 @keyframes modalFadeIn {
   from {
-    opacity: 0;
+    scale: -5%;
   }
   to {
-    opacity: 1;
+    scale: initial;
   }
 }
 
@@ -50,7 +53,7 @@
   right: 0.5rem;
   cursor: pointer;
   position: absolute;
-  transition: transform 0.3s;
+  transition: scale 0.3s;
   background-color: transparent;
 
   svg {
@@ -59,7 +62,7 @@
 }
 
 .closeButton:hover {
-  transform: scale(1.15);
+  scale: 1.15;
 }
 
 @media (width <= 52.5rem) {

@@ -121,3 +121,11 @@
     }
   }
 }
+
+@media (height < 48rem) {
+  .navWrapper {
+    gap: 1.5rem;
+    height: 20vh;
+    overflow: scroll;
+  }
+}
