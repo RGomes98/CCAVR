@@ -6,9 +6,10 @@ import { Poppins } from 'next/font/google';
 
 import '../stylesheets/global.scss';
 
-export const poppins = Poppins({
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+const poppins = Poppins({
   display: 'swap',
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata = {
@@ -20,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='pt-BR'>
-      <body>
+      <body className={poppins.className}>
         <div id='root'>
           <Navbar />
           <Carousel />
