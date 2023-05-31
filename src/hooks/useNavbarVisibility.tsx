@@ -12,11 +12,10 @@ export const useNavbarVisibility = () => {
     if (oldScrollYPosition > currentScrollYPosition) {
       setIsScrollDownward(false);
     } else {
-      closeHiddenMenu();
       setIsScrollDownward(true);
     }
     setOldScrollYPosition(currentScrollYPosition);
-  }, [closeHiddenMenu, oldScrollYPosition]);
+  }, [oldScrollYPosition]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
