@@ -19,6 +19,7 @@
   align-items: center;
 
   svg {
+    transition: fill 0.2s;
     fill: var.$secondary-blue;
     filter: drop-shadow(var.$standard-box-shadow);
   }
@@ -34,6 +35,12 @@
 .wrapper :nth-child(3) {
   svg {
     height: 1.85rem;
+  }
+}
+
+.wrapper a:hover {
+  svg {
+    fill: var.$dark-blue;
   }
 }
 

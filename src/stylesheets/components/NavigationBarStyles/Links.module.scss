@@ -11,11 +11,17 @@
 .navItem {
   font-weight: 300;
   font-size: var.$navbar-clamp;
+  transition: filter 0.2s, scale 0.2s;
 }
 
 .navLink {
   color: var.$white;
   text-decoration: none;
+}
+
+.navItem:hover {
+  scale: 1.01;
+  filter: drop-shadow(0px 0px 8px var.$transparent-white-hover);
 }
 
 .secondaryWrapper {
@@ -34,11 +40,16 @@
 .socialLink {
   display: flex;
   align-items: center;
+  transition: filter 0.3s;
 
   svg {
     fill: var.$white;
     filter: drop-shadow(var.$standard-box-shadow);
   }
+}
+
+.socialLink:hover {
+  filter: drop-shadow(0px 0px 8px var.$transparent-white-hover);
 }
 
 .socialWrapper :nth-child(1) {
@@ -65,8 +76,13 @@
   font-family: inherit;
   border-radius: 0.2rem;
   animation: fadeIn forwards 0.4s;
+  transition: background-color 0.2s;
   box-shadow: var.$heavy-box-shadow;
   background-color: var.$secondary-blue;
+}
+
+.donateButton:hover {
+  background-color: var.$dark-blue;
 }
 
 @keyframes fadeIn {

@@ -94,8 +94,13 @@
   align-self: flex-end;
   border-radius: 0.2rem;
   font-size: var.$regular-text;
+  transition: background-color 0.2s;
   box-shadow: var.$standard-box-shadow;
   background-color: var.$secondary-blue;
+}
+
+.button:hover {
+  background-color: var.$dark-blue;
 }
 
 .bar {
