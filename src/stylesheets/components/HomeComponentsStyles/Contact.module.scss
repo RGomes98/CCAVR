@@ -30,18 +30,19 @@
 }
 
 .userDetailsWrapper {
-  gap: 2rem;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
   justify-content: space-between;
 }
 
 .detail {
-  width: 50%;
   gap: 0.2rem;
   display: flex;
   font-weight: 400;
   flex-direction: column;
+  width: calc(50% - 1.5rem);
   font-size: var.$medium-text;
 }
 
@@ -57,6 +58,7 @@
   font-size: inherit;
   outline: transparent;
   border-radius: 0.2rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .messageWrapper {
@@ -66,6 +68,10 @@
   font-weight: 400;
   flex-direction: column;
   font-size: var.$medium-text;
+}
+
+.messageWrapper .detailContent {
+  margin-bottom: 1rem;
 }
 
 .messageText {
@@ -82,6 +88,14 @@
   font-family: inherit;
   outline: transparent;
   border-radius: 0.2rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.recaptchaWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .button {
@@ -91,7 +105,6 @@
   cursor: pointer;
   color: var.$white;
   font-family: inherit;
-  align-self: flex-end;
   border-radius: 0.2rem;
   font-size: var.$regular-text;
   transition: background-color 0.2s;
