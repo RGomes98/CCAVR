@@ -8,6 +8,8 @@ export const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    return console.log('Blocked');
+
     const {
       contact_name,
       contact_email,
