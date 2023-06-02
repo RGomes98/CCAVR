@@ -33,12 +33,11 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 1.5rem;
+  gap: 0.8rem 1.5rem;
   justify-content: space-between;
 }
 
 .detail {
-  gap: 0.2rem;
   display: flex;
   font-weight: 400;
   flex-direction: column;
@@ -49,6 +48,7 @@
 .detailText {
   font-size: inherit;
   font-weight: inherit;
+  margin-bottom: 0.2rem;
 }
 
 .detailContent {
@@ -62,7 +62,6 @@
 }
 
 .messageWrapper {
-  gap: 0.2rem;
   width: 100%;
   display: flex;
   font-weight: 400;
@@ -88,7 +87,34 @@
   font-family: inherit;
   outline: transparent;
   border-radius: 0.2rem;
+  margin-bottom: 0.2rem;
   padding: 0.25rem 0.5rem;
+}
+
+.contactMessageWrapper {
+  gap: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.errorMessage,
+.contactResponse {
+  opacity: 0;
+  color: var.$red;
+  font-size: var.$small-text;
+  transform: translateY(-15%);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.showError,
+.showResponse {
+  opacity: 1;
+  transform: translateY(20%);
+}
+
+.successMessage {
+  color: var.$green;
 }
 
 .recaptchaWrapper {
@@ -173,6 +199,13 @@
 
   .adress {
     width: 100%;
+  }
+}
+
+@media (width <= 37.5rem) {
+  .contactMessageWrapper {
+    align-items: center;
+    flex-direction: column;
   }
 }
 
