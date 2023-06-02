@@ -13,21 +13,19 @@ type FormData = {
 };
 
 export async function POST(req: Request, res: Response) {
-  const { reCAPTCHAToken, name, email, telephone, city, subject, content }: FormData =
-    await req.json();
+  const formData: FormData = await req.json();
 
-  return new Response('Block Emails');
-
-  if (!reCAPTCHAToken || !name || !email || !telephone || !city || !subject || !content) {
-    throw new Response(undefined, {
+  const isFormFilled = Object.values(formData).every((value) => value.trim());
+  if (!isFormFilled) {
+    return new Response(undefined, {
       status: 400,
       statusText: 'Todos os campos são necessários.',
     });
   }
 
-  const isHuman = await validadeReCAPTCHA(reCAPTCHAToken);
+  const isHuman = await validadeReCAPTCHA(formData.reCAPTCHAToken);
   if (!isHuman) {
-    throw new Response(undefined, {
+    return new Response(undefined, {
       status: 403,
       statusText: 'Tente novamente mais tarde.',
     });
@@ -36,10 +34,10 @@ export async function POST(req: Request, res: Response) {
   try {
     await transporter.sendMail({
       ...mailOptions,
-      replyTo: email,
-      subject: subject,
+      replyTo: formData.email,
+      subject: formData.subject,
       text: 'Olá. Este é um e-mail de contato da Casa da Criança e do Adolescente.',
-      html: generateTemplate(name, city, telephone, content),
+      html: generateTemplate(formData.name, formData.city, formData.telephone, formData.content),
     });
 
     return new Response(undefined, {
@@ -47,7 +45,7 @@ export async function POST(req: Request, res: Response) {
       statusText: 'E-mail enviado com sucesso!',
     });
   } catch (error) {
-    throw new Response(undefined, {
+    return new Response(undefined, {
       status: 400,
       statusText: 'Ocorreu algum problema durante o envio do e-mail.',
     });

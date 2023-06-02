@@ -10,13 +10,13 @@ export const validadeReCAPTCHA = async (token: string): Promise<boolean> => {
       `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
       { method: 'POST' }
     );
-    const data: Validate = await response.json();
+    const { success }: Validate = await response.json();
 
-    return data.success;
+    return success;
   } catch (err) {
     throw new Response(undefined, {
       status: 400,
-      statusText: 'Something went wrong.',
+      statusText: 'Ocorreu algum problema durante a verificação do ReCAPTCHA.',
     });
   }
 };
