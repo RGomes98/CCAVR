@@ -27,39 +27,39 @@ export const Links: React.FC = () => {
       <ul className={`${styles.navWrapper} ${linkStyles}`}>
         {!isAtHome && (
           <li className={styles.navItem}>
-            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href={'/'}>
+            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href='/'>
               Início
             </a>
           </li>
         )}
         {!isAtNews && (
           <li className={styles.navItem}>
-            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href={'/noticias'}>
+            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href='/noticias'>
               Notícias
             </a>
           </li>
         )}
         <li className={styles.navItem}>
-          <a onClick={() => closeHiddenMenu()} href={'/#project'} className={styles.navLink}>
+          <a onClick={() => closeHiddenMenu()} href='/#project' className={styles.navLink}>
             Projetos
           </a>
         </li>
         {!isAtTestimonials && (
           <li className={styles.navItem}>
-            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href={'/depoimentos'}>
+            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href='/depoimentos'>
               Depoimentos
             </a>
           </li>
         )}
         {!isAtTransparency && (
           <li className={styles.navItem}>
-            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href={'/transparencia'}>
+            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href='/transparencia'>
               Transparência
             </a>
           </li>
         )}
         <li className={styles.navItem}>
-          <a onClick={() => closeHiddenMenu()} className={styles.navLink} href={'/#contact'}>
+          <a onClick={() => closeHiddenMenu()} className={styles.navLink} href='/#contact'>
             Contato
           </a>
         </li>
@@ -68,19 +68,19 @@ export const Links: React.FC = () => {
         <div className={styles.socialWrapper}>
           <a
             className={styles.socialLink}
-            href={'https://www.facebook.com/CasadaCriancaedoAdolescenteOficial/'}
+            href='https://www.facebook.com/CasadaCriancaedoAdolescenteOficial/'
           >
             <LogoFacebook />
           </a>
           <a
             className={styles.socialLink}
-            href={'https://www.instagram.com/casadacriancaedoadolescente/'}
+            href='https://www.instagram.com/casadacriancaedoadolescente/'
           >
             <LogoInstagram />
           </a>
           <a
             className={styles.socialLink}
-            href={'https://www.youtube.com/@casadacriancaedoadolescent351'}
+            href='https://www.youtube.com/@casadacriancaedoadolescent351'
           >
             <LogoYoutube />
           </a>

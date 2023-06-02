@@ -13,14 +13,14 @@ export const Footer: React.FC = () => {
       <div className={styles.wrapper}>
         <a
           className={styles.link}
-          href={'https://www.facebook.com/CasadaCriancaedoAdolescenteOficial/'}
+          href='https://www.facebook.com/CasadaCriancaedoAdolescenteOficial/'
         >
           <LogoFacebook />
         </a>
-        <a className={styles.link} href={'https://www.instagram.com/casadacriancaedoadolescente/'}>
+        <a className={styles.link} href='https://www.instagram.com/casadacriancaedoadolescente/'>
           <LogoInstagram />
         </a>
-        <a className={styles.link} href={'https://www.youtube.com/@casadacriancaedoadolescent351'}>
+        <a className={styles.link} href='https://www.youtube.com/@casadacriancaedoadolescent351'>
           <LogoYoutube />
         </a>
       </div>

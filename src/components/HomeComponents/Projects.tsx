@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export const Projects: React.FC = () => {
   return (
-    <div id={'project'} className={styles.container}>
+    <div id='project' className={styles.container}>
       <div className={styles.textWrapper}>
         <h2 className={styles.heading}>Projetos que Transformam</h2>
         <p className={styles.text}>
@@ -16,10 +16,10 @@ export const Projects: React.FC = () => {
         </p>
       </div>
       <div className={styles.projectWrapper}>
-        <a className={styles.project} href={'/curumim'}>
+        <a className={styles.project} href='/curumim'>
           <Image
-            src={'/logos/svgs/institution/logoCurumim.svg'}
-            alt={'logo-curumim'}
+            src='/logos/svgs/institution/logoCurumim.svg'
+            alt='logo-curumim'
             className={styles.logoCurumim}
             width={384}
             height={288}

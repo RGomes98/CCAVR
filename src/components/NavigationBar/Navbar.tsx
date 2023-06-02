@@ -32,17 +32,17 @@ export const Navbar: React.FC = () => {
         <Image
           width={160}
           height={160}
-          alt={'logo-cca'}
+          alt='logo-cca'
           className={styles.primaryLogo}
-          src={'/logos/svgs/institution/logoCurumim.svg'}
+          src='/logos/svgs/institution/logoCurumim.svg'
         />
       ) : (
         <Image
           width={160}
           height={160}
-          alt={'logo-cca'}
+          alt='logo-cca'
           className={styles.primaryLogo}
-          src={'/logos/svgs/institution/logoCCA.svg'}
+          src='/logos/svgs/institution/logoCCA.svg'
         />
       )}
 

@@ -19,16 +19,16 @@ export const Carousel: React.FC = () => {
       {isAtCurumim ? (
         <Image
           className={styles.logo}
-          src={'/logos/svgs/institution/logoCurumim.svg'}
-          alt={'logo-cca'}
+          src='/logos/svgs/institution/logoCurumim.svg'
+          alt='logo-cca'
           width={384}
           height={384}
         />
       ) : (
         <Image
           className={styles.logo}
-          src={'/logos/svgs/institution/logoCCA.svg'}
-          alt={'logo-cca'}
+          src='/logos/svgs/institution/logoCCA.svg'
+          alt='logo-cca'
           width={384}
           height={384}
         />

@@ -47,15 +47,15 @@ export const Donate: React.FC = () => {
         <h2 className={styles.secondaryHeading}>Doe usando PIX</h2>
         <Image
           className={styles.logoPix}
-          src={'/logos/donation/pix.png'}
-          alt={'logo-pix'}
+          src='/logos/donation/pix.png'
+          alt='logo-pix'
           width={240}
           height={80}
         />
         <Image
           className={styles.qrCode}
-          src={'/logos/donation/QRCode.png'}
-          alt={'qr-code'}
+          src='/logos/donation/QRCode.png'
+          alt='qr-code'
           width={285}
           height={285}
         />
