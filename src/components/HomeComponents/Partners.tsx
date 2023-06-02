@@ -14,9 +14,9 @@ export const Partners: React.FC = () => {
               key={idx}
               className={styles.logo}
               src={logoPartner}
-              alt={'partner-logo'}
-              width={1000}
-              height={1000}
+              alt='partner-logo'
+              width={1500}
+              height={1500}
             />
           );
         })}
