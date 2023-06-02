@@ -20,9 +20,19 @@ type FormError = {
   content: boolean;
 };
 
+type ContactMessage = {
+  code: null | number;
+  message: string;
+};
+
 type ChangeInput = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
 export const Contact: React.FC = () => {
+  const [contactMessage, setContactMessage] = useState<ContactMessage>({
+    code: null,
+    message: '',
+  });
+
   const [formErrors, setFormErrors] = useState<FormError>({
     name: false,
     telephone: false,
@@ -38,6 +48,7 @@ export const Contact: React.FC = () => {
     content: '',
   });
 
+  const contactMessageColor = contactMessage.code === 200 && styles.successMessage;
   const reCAPTCHARef = useRef<ReCAPTCHA>(null);
 
   const handleChange = (e: React.ChangeEvent<ChangeInput>) => {
@@ -53,8 +64,6 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    return console.log('Block Email!');
 
     const { name, email, telephone, city, subject, content } = formData;
     setFormErrors({ name: false, telephone: false, content: false });
@@ -77,10 +86,12 @@ export const Contact: React.FC = () => {
 
     if (hasError) return;
 
+    return console.log('Block Email!');
+
     const reCAPTCHAToken = await reCAPTCHARef.current?.executeAsync();
     reCAPTCHARef.current?.reset();
 
-    const response = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
+    const { statusText, status } = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
       method: 'POST',
       body: JSON.stringify({
         reCAPTCHAToken,
@@ -93,7 +104,8 @@ export const Contact: React.FC = () => {
       }),
     });
 
-    console.log(response);
+    setContactMessage({ message: statusText, code: status });
+    setTimeout(() => setContactMessage({ message: '', code: null }), 5000);
   };
 
   return (
@@ -109,11 +121,14 @@ export const Contact: React.FC = () => {
               required
               id='name'
               type='text'
+              pattern='[A-Za-z ]+'
               value={formData.name}
               onChange={handleChange}
               className={styles.detailContent}
             />
-            {formErrors.name && <span>Nome Errado</span>}
+            <span className={`${styles.errorMessage} ${formErrors.name && styles.showError}`}>
+              Insira um nome válido!
+            </span>
           </div>
           <div className={styles.detail}>
             <label htmlFor='email' className={styles.detailText}>
@@ -142,7 +157,10 @@ export const Contact: React.FC = () => {
               className={styles.detailContent}
               placeholder='Digite o número de telefone com DDD.'
             />
-            {formErrors.telephone && <span>Telefone Errado</span>}
+
+            <span className={`${styles.errorMessage} ${formErrors.telephone && styles.showError}`}>
+              Insira um número válido!
+            </span>
           </div>
           <div className={styles.detail}>
             <label htmlFor='city' className={styles.detailText}>
@@ -179,7 +197,18 @@ export const Contact: React.FC = () => {
             value={formData.content}
             className={styles.messageContent}
           />
-          {formErrors.content && <span>Falta Conteudo!</span>}
+          <div className={styles.contactMessageWrapper}>
+            <span className={`${styles.errorMessage} ${formErrors.content && styles.showError}`}>
+              Insira uma mensagem válida!
+            </span>
+            <span
+              className={`${styles.contactResponse} ${contactMessageColor} ${
+                contactMessage.code && styles.showResponse
+              }`}
+            >
+              {contactMessage.message}
+            </span>
+          </div>
         </div>
         <div className={styles.recaptchaWrapper}>
           <ReCAPTCHA

@@ -13,5 +13,8 @@ export const transporter = nodemailer.createTransport({
 
 export const mailOptions = {
   from: `Casa da Criança e do Adolescente - Mailer <${process.env.EMAIL}>`,
-  to: [process.env.INSTITUTION_EMAIL_1, process.env.INSTITUTION_EMAIL_2] as string[],
+  to: [
+    process.env.INSTITUTION_EMAIL_1,
+    // , process.env.INSTITUTION_EMAIL_2
+  ] as string[],
 };
