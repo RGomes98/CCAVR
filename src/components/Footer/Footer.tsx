@@ -1,14 +1,20 @@
+'use client';
+
 import { Instagram as LogoInstagram } from '../../components/SVGs/Instagram';
 import { Facebook as LogoFacebook } from '../../components/SVGs/Facebook';
 import { Youtube as LogoYoutube } from '../../components/SVGs/Youtube';
+import { usePathname } from 'next/navigation';
 import { Cloud } from '../CloudSlice/Cloud';
 
 import styles from '../../stylesheets/components/FooterStyles/Footer.module.scss';
 
 type FooterColors = 'Light' | 'Dark';
 
-export const Footer: React.FC<{ footerColors: FooterColors }> = ({ footerColors }) => {
-  const FooterColor = footerColors === 'Light' ? styles.lightColor : styles.darkColor;
+export const Footer: React.FC = () => {
+  const pathname = usePathname();
+  const isAtHomeOrNews = pathname === '/' || pathname === '/noticias';
+  const FooterColor = isAtHomeOrNews ? styles.lightColor : styles.darkColor;
+
   const currentYear = new Date().getUTCFullYear();
 
   return (
