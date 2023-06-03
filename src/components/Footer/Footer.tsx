@@ -5,11 +5,14 @@ import { Cloud } from '../CloudSlice/Cloud';
 
 import styles from '../../stylesheets/components/FooterStyles/Footer.module.scss';
 
-export const Footer: React.FC = () => {
+type FooterColors = 'Light' | 'Dark';
+
+export const Footer: React.FC<{ footerColors: FooterColors }> = ({ footerColors }) => {
+  const FooterColor = footerColors === 'Light' ? styles.lightColor : styles.darkColor;
   const currentYear = new Date().getUTCFullYear();
 
   return (
-    <footer className={styles.container}>
+    <footer className={`${styles.container} ${FooterColor}`}>
       <div className={styles.wrapper}>
         <a
           className={styles.link}

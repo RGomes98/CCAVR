@@ -12,6 +12,14 @@
   filter: drop-shadow(var.$standard-box-shadow);
 }
 
+.lightColor {
+  background-color: var.$light-blue;
+}
+
+.darkColor {
+  background-color: var.$primary-blue;
+}
+
 .wrapper {
   z-index: 1;
   gap: 0.7rem;
@@ -64,7 +72,7 @@
   height: 30rem;
   position: absolute;
   border-radius: 50%;
-  background-color: var.$light-blue;
+  background-color: inherit;
 }
 
 .cloud:nth-of-type(1) {

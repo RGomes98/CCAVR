@@ -86,7 +86,7 @@ export const Contact: React.FC = () => {
 
     if (hasError) return;
 
-    return console.log('Block Email!');
+    // return console.log('Block Email!');
 
     const reCAPTCHAToken = await reCAPTCHARef.current?.executeAsync();
     reCAPTCHARef.current?.reset();
@@ -121,10 +121,10 @@ export const Contact: React.FC = () => {
               required
               id='name'
               type='text'
-              pattern='[A-Za-z ]+'
               value={formData.name}
               onChange={handleChange}
               className={styles.detailContent}
+              pattern='[A-Za-z\u00C0-\u00FF ]+'
             />
             <span className={`${styles.errorMessage} ${formErrors.name && styles.showError}`}>
               Insira um nome válido!

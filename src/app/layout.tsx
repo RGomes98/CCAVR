@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
             <ScrollToTopArrow />
           </main>
-          <Footer />
+          <Footer footerColors='Light' />
         </div>
       </body>
     </html>
