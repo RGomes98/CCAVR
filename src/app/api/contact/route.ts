@@ -1,4 +1,4 @@
-import { validadeReCAPTCHA } from '@/helpers/validateReCAPTCHA';
+import { validateReCAPTCHA } from '@/helpers/validateReCAPTCHA';
 import { transporter, mailOptions } from '@/config/nodemailer';
 import { generateTemplate } from '@/utils/generateTemplate';
 
@@ -23,7 +23,7 @@ export async function POST(req: Request, res: Response) {
     });
   }
 
-  const isHuman = await validadeReCAPTCHA(formData.reCAPTCHAToken);
+  const isHuman = await validateReCAPTCHA(formData.reCAPTCHAToken);
   if (!isHuman) {
     return new Response(undefined, {
       status: 403,
@@ -37,7 +37,21 @@ export async function POST(req: Request, res: Response) {
       replyTo: formData.email,
       subject: formData.subject,
       text: 'Olá. Este é um e-mail de contato da Casa da Criança e do Adolescente.',
-      html: generateTemplate(formData.name, formData.city, formData.telephone, formData.content),
+      html: generateTemplate(
+        formData.name,
+        formData.email,
+        formData.telephone,
+        formData.city,
+        formData.subject,
+        formData.content
+      ),
+      attachments: [
+        {
+          cid: 'logoCCA',
+          filename: 'logoCCA',
+          path: `${__dirname}/../../../../../public/logos/pngs/institution/LogoCCA.png`,
+        },
+      ],
     });
 
     return new Response(undefined, {
