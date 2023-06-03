@@ -1,6 +1,7 @@
 @use '../../variables' as var;
 
 .container {
+  width: 100%;
   display: flex;
   padding: 4rem 0;
   color: var.$white;
@@ -53,7 +54,7 @@
   font-size: var.$regular-heading;
   box-shadow: var.$heavy-box-shadow;
   background-color: var.$secondary-blue;
-  transition: scale 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: scale 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project:hover {

@@ -18,6 +18,28 @@
 
 .darkColor {
   background-color: var.$primary-blue;
+
+  .wrapper {
+    .link {
+      transition: filter 0.3s ease;
+    }
+
+    svg {
+      fill: var.$white;
+    }
+  }
+
+  .link:hover {
+    filter: drop-shadow(0px 0px 8px var.$transparent-white-hover);
+
+    svg {
+      fill: var.$white;
+    }
+  }
+
+  .text {
+    color: var.$white;
+  }
 }
 
 .wrapper {
@@ -27,8 +49,8 @@
   align-items: center;
 
   svg {
-    transition: fill 0.2s;
     fill: var.$secondary-blue;
+    transition: fill 0.2s ease;
     filter: drop-shadow(var.$standard-box-shadow);
   }
 }

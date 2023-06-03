@@ -11,7 +11,7 @@
 .navItem {
   font-weight: 300;
   font-size: var.$navbar-clamp;
-  transition: filter 0.2s, scale 0.2s, transform 0.2s;
+  transition: filter 0.2s ease, scale 0.2s ease, transform 0.2s ease;
 }
 
 .navItem:hover {
@@ -41,7 +41,7 @@
 .socialLink {
   display: flex;
   align-items: center;
-  transition: filter 0.3s;
+  transition: filter 0.3s ease;
 
   svg {
     fill: var.$white;
@@ -77,9 +77,9 @@
   font-family: inherit;
   border-radius: 0.2rem;
   animation: fadeIn forwards 0.4s;
-  transition: background-color 0.2s;
   box-shadow: var.$heavy-box-shadow;
   background-color: var.$secondary-blue;
+  transition: background-color 0.2s ease;
 }
 
 .donateButton:hover {

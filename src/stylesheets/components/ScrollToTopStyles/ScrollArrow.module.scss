@@ -9,7 +9,7 @@
   position: fixed;
   cursor: pointer;
   pointer-events: none;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s ease;
   background-color: transparent;
 
   svg {
@@ -18,7 +18,7 @@
     fill: var.$secondary-blue;
     box-shadow: var.$heavy-box-shadow;
     background-color: var.$light-blue;
-    transition: rotate 0.3s, scale 0.3s;
+    transition: rotate 0.3s ease, scale 0.3s ease;
   }
 }
 

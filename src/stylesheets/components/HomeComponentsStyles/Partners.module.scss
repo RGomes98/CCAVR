@@ -1,10 +1,11 @@
 @use '../../variables' as var;
 
 .container {
+  width: 100%;
   display: flex;
   padding: 2rem;
-  margin: 20rem 0 4rem;
   align-items: center;
+  margin: 20rem 0 4rem;
   flex-direction: column;
 }
 
@@ -29,7 +30,7 @@
   width: 100%;
   height: auto;
   max-width: 15rem;
-  transition: scale 0.2s;
+  transition: scale 0.2s ease;
   filter: drop-shadow(var.$light-box-shadow);
 }
 
