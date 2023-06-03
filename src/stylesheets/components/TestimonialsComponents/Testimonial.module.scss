@@ -1,0 +1,116 @@
+@use '../../variables' as var;
+
+.container {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 8rem 0 14rem;
+  flex-direction: column;
+}
+
+.videoSection {
+  gap: 6rem;
+  width: 100%;
+  display: flex;
+  max-width: 90%;
+  margin-bottom: 8rem;
+  flex-direction: column;
+}
+
+.videoWrapper {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  display: flex;
+  font-weight: 400;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  color: var.$primary-blue;
+  font-size: var.$video-heading-clamp;
+}
+
+.container > .heading {
+  max-width: 60%;
+}
+
+.boldHeading {
+  font-weight: 600;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  max-width: 75rem;
+  border-radius: 0.4rem;
+}
+
+.linkWrapper {
+  gap: 1rem;
+  width: 90%;
+  border: none;
+  display: flex;
+  margin-top: 4rem;
+  max-width: 25rem;
+  align-items: center;
+  font-family: inherit;
+  border-radius: 0.4rem;
+  flex-direction: column;
+  padding: 3rem 2rem 2.5rem;
+  transition: scale 0.3s ease;
+  box-shadow: var.$medium-box-shadow;
+  background-color: var.$secondary-blue;
+
+  svg {
+    width: 6rem;
+    height: 6rem;
+    fill: var.$white;
+  }
+}
+
+.linkWrapper:hover {
+  scale: 1.03;
+}
+
+.linkHeading {
+  color: var.$white;
+  text-decoration: none;
+  line-height: 1.2;
+  font-size: var.$small-heading;
+}
+
+.link {
+  gap: 0.5rem;
+  display: flex;
+  color: var.$white;
+  align-items: center;
+  text-decoration: none;
+  font-size: var.$medium-text;
+
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var.$secondary-blue;
+  }
+}
+
+.circle {
+  width: 1.8rem;
+  display: flex;
+  height: 1.8rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: var.$white;
+}
+
+@media (width <= 62.5rem) {
+  .container > .heading {
+    max-width: 90%;
+  }
+}

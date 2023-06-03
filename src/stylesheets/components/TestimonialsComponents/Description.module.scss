@@ -1,0 +1,26 @@
+@use '../../variables' as var;
+
+.container {
+  display: flex;
+  color: var.$white;
+  padding: 0 0 4.5rem;
+  align-items: center;
+  flex-direction: column;
+  background-color: var.$primary-blue;
+}
+
+.heading {
+  max-width: 90%;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: var.$section-heading-clamp;
+}
+
+.text {
+  max-width: 90%;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: justify;
+  font-size: var.$text-clamp;
+}
