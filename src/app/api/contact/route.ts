@@ -45,8 +45,8 @@ export async function POST(req: Request) {
       ],
     });
 
-    return new Response('undefined', {
-      status: 200,
+    return new Response(undefined, {
+      // status: 200,
       statusText: 'E-mail enviado com sucesso!',
     });
   } catch (error) {
