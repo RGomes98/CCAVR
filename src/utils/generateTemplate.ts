@@ -524,7 +524,7 @@ export const generateTemplate = (
                                   >Telefone:</strong
                                 ><br />
                                 (${telephone.charAt(0).concat(telephone.charAt(1))}) 
-                                ${telephone.slice(2, 6)}-${telephone.slice(7)}
+                                ${telephone.slice(2, 7)}-${telephone.slice(7)}
                               </p>
                             </div>
                           </td>
