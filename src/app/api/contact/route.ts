@@ -15,6 +15,11 @@ type FormData = {
 export async function POST(req: Request, res: Response) {
   const formData: FormData = await req.json();
 
+  return new Response('OK', {
+    status: 200,
+    statusText: 'HIHIHIHIHI',
+  });
+
   const isFormFilled = Object.values(formData).every((value) => value.trim());
   if (!isFormFilled) {
     return new Response(undefined, {
