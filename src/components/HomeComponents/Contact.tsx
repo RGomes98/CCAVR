@@ -91,6 +91,8 @@ export const Contact: React.FC = () => {
 
     if (hasError) return;
 
+    return console.log('Blocked Email!');
+
     const reCAPTCHAToken = await reCAPTCHARef.current?.executeAsync();
     reCAPTCHARef.current?.reset();
     setIsLoading(true);
