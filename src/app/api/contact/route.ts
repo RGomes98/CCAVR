@@ -23,13 +23,13 @@ export async function POST(req: Request, res: Response) {
     });
   }
 
-  // const isHuman = await validateReCAPTCHA(formData.reCAPTCHAToken);
-  // if (!isHuman) {
-  //   return new Response(undefined, {
-  //     status: 403,
-  //     statusText: 'Tente novamente mais tarde.',
-  //   });
-  // }
+  const isHuman = await validateReCAPTCHA(formData.reCAPTCHAToken);
+  if (!isHuman) {
+    return new Response(undefined, {
+      status: 403,
+      statusText: 'Tente novamente mais tarde.',
+    });
+  }
 
   try {
     await transporter.sendMail({
