@@ -55,7 +55,7 @@ export async function POST(req: Request, res: Response) {
     });
 
     return new Response(undefined, {
-      status: 200,
+      status: 300,
       statusText: 'E-mail enviado com sucesso!',
     });
   } catch (error) {
