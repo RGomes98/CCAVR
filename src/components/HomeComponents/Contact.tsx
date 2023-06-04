@@ -4,6 +4,9 @@ import { cities } from '@/data/cities';
 
 import styles from '../../stylesheets/components/HomeComponentsStyles/Contact.module.scss';
 import ReCAPTCHA from 'react-google-recaptcha';
+import Image from 'next/image';
+
+type ChangeInput = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
 type Form = {
   name: string;
@@ -20,15 +23,13 @@ type FormError = {
   content: boolean;
 };
 
-type ContactMessage = {
+type StatusMessage = {
   code: null | number;
   message: string;
 };
 
-type ChangeInput = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
-
 export const Contact: React.FC = () => {
-  const [contactMessage, setContactMessage] = useState<ContactMessage>({
+  const [statusMessage, setStatusMessage] = useState<StatusMessage>({
     code: null,
     message: '',
   });
@@ -48,13 +49,16 @@ export const Contact: React.FC = () => {
     content: '',
   });
 
-  const contactMessageColor = contactMessage.code === 200 && styles.successMessage;
+  const [isLoading, setIsLoading] = useState(false);
+
+  const contactMessageColor = statusMessage.code === 200 && styles.successMessage;
   const reCAPTCHARef = useRef<ReCAPTCHA>(null);
 
   const handleChange = (e: React.ChangeEvent<ChangeInput>) => {
+    const telephoneLength = 11;
+
     const { value } = e.target;
     const { id } = e.target;
-    const telephoneLength = 11;
 
     if (id !== 'telephone') setFormData((prev) => ({ ...prev, [id]: value }));
     if (id === 'telephone' && value.length <= telephoneLength) {
@@ -67,6 +71,7 @@ export const Contact: React.FC = () => {
 
     const { name, email, telephone, city, subject, content } = formData;
     setFormErrors({ name: false, telephone: false, content: false });
+    setStatusMessage({ message: '', code: null });
     let hasError = false;
 
     if (!name.trim()) {
@@ -88,12 +93,10 @@ export const Contact: React.FC = () => {
 
     const reCAPTCHAToken = await reCAPTCHARef.current?.executeAsync();
     reCAPTCHARef.current?.reset();
+    setIsLoading(true);
 
-    const response = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
+    const { status } = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
       body: JSON.stringify({
         reCAPTCHAToken,
         name: name,
@@ -105,10 +108,22 @@ export const Contact: React.FC = () => {
       }),
     });
 
-    console.log(response);
+    const statusText: { [index: number]: () => void } = {
+      200: () => setStatusMessage({ message: 'E-mail enviado com sucesso!', code: status }),
+      400: () => setStatusMessage({ message: 'Todos os campos são necessários!', code: status }),
+      403: () => setStatusMessage({ message: 'Tente novamente mais tarde.', code: status }),
+      500: () =>
+        setStatusMessage({
+          message: 'Ocorreu algum problema durante o envio do e-mail.',
+          code: status,
+        }),
+    };
 
-    setContactMessage({ message: response.statusText, code: response.status });
-    setTimeout(() => setContactMessage({ message: '', code: null }), 5000);
+    setIsLoading(false);
+    statusText[status]();
+
+    setFormData((prev) => ({ ...prev, name: '', email: '', telephone: '', content: '' }));
+    setTimeout(() => setStatusMessage({ message: '', code: null }), 5000);
   };
 
   return (
@@ -193,23 +208,36 @@ export const Contact: React.FC = () => {
           <label htmlFor='content' className={styles.messageText}>
             Mensagem
           </label>
-          <textarea
-            required
-            id='content'
-            onChange={handleChange}
-            value={formData.content}
-            className={styles.messageContent}
-          />
+          <div className={styles.contentWrapper}>
+            <textarea
+              required
+              id='content'
+              onChange={handleChange}
+              value={formData.content}
+              className={styles.messageContent}
+            />
+            {isLoading && (
+              <div className={styles.spinnerWrapper}>
+                <Image
+                  width={60}
+                  height={60}
+                  alt='loading-spinner'
+                  className={styles.spinner}
+                  src='/logos/svgs/loadingSpinner.svg'
+                />
+              </div>
+            )}
+          </div>
           <div className={styles.contactMessageWrapper}>
             <span className={`${styles.errorMessage} ${formErrors.content && styles.showError}`}>
               Insira uma mensagem válida!
             </span>
             <span
               className={`${styles.contactResponse} ${contactMessageColor} ${
-                contactMessage.code && styles.showResponse
+                statusMessage.code && styles.showResponse
               }`}
             >
-              {contactMessage.message}
+              {statusMessage.message}
             </span>
           </div>
         </div>
