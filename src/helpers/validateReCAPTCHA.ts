@@ -4,11 +4,7 @@ type Validate = {
   hostname: string;
 };
 
-export const validateReCAPTCHA = async (token: string): Promise<boolean | Response> => {
-  return new Response('RESPONSE', {
-    statusText: 'HI',
-  });
-
+export const validateReCAPTCHA = async (token: string): Promise<boolean> => {
   try {
     const response = await fetch(
       `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
@@ -18,7 +14,7 @@ export const validateReCAPTCHA = async (token: string): Promise<boolean | Respon
 
     return success;
   } catch (err) {
-    throw new Response('OK', {
+    throw new Response(undefined, {
       status: 400,
       statusText: 'Ocorreu algum problema durante a verificação do ReCAPTCHA.',
     });

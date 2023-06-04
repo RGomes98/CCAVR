@@ -17,19 +17,19 @@ export async function POST(req: Request, res: Response) {
 
   const isFormFilled = Object.values(formData).every((value) => value.trim());
   if (!isFormFilled) {
-    return new Response('OK', {
+    return new Response(undefined, {
       status: 400,
       statusText: 'Todos os campos são necessários.',
     });
   }
 
-  const isHuman = await validateReCAPTCHA(formData.reCAPTCHAToken);
-  if (!isHuman) {
-    return new Response('OK', {
-      status: 403,
-      statusText: 'Tente novamente mais tarde.',
-    });
-  }
+  // const isHuman = await validateReCAPTCHA(formData.reCAPTCHAToken);
+  // if (!isHuman) {
+  //   return new Response(undefined, {
+  //     status: 403,
+  //     statusText: 'Tente novamente mais tarde.',
+  //   });
+  // }
 
   try {
     await transporter.sendMail({
@@ -54,12 +54,12 @@ export async function POST(req: Request, res: Response) {
       ],
     });
 
-    return new Response('OK', {
+    return new Response(undefined, {
       status: 200,
       statusText: 'E-mail enviado com sucesso!',
     });
   } catch (error) {
-    return new Response('OK', {
+    return new Response(undefined, {
       status: 400,
       statusText: 'Ocorreu algum problema durante o envio do e-mail.',
     });
