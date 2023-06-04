@@ -105,6 +105,8 @@ export const Contact: React.FC = () => {
       }),
     });
 
+    console.log(response);
+
     setContactMessage({ message: response.statusText, code: response.status });
     setTimeout(() => setContactMessage({ message: '', code: null }), 5000);
   };
