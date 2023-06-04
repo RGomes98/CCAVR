@@ -2,20 +2,11 @@ import { validateReCAPTCHA } from '@/helpers/validateReCAPTCHA';
 import { transporter, mailOptions } from '@/config/nodemailer';
 import { generateTemplate } from '@/utils/generateTemplate';
 
-type FormData = {
-  reCAPTCHAToken: string;
-  name: string;
-  email: string;
-  telephone: string;
-  city: string;
-  subject: string;
-  content: string;
-};
-
 export async function POST(req: Request, res: Response) {
-  const formData: FormData = await req.json();
+  const formData: { [index: string]: string } = await req.json();
+  Object.keys(formData).forEach((key) => (formData[key] = formData[key].trim()));
 
-  const isFormFilled = Object.values(formData).every((value) => value.trim());
+  const isFormFilled = Object.values(formData).every((value) => value);
   if (!isFormFilled) {
     return new Response(undefined, {
       status: 400,
