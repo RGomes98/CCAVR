@@ -523,11 +523,8 @@ export const generateTemplate = (
                                 <strong style="font-size: 14px; color: #999; line-height: 18px"
                                   >Telefone:</strong
                                 ><br />
-                                ${telephone
-                                  .charAt(0)
-                                  .concat(telephone.charAt(1))
-                                  .concat('-')
-                                  .concat(telephone.slice(2))}
+                                (${telephone.charAt(0).concat(telephone.charAt(1))}) 
+                                ${telephone.slice(2, 6)}-${telephone.slice(7)}
                               </p>
                             </div>
                           </td>
