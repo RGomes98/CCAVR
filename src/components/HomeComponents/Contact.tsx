@@ -89,7 +89,7 @@ export const Contact: React.FC = () => {
     const reCAPTCHAToken = await reCAPTCHARef.current?.executeAsync();
     reCAPTCHARef.current?.reset();
 
-    const { status, statusText } = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
+    const response = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ export const Contact: React.FC = () => {
       }),
     });
 
-    setContactMessage({ message: statusText, code: status });
+    setContactMessage({ message: response.statusText, code: response.status });
     setTimeout(() => setContactMessage({ message: '', code: null }), 5000);
   };
 

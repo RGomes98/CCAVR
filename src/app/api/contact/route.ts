@@ -2,7 +2,7 @@ import { validateReCAPTCHA } from '@/helpers/validateReCAPTCHA';
 import { transporter, mailOptions } from '@/config/nodemailer';
 import { generateTemplate } from '@/utils/generateTemplate';
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   const formData: { [index: string]: string } = await req.json();
   Object.keys(formData).forEach((key) => (formData[key] = formData[key].trim()));
 
