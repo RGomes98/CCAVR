@@ -36,7 +36,7 @@ export async function POST(req: Request, res: Response) {
       ...mailOptions,
       replyTo: formData.email,
       subject: formData.subject,
-      text: 'Olá. Este é um e-mail de contato da Casa da Criança e do Adolescente.',
+      text: `Olá. Este é um e-mail de ${formData.subject.toLowerCase()} da Casa da Criança e do Adolescente.`,
       html: generateTemplate(
         formData.name,
         formData.email,
@@ -55,7 +55,7 @@ export async function POST(req: Request, res: Response) {
     });
 
     return new Response(undefined, {
-      status: 300,
+      status: 200,
       statusText: 'E-mail enviado com sucesso!',
     });
   } catch (error) {
