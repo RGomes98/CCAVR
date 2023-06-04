@@ -25,7 +25,7 @@ export async function POST(req: Request, res: Response) {
 
   const isHuman = await validateReCAPTCHA(formData.reCAPTCHAToken);
   if (!isHuman) {
-    return new Response(undefined, {
+    return new Response('OK', {
       status: 403,
       statusText: 'Tente novamente mais tarde.',
     });
@@ -54,12 +54,12 @@ export async function POST(req: Request, res: Response) {
       ],
     });
 
-    return new Response(undefined, {
+    return new Response('OK', {
       status: 200,
       statusText: 'E-mail enviado com sucesso!',
     });
   } catch (error) {
-    return new Response(undefined, {
+    return new Response('OK', {
       status: 400,
       statusText: 'Ocorreu algum problema durante o envio do e-mail.',
     });
