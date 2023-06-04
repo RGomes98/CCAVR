@@ -86,13 +86,14 @@ export const Contact: React.FC = () => {
 
     if (hasError) return;
 
-    // return console.log('Block Email!');
-    //
     const reCAPTCHAToken = await reCAPTCHARef.current?.executeAsync();
     reCAPTCHARef.current?.reset();
 
-    const { statusText, status } = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
+    const { status, statusText } = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         reCAPTCHAToken,
         name: name,

@@ -215,7 +215,7 @@ export const generateTemplate = (
                                   font-weight: bold;
                                 "
                               >
-                                E-mail de ${subject}<br />
+                                E-mail de ${subject.toLowerCase()}<br />
                                 enviado por ${name}.
                               </h1>
                             </div>
