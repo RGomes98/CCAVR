@@ -14,9 +14,6 @@ export const validateReCAPTCHA = async (token: string): Promise<boolean> => {
 
     return success;
   } catch (err) {
-    throw new Response(undefined, {
-      status: 400,
-      statusText: 'Ocorreu algum problema durante a verificação do ReCAPTCHA.',
-    });
+    throw new Response(undefined, { status: 500 });
   }
 };
