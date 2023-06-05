@@ -5,17 +5,17 @@
   display: flex;
   text-align: center;
   align-items: center;
-  padding: 8rem 0 14rem;
+  padding: 6rem 0 14rem;
   flex-direction: column;
 }
 
 .videoSection {
-  gap: 6rem;
   width: 100%;
   display: flex;
   max-width: 90%;
   margin-bottom: 8rem;
   flex-direction: column;
+  gap: var.$testimonials-gap-clamp;
 }
 
 .videoWrapper {
@@ -53,7 +53,6 @@
 .linkWrapper {
   gap: 1rem;
   width: 90%;
-  border: none;
   display: flex;
   margin-top: 4rem;
   max-width: 25rem;
