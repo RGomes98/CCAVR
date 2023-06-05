@@ -1,4 +1,4 @@
-import styles from '../../stylesheets/components/TestimonialsComponents/Description.module.scss';
+import styles from '../../stylesheets/components/TestimonialsComponentsStyles/Description.module.scss';
 
 export const Description: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 import { ArrowRight as LogoArrowRight } from '../SVGs/ArrowRight';
 import { Youtube as LogoYoutube } from '../SVGs/Youtube';
 
-import styles from '../../stylesheets/components/TestimonialsComponents/Testimonial.module.scss';
+import styles from '../../stylesheets/components/TestimonialsComponentsStyles/Testimonial.module.scss';
 
 export const Testimonial: React.FC = () => {
   const thumbnailTime = '#t=0.8';
@@ -42,7 +42,7 @@ export const Testimonial: React.FC = () => {
         </div>
       </div>
       <h2 className={styles.heading}>Veja mais Histórias Inspiradoras em nosso Canal do YouTube</h2>
-      <button className={styles.linkWrapper}>
+      <div className={styles.linkWrapper}>
         <LogoYoutube />
         <p className={styles.linkHeading}>Casa da Criança e do Adolescente no Youtube</p>
         <a className={styles.link} href='https://www.youtube.com/@casadacriancaedoadolescent351'>
@@ -51,7 +51,7 @@ export const Testimonial: React.FC = () => {
             <LogoArrowRight />
           </div>
         </a>
-      </button>
+      </div>
     </div>
   );
 };
