@@ -1,0 +1,149 @@
+@use '../../variables' as var;
+
+.container {
+  gap: 6rem;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 6rem 0 18rem;
+  flex-direction: column;
+  color: var.$primary-blue;
+}
+
+.councilWrapper {
+  gap: 4rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.detailWrapper {
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-weight: 400;
+  letter-spacing: -0.1rem;
+  font-size: var.$transparency-heading-clamp;
+}
+
+.nameWrapper {
+  gap: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: var.$medium-text;
+}
+
+.boldName {
+  font-weight: 600;
+  font-size: var.$medium-text;
+}
+
+.statuteWrapper {
+  gap: 3.5rem;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.statuteWrapper .links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.statuteWrapper .linkWrapper {
+  width: 100%;
+  max-width: 20rem;
+  min-width: 18rem;
+}
+
+.statuteWrapper .linkText {
+  gap: 0.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.links {
+  gap: 4rem;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 20rem));
+}
+
+.linkWrapper {
+  gap: 1rem;
+  height: 17rem;
+  display: flex;
+  color: var.$white;
+  align-items: center;
+  border-radius: 0.4rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 2rem 2.5rem;
+  transition: scale 0.3s ease;
+  box-shadow: var.$medium-box-shadow;
+  background-color: var.$secondary-blue;
+}
+
+.linkWrapper {
+  svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: var.$white;
+  }
+}
+
+.linkWrapper:hover {
+  scale: 1.03;
+}
+
+.linkText {
+  max-width: 85%;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var.$white;
+  font-size: var.$big-text;
+}
+
+.link {
+  gap: 0.6rem;
+  display: flex;
+  color: inherit;
+  font-weight: 500;
+  align-items: center;
+  font-family: inherit;
+  text-decoration: none;
+  font-size: var.$medium-text;
+}
+
+.arrowWrapper {
+  width: 1.4rem;
+  display: flex;
+  height: 1.4rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: var.$white;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: var.$secondary-blue;
+  }
+}
+
+.accountingWrapper {
+  gap: 3.5rem;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

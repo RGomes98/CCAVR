@@ -1,3 +1,12 @@
+import { Description } from '@/components/TransparencyComponents/Description';
+import { Accounting } from '@/components/TransparencyComponents/Accounting';
+import { Fragment } from 'react';
+
 export default function Transparency() {
-  return <h1>Transparency</h1>;
+  return (
+    <Fragment>
+      <Description />
+      <Accounting />
+    </Fragment>
+  );
 }
