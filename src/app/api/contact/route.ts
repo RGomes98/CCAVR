@@ -12,20 +12,15 @@ export async function POST(req: Request) {
   const isHuman = await validateReCAPTCHA(formData.reCAPTCHAToken);
   if (!isHuman) return new Response(undefined, { status: 403 });
 
+  const { name, email, telephone, city, subject, content } = formData;
+
   try {
     await transporter.sendMail({
       ...mailOptions,
       replyTo: formData.email,
       subject: formData.subject,
       text: `Olá. Este é um e-mail de ${formData.subject.toLowerCase()} da Casa da Criança e do Adolescente.`,
-      html: generateTemplate(
-        formData.name,
-        formData.email,
-        formData.telephone,
-        formData.city,
-        formData.subject,
-        formData.content
-      ),
+      html: generateTemplate(name, email, telephone, city, subject, content),
       attachments: [
         {
           cid: 'logoCCA',
