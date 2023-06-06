@@ -7,6 +7,7 @@
   padding: 4rem 0 16rem;
   flex-direction: column;
   background-color: var.$primary-blue;
+  filter: drop-shadow(var.$standard-box-shadow);
 }
 
 .heading {
