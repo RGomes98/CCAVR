@@ -24,7 +24,6 @@
   width: 100%;
   height: auto;
   max-width: 10rem;
-  filter: drop-shadow(var.$standard-box-shadow);
 }
 
 .hiddenButton {
@@ -32,8 +31,8 @@
   background-color: transparent;
 
   svg {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     cursor: pointer;
     fill: var.$white;
     animation: rotate forwards 0.5s;

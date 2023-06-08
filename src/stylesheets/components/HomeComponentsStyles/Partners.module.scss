@@ -32,7 +32,7 @@
   padding: 0.5rem;
   max-width: 15rem;
   transition: scale 0.2s ease;
-  filter: drop-shadow(var.$light-box-shadow);
+  filter: drop-shadow(var.$heavy-box-shadow);
 }
 
 .logo:hover {

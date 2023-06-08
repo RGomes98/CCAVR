@@ -69,9 +69,7 @@ export const Accounting: React.FC = () => {
           </div>
           <div className={styles.linkWrapper}>
             <LogoPDF />
-            <p className={styles.linkText}>
-              Ata De Eleição<span className={styles.boldName}> 2022</span>
-            </p>
+            <p className={styles.linkText}>Ata De Eleição</p>
             <a
               className={styles.link}
               href='https://drive.google.com/file/d/15jeS9DiAI8tCBCKVfKKrsf7avpIxQ1Q9/view?usp=sharing'

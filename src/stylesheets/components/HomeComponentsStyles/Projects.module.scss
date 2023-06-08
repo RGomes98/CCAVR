@@ -53,7 +53,7 @@
   border-radius: 0.4rem;
   justify-content: center;
   font-size: var.$regular-heading;
-  box-shadow: var.$heavy-box-shadow;
+  box-shadow: var.$standard-box-shadow;
   background-color: var.$secondary-blue;
   transition: scale 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -66,7 +66,6 @@
 
 .projectWrapper a:nth-child(1) {
   padding: 0;
-  background-color: var.$transparent-secondary-blue;
 }
 
 .logoCurumim {

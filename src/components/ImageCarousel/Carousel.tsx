@@ -33,7 +33,7 @@ export const Carousel: React.FC = () => {
           src='/logos/svgs/institution/logoCCA.svg'
         />
       )}
-      <span className={styles.cloud} />
+      <div className={styles.cloud} />
     </div>
   );
 };

@@ -9,7 +9,7 @@ export const Projects: React.FC = () => {
   return (
     <div id='project' className={styles.container}>
       <div className={styles.textWrapper}>
-        <h2 className={styles.heading}>Projetos que Transformam</h2>
+        <h2 className={styles.heading}>Projetos que Transformam Vidas</h2>
         <p className={styles.text}>
           A Casa da Criança e do Adolescente mantém diversos projetos que se complementam e
           asseguram tratamento adequado às crianças e aos adolescentes.
