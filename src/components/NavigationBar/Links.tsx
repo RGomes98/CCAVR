@@ -16,8 +16,8 @@ export const Links: React.FC = () => {
 
   const isAtTransparency = pathname === '/transparencia';
   const isAtTestimonials = pathname === '/depoimentos';
+  const isAtFAQ = pathname === '/perguntas-frequentes';
   const isAtCurumim = pathname === '/curumim';
-  const isAtNews = pathname === '/noticias';
   const isAtHome = pathname === '/';
 
   const linkStyles = isAtCurumim ? styles.curumim : styles.home;
@@ -32,10 +32,14 @@ export const Links: React.FC = () => {
             </a>
           </li>
         )}
-        {!isAtNews && (
+        {!isAtFAQ && (
           <li className={styles.navItem}>
-            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href='/noticias'>
-              Notícias
+            <a
+              onClick={() => closeHiddenMenu()}
+              className={styles.navLink}
+              href='/perguntas-frequentes'
+            >
+              FAQ
             </a>
           </li>
         )}

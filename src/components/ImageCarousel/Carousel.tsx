@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 export const Carousel: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
-  useImageCarousel(carouselRef, 5000);
+  useImageCarousel(carouselRef, 8000);
   const pathname = usePathname();
 
   const isAtCurumim = pathname === '/curumim';

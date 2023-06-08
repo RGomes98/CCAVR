@@ -5,22 +5,22 @@
   display: flex;
   padding: 2rem;
   align-items: center;
-  margin: 20rem 0 4rem;
+  margin: 18rem 0 4rem;
   flex-direction: column;
 }
 
 .heading {
   font-weight: 500;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   color: var.$primary-blue;
   font-size: var.$section-heading-clamp;
 }
 
 .wrapper {
   display: grid;
+  gap: 0 2.6rem;
   max-width: 90%;
-  gap: 2rem 2.6rem;
   align-items: center;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, 15rem);
@@ -29,6 +29,7 @@
 .logo {
   width: 100%;
   height: auto;
+  padding: 0.5rem;
   max-width: 15rem;
   transition: scale 0.2s ease;
   filter: drop-shadow(var.$light-box-shadow);

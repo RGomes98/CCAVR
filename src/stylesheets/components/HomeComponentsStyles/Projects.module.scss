@@ -33,9 +33,9 @@
 }
 
 .projectWrapper {
+  gap: 5rem;
   width: 90%;
   display: grid;
-  gap: 6rem 4rem;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, 24rem);
 }
@@ -46,6 +46,7 @@
   display: flex;
   padding: 2rem;
   cursor: pointer;
+  font-weight: 300;
   color: var.$white;
   align-items: center;
   font-family: inherit;
@@ -63,7 +64,7 @@
   box-shadow: var.$medium-box-shadow;
 }
 
-.projectWrapper :nth-child(1) {
+.projectWrapper a:nth-child(1) {
   padding: 0;
   background-color: var.$transparent-secondary-blue;
 }
@@ -127,7 +128,7 @@
   }
 
   .projectWrapper {
-    gap: 2rem;
+    gap: 3rem;
     grid-template-columns: repeat(auto-fill, 20rem);
   }
 }
