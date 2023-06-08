@@ -1,130 +1,17 @@
-import { validateTelephone } from '@/utils/validateTelephone';
-import { useRef, useState } from 'react';
+import { useForm } from '@/hooks/useForm';
 import { cities } from '@/data/cities';
+import { useRef } from 'react';
 
 import styles from '../../stylesheets/components/HomeComponentsStyles/Contact.module.scss';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Image from 'next/image';
 
-type ChangeInput = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
-
-type Form = {
-  name: string;
-  email: string;
-  telephone: string;
-  city: string;
-  subject: string;
-  content: string;
-};
-
-type FormError = {
-  name: boolean;
-  telephone: boolean;
-  content: boolean;
-};
-
-type StatusMessage = {
-  code: null | number;
-  message: string;
-};
-
 export const Contact: React.FC = () => {
-  const [statusMessage, setStatusMessage] = useState<StatusMessage>({
-    code: null,
-    message: '',
-  });
-
-  const [formErrors, setFormErrors] = useState<FormError>({
-    name: false,
-    telephone: false,
-    content: false,
-  });
-
-  const [formData, setFormData] = useState<Form>({
-    name: '',
-    email: '',
-    telephone: '',
-    city: '',
-    subject: '',
-    content: '',
-  });
-
-  const [isLoading, setIsLoading] = useState(false);
-
-  const contactMessageColor = statusMessage.code === 200 && styles.successMessage;
   const reCAPTCHARef = useRef<ReCAPTCHA>(null);
+  const { formData, formErrors, statusMessage, isLoading, isError, handleChange, handleSubmit } =
+    useForm(reCAPTCHARef);
 
-  const handleChange = (e: React.ChangeEvent<ChangeInput>) => {
-    const telephoneLength = 11;
-
-    const { value } = e.target;
-    const { id } = e.target;
-
-    if (id !== 'telephone') setFormData((prev) => ({ ...prev, [id]: value }));
-    if (id === 'telephone' && value.length <= telephoneLength) {
-      setFormData((prev) => ({ ...prev, [id]: value }));
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const { name, email, telephone, city, subject, content } = formData;
-    setFormErrors({ name: false, telephone: false, content: false });
-    setStatusMessage({ message: '', code: null });
-    let hasError = false;
-
-    if (!name.trim()) {
-      hasError = true;
-      setFormErrors((prev) => ({ ...prev, name: true }));
-    }
-
-    if (!content.trim()) {
-      hasError = true;
-      setFormErrors((prev) => ({ ...prev, content: true }));
-    }
-
-    if (!validateTelephone(telephone)) {
-      hasError = true;
-      setFormErrors((prev) => ({ ...prev, telephone: true }));
-    }
-
-    if (hasError) return;
-
-    const reCAPTCHAToken = await reCAPTCHARef.current?.executeAsync();
-    reCAPTCHARef.current?.reset();
-    setIsLoading(true);
-
-    const { status } = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
-      method: 'POST',
-      body: JSON.stringify({
-        reCAPTCHAToken,
-        name: name,
-        email: email,
-        telephone: telephone,
-        city: city,
-        subject: subject,
-        content: content,
-      }),
-    });
-
-    const statusText: { [index: number]: () => void } = {
-      200: () => setStatusMessage({ message: 'E-mail enviado com sucesso!', code: status }),
-      400: () => setStatusMessage({ message: 'Todos os campos são necessários!', code: status }),
-      403: () => setStatusMessage({ message: 'Tente novamente mais tarde.', code: status }),
-      500: () =>
-        setStatusMessage({
-          message: 'Ocorreu algum problema durante o envio do e-mail.',
-          code: status,
-        }),
-    };
-
-    setIsLoading(false);
-    statusText[status]();
-
-    setFormData((prev) => ({ ...prev, name: '', email: '', telephone: '', content: '' }));
-    setTimeout(() => setStatusMessage({ message: '', code: null }), 5000);
-  };
+  const isResponseError = isError ? '' : styles.successMessage;
 
   return (
     <div id='contact' className={styles.container}>
@@ -162,21 +49,21 @@ export const Contact: React.FC = () => {
             />
           </div>
           <div className={styles.detail}>
-            <label htmlFor='telephone' className={styles.detailText}>
+            <label htmlFor='phone' className={styles.detailText}>
               Tel.Celular
             </label>
             <input
               required
               type='text'
               pattern='\d*'
-              id='telephone'
+              id='phone'
               onChange={handleChange}
-              value={formData.telephone}
+              value={formData.phone}
               className={styles.detailContent}
               placeholder='Digite o número de telefone com DDD.'
             />
 
-            <span className={`${styles.errorMessage} ${formErrors.telephone && styles.showError}`}>
+            <span className={`${styles.errorMessage} ${formErrors.phone && styles.showError}`}>
               Insira um número válido!
             </span>
           </div>
@@ -233,11 +120,11 @@ export const Contact: React.FC = () => {
               Insira uma mensagem válida!
             </span>
             <span
-              className={`${styles.contactResponse} ${contactMessageColor} ${
-                statusMessage.code && styles.showResponse
+              className={`${styles.contactResponse} ${isResponseError} ${
+                statusMessage && styles.showResponse
               }`}
             >
-              {statusMessage.message}
+              {statusMessage}
             </span>
           </div>
         </div>
