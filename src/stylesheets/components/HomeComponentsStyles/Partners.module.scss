@@ -39,6 +39,12 @@
   scale: 1.1;
 }
 
+@media (width <= 40.625rem) {
+  .wrapper {
+    gap: 2rem 2.6rem;
+  }
+}
+
 @media (width <= 30.625rem) {
   .container {
     margin: 2rem 0;

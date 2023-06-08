@@ -152,7 +152,7 @@
 }
 
 .recaptchaWrapper {
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   display: flex;
   padding: 0 0.4rem;
@@ -257,7 +257,7 @@
   }
 
   .recaptchaWrapper .button {
-    width: 100%;
+    width: 105%;
     height: 3.5rem;
     font-size: var.$medium-text;
   }

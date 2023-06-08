@@ -154,6 +154,10 @@
     grid-template-columns: repeat(auto-fill, minmax(17rem, 20rem));
   }
 
+  .project {
+    font-weight: 400;
+  }
+
   :is(.cloud) {
     display: none;
   }
