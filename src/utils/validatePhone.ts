@@ -68,14 +68,14 @@ const validDDD = [
   '99',
 ];
 
-export const validateTelephone = (telephone: string): boolean => {
-  const cleanedTelephone = telephone.replace(/\D/g, '');
-  if (cleanedTelephone.length !== 11) return false;
-  if (cleanedTelephone.charAt(2) !== '9') return false;
+export const validatePhone = (phone: string): boolean => {
+  const cleanedPhone = phone.replace(/\D/g, '');
+  if (cleanedPhone.length !== 11) return false;
+  if (cleanedPhone.charAt(2) !== '9') return false;
 
-  const DDD = cleanedTelephone.substring(0, 2);
+  const DDD = cleanedPhone.substring(0, 2);
   if (!validDDD.includes(DDD)) return false;
-  if (/^(\d)\1+$/.test(cleanedTelephone)) return false;
+  if (/^(\d)\1+$/.test(cleanedPhone)) return false;
 
   return true;
 };
