@@ -123,6 +123,10 @@
     gap: 2rem;
     flex-direction: column;
 
+    .navWrapper {
+      overflow-y: scroll;
+    }
+
     .navItem {
       font-weight: 400;
       font-size: var.$big-text;
@@ -144,6 +148,6 @@
   .navWrapper {
     gap: 1.5rem;
     height: 20vh;
-    overflow: scroll;
+    overflow-x: hidden;
   }
 }
