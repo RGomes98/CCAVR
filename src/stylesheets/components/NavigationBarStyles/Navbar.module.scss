@@ -8,15 +8,20 @@
   display: flex;
   position: sticky;
   align-items: center;
-  padding: 0.5rem 4.5rem;
+  padding: 0 6rem 1rem;
   justify-content: space-between;
-  background-color: var.$primary-blue;
+  background-color: var.$light-blue;
   filter: drop-shadow(var.$standard-box-shadow);
-  transition: padding 0.3s, flex-direction 0.3s, top 0.5s ease;
+  transition: top 0.5s ease, background-color 0.2s ease;
 }
 
 .showNavbar {
   top: 0;
+}
+
+.transparent {
+  backdrop-filter: blur(5px);
+  background-color: var.$transparent-white-navbar;
 }
 
 .primaryLogo {

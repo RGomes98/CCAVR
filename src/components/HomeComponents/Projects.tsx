@@ -36,12 +36,12 @@ export const Projects: React.FC = () => {
           );
         })}
       </div>
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
+      {/* <Cloud cloudStyle={styles.cloud} /> */}
+      {/* <Cloud cloudStyle={styles.cloud} /> */}
+      {/* <Cloud cloudStyle={styles.cloud} /> */}
+      {/* <Cloud cloudStyle={styles.cloud} /> */}
+      {/* <Cloud cloudStyle={styles.cloud} /> */}
+      {/* <Cloud cloudStyle={styles.cloud} /> */}
     </div>
   );
 };

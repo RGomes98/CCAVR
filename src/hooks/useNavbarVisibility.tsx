@@ -19,5 +19,5 @@ export const useNavbarVisibility = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
-  return { isScrollDownward };
+  return { isScrollDownward, oldScrollYPosition };
 };

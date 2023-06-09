@@ -22,12 +22,15 @@ export const Navbar: React.FC = () => {
   const isAtCurumim = pathname === '/curumim';
 
   const { isSmallerThanLimit } = useWindowSize(isAtCurumim ? 1380 : 1280, closeHiddenMenu);
-  const { isScrollDownward } = useNavbarVisibility();
+  const { isScrollDownward, oldScrollYPosition } = useNavbarVisibility();
+
+  const navbarTransparency = oldScrollYPosition > 250 ? styles.transparent : '';
+  const showNavbar = isScrollDownward
+    ? styles.container
+    : `${styles.container} ${styles.showNavbar}`;
 
   return (
-    <nav
-      className={isScrollDownward ? styles.container : `${styles.container} ${styles.showNavbar}`}
-    >
+    <nav className={`${showNavbar} ${navbarTransparency}`}>
       {isAtCurumim ? (
         <Image
           width={160}
@@ -53,10 +56,6 @@ export const Navbar: React.FC = () => {
         </button>
       )}
       <HiddenMenu />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
     </nav>
   );
 };

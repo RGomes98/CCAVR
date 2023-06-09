@@ -1,22 +1,25 @@
 // Color
+$black: hsl(0, 0%, 15%);
 $grey: hsl(0, 0%, 68%);
 $red: hsl(0, 100%, 64%);
 $white: hsl(0, 0%, 100%);
 $blue: hsl(203, 90%, 52%);
 $green: hsl(152, 80%, 40%);
-$light-blue: hsl(0, 0%, 96%);
-$dark-blue: hsl(203, 90%, 46%);
-$primary-blue: hsl(203, 90%, 36%);
-$secondary-blue: hsl(203, 90%, 50%);
+$light-blue: hsl(0, 0%, 98%);
+$dark-blue: hsl(203, 90%, 30%);
+$primary-blue: hsl(204, 61%, 52%);
+$light-green: hsl(172, 71%, 36%);
+$secondary-blue: hsl(204, 61%, 68%);
 
 //Transparent Color
 $transparent-white: hsl(0, 0%, 100%, 0.3);
 $transparent-white-hover: hsl(0, 0%, 100%, 0.5);
 $transparent-blue-hover: hsl(197, 51%, 64%, 0.5);
+$transparent-white-navbar: hsl(0, 0%, 96%, 0.9);
 $transparent-secondary-blue: hsl(197, 51%, 40%, 0.3);
 
 //Font Color
-$black-font: hsl(0, 0%, 20%);
+$black-font: hsl(0, 0%, 25%);
 $blue-font: hsl(197, 51%, 36%);
 $dark-blue-font: hsl(197, 51%, 25%);
 

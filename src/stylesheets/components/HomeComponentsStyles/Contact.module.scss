@@ -8,6 +8,12 @@
   flex-direction: column;
   background-color: var.$primary-blue;
   filter: drop-shadow(var.$standard-box-shadow);
+  background-image: linear-gradient(-45deg, transparent 75%, var.$secondary-blue 75%),
+    linear-gradient(45deg, transparent 75%, var.$secondary-blue 75%),
+    linear-gradient(-135deg, transparent 75%, var.$secondary-blue 75%),
+    linear-gradient(135deg, transparent 75%, var.$secondary-blue 75%);
+  background-size: 4rem 4rem;
+  background-position: 2rem 0, 2rem 0, 0 0, 0 0;
 }
 
 .heading {
@@ -212,12 +218,12 @@
 
 .mailto {
   word-break: break-all;
-  color: var.$blue-font;
+  color: var.$primary-blue;
   transition: color 0.2s ease;
 }
 
 .mailto:hover {
-  color: var.$dark-blue-font;
+  color: var.$dark-blue;
 }
 
 @media (width <= 43.75rem) {

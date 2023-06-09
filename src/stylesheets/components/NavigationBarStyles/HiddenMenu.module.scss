@@ -16,6 +16,13 @@
   border-radius: 0 0 0.4rem 0.4rem;
 }
 
+.container {
+  .wrapper > div,
+  .wrapper ul {
+    margin-top: 0;
+  }
+}
+
 .visible {
   transform: translateX(0);
 }

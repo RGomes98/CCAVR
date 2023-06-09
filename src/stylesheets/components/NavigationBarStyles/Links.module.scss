@@ -4,6 +4,7 @@
   gap: 2.5rem;
   display: flex;
   list-style: none;
+  margin-top: 1rem;
   align-items: center;
   animation: fadeIn forwards 0.4s;
 }
@@ -21,7 +22,8 @@
 }
 
 .navLink {
-  color: var.$white;
+  font-weight: 400;
+  color: var.$black-font;
   text-decoration: none;
   text-shadow: var.$light-box-shadow;
 }
@@ -29,6 +31,7 @@
 .secondaryWrapper {
   gap: 2rem;
   display: flex;
+  margin-top: 1rem;
   align-items: center;
   animation: fadeIn forwards 0.4s;
 }
@@ -45,7 +48,7 @@
   transition: filter 0.3s ease;
 
   svg {
-    fill: var.$white;
+    fill: var.$black;
     filter: drop-shadow(var.$standard-box-shadow);
   }
 }
@@ -79,7 +82,7 @@
   border-radius: 0.2rem;
   animation: fadeIn forwards 0.4s;
   box-shadow: var.$standard-box-shadow;
-  background-color: var.$secondary-blue;
+  background-color: #ff4747;
   transition: background-color 0.2s ease;
 }
 

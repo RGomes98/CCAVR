@@ -33,7 +33,7 @@
   user-select: none;
   transition: all 0.3s;
   border-radius: 0.4rem;
-  margin: 8rem 0 0 8.5rem;
+  margin: 6rem 0 0 8.5rem;
   box-shadow: var.$standard-box-shadow;
   background-color: var.$transparent-white;
   backdrop-filter: blur(10px) drop-shadow(var.$standard-box-shadow);
@@ -95,7 +95,7 @@
 
 @media (height <= 48rem) {
   .imageCarousel {
-    padding: 6rem 0 16rem;
+    padding: 4rem 0 17rem;
   }
 
   .cloud {
