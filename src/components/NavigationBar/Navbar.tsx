@@ -6,7 +6,6 @@ import { Close as LogoClose } from '../SVGs/Close';
 import { Bars as LogoOpen } from '../SVGs/Bars';
 import { usePathname } from 'next/navigation';
 import { useStore } from '../../store/store';
-import { Cloud } from '../CloudSlice/Cloud';
 import { HiddenMenu } from './HiddenMenu';
 import { Links } from './Links';
 

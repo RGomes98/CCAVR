@@ -4,17 +4,13 @@ import { Instagram as LogoInstagram } from '../../components/SVGs/Instagram';
 import { Facebook as LogoFacebook } from '../../components/SVGs/Facebook';
 import { Youtube as LogoYoutube } from '../../components/SVGs/Youtube';
 import { usePathname } from 'next/navigation';
-import { Cloud } from '../CloudSlice/Cloud';
 
 import styles from '../../stylesheets/components/FooterStyles/Footer.module.scss';
-
-type FooterColors = 'Light' | 'Dark';
 
 export const Footer: React.FC = () => {
   const pathname = usePathname();
   const isAtHomeOrNews = pathname === '/' || pathname === '/noticias';
   const FooterColor = isAtHomeOrNews ? styles.lightColor : styles.darkColor;
-
   const currentYear = new Date().getUTCFullYear();
 
   return (
@@ -36,11 +32,6 @@ export const Footer: React.FC = () => {
       <p className={styles.text}>
         © {currentYear} Casa da Criança e do Adolescente. - CNPJ:01.375.045/0001-03.
       </p>
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
     </footer>
   );
 };

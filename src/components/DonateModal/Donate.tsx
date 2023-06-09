@@ -1,7 +1,6 @@
 import { Close as LogoClose } from '../SVGs/Close';
 import { useModal } from '../../hooks/useModal';
 import { useStore } from '../../store/store';
-import { Cloud } from '../CloudSlice/Cloud';
 import { useRef } from 'react';
 
 import styles from '../../stylesheets/components/DonateModalStyles/Donate.module.scss';
@@ -64,14 +63,6 @@ export const Donate: React.FC = () => {
       <button className={styles.closeButton} onClick={toggleDonateModal}>
         <LogoClose />
       </button>
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
-      <Cloud cloudStyle={styles.cloud} />
     </dialog>
   );
 };

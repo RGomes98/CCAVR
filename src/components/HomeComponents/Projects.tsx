@@ -1,6 +1,5 @@
 import { projectDescription } from '../../data/projectDescription';
 import { Project } from '../ProjectModal/Project';
-import { Cloud } from '../CloudSlice/Cloud';
 
 import styles from '../../stylesheets/components/HomeComponentsStyles/Projects.module.scss';
 import Image from 'next/image';
@@ -36,12 +35,6 @@ export const Projects: React.FC = () => {
           );
         })}
       </div>
-      {/* <Cloud cloudStyle={styles.cloud} /> */}
-      {/* <Cloud cloudStyle={styles.cloud} /> */}
-      {/* <Cloud cloudStyle={styles.cloud} /> */}
-      {/* <Cloud cloudStyle={styles.cloud} /> */}
-      {/* <Cloud cloudStyle={styles.cloud} /> */}
-      {/* <Cloud cloudStyle={styles.cloud} /> */}
     </div>
   );
 };
