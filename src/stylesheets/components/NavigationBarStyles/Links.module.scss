@@ -71,8 +71,8 @@
   flex-direction: column;
 
   svg {
-    fill: var.$black;
     position: absolute;
+    fill: var.$black-font;
     transition: transform 0.2s ease;
   }
 
