@@ -7,6 +7,7 @@ import { useStore } from '../../store/store';
 import { Fragment } from 'react';
 
 import styles from '../../stylesheets/components/NavigationBarStyles/Links.module.scss';
+import Link from 'next/link';
 
 export const Links: React.FC = () => {
   const isDonateModalOpen = useStore((state) => state.isDonateModalOpen);
@@ -27,70 +28,74 @@ export const Links: React.FC = () => {
       <ul className={`${styles.navWrapper} ${linkStyles}`}>
         {!isAtHome && (
           <li className={styles.navItem}>
-            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href='/'>
+            <Link onClick={() => closeHiddenMenu()} className={styles.navLink} href='/'>
               Início
-            </a>
+            </Link>
           </li>
         )}
         {!isAtFAQ && (
           <li className={styles.navItem}>
-            <a
+            <Link
               onClick={() => closeHiddenMenu()}
               className={styles.navLink}
               href='/perguntas-frequentes'
             >
               FAQ
-            </a>
+            </Link>
           </li>
         )}
         <li className={styles.navItem}>
-          <a onClick={() => closeHiddenMenu()} href='/#project' className={styles.navLink}>
+          <Link onClick={() => closeHiddenMenu()} href='/#project' className={styles.navLink}>
             Projetos
-          </a>
+          </Link>
         </li>
         {!isAtTestimonials && (
           <li className={styles.navItem}>
-            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href='/depoimentos'>
+            <Link onClick={() => closeHiddenMenu()} className={styles.navLink} href='/depoimentos'>
               Depoimentos
-            </a>
+            </Link>
           </li>
         )}
         {!isAtTransparency && (
           <li className={styles.navItem}>
-            <a onClick={() => closeHiddenMenu()} className={styles.navLink} href='/transparencia'>
+            <Link
+              onClick={() => closeHiddenMenu()}
+              className={styles.navLink}
+              href='/transparencia'
+            >
               Transparência
-            </a>
+            </Link>
           </li>
         )}
         <li className={styles.navItem}>
-          <a onClick={() => closeHiddenMenu()} className={styles.navLink} href='/#contact'>
+          <Link onClick={() => closeHiddenMenu()} className={styles.navLink} href='/#contact'>
             Contato
-          </a>
+          </Link>
         </li>
       </ul>
       <div className={`${styles.secondaryWrapper} ${linkStyles}`}>
         <div className={styles.socialWrapper}>
-          <a
+          <Link
             className={styles.socialLink}
             href='https://www.facebook.com/CasadaCriancaedoAdolescenteOficial/'
           >
             <LogoFacebook />
             <LogoFacebook />
-          </a>
-          <a
+          </Link>
+          <Link
             className={styles.socialLink}
             href='https://www.instagram.com/casadacriancaedoadolescente/'
           >
             <LogoInstagram />
             <LogoInstagram />
-          </a>
-          <a
+          </Link>
+          <Link
             className={styles.socialLink}
             href='https://www.youtube.com/@casadacriancaedoadolescent351'
           >
             <LogoYoutube />
             <LogoYoutube />
-          </a>
+          </Link>
         </div>
         <button onClick={toggleDonateModal} className={styles.donateButton}>
           DOE AGORA
