@@ -53,7 +53,7 @@
 
 .triangle:nth-of-type(1),
 .triangle:nth-of-type(4) {
-  top: 3rem;
+  top: 3.2rem;
 }
 
 .triangle:nth-of-type(2),
@@ -64,7 +64,7 @@
 }
 .triangle:nth-of-type(3),
 .triangle:nth-of-type(6) {
-  bottom: 3rem;
+  bottom: 3.2rem;
 }
 
 @media (width <= 46.875rem) {
