@@ -4,7 +4,7 @@
   right: 0;
   z-index: -1;
   width: 100%;
-  top: 9.92rem;
+  top: 8.92rem;
   display: flex;
   padding: 2rem;
   position: absolute;
@@ -36,12 +36,16 @@
   flex-direction: column;
 }
 
+.wrapper div:last-child {
+  gap: 2rem;
+}
+
 @media (width <= 22.8rem) {
   .container {
-    top: 10.5rem;
     width: 100vw;
     height: 100vh;
+    padding: 2rem;
+    top: 10.95rem;
     max-width: unset;
-    padding: 6rem 2rem 0;
   }
 }

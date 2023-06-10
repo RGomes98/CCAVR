@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
   const pathname = usePathname();
   const isAtCurumim = pathname === '/curumim';
 
-  const { isSmallerThanLimit } = useWindowSize(isAtCurumim ? 1380 : 1280, closeHiddenMenu);
+  const { isSmallerThanLimit } = useWindowSize(isAtCurumim ? 1500 : 1280, closeHiddenMenu);
   const { isScrollDownward, oldScrollYPosition } = useNavbarVisibility();
 
   const navbarTransparency =
