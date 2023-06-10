@@ -11,8 +11,8 @@
 
   --s: 6.25rem;
   --s: 1.25rem;
-  --c1: hsl(204, 61%, 68%);
-  --c2: hsl(204, 61%, 52%);
+  --c1: hsl(204, 61%, 68%, 0.9);
+  --c2: hsl(204, 61%, 52%, 0.9);
   --c: #0000 46.46%, var(--c1) 0 53.53%, #0000 0;
   --d: calc(10 * var(--s)) calc(10 * var(--s));
   --g: /var(--d) conic-gradient(at 40% 40%, #0000 75%, var(--c1) 0);
@@ -29,7 +29,6 @@
   color: var.$white;
   margin-bottom: 4rem;
   font-size: var.$section-heading-clamp;
-  filter: drop-shadow(var.$standard-text-shadow);
 }
 
 .form {
@@ -41,7 +40,7 @@
   padding: 1.5rem 2.5rem;
   flex-direction: column;
   color: var.$black-font;
-  background-color: var.$light-blue;
+  background-color: var.$light-grey;
   box-shadow: var.$standard-box-shadow;
 }
 
