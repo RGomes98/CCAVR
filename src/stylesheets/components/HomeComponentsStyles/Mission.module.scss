@@ -8,13 +8,13 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  color: var.$primary-blue;
 }
 
 .heading {
   font-weight: 500;
   text-align: center;
   margin-bottom: 4rem;
+  color: var.$primary-blue;
   font-size: var.$section-heading-clamp;
 }
 
@@ -27,6 +27,7 @@
 
 .text {
   margin-bottom: 3.5rem;
+  color: var.$black-font;
   font-size: var.$text-clamp;
 }
 

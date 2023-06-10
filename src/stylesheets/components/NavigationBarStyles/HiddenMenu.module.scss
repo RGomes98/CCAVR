@@ -6,14 +6,15 @@
   width: 100%;
   top: 9.92rem;
   display: flex;
+  padding: 2rem;
   position: absolute;
   max-width: 21.875rem;
   justify-content: center;
-  padding: 4.5rem 2rem 2rem;
   transition: transform 0.6s;
   transform: translateX(200%);
-  background-color: var.$blue;
+  background-color: var.$light-blue;
   border-radius: 0 0 0.4rem 0.4rem;
+  border-top: 1px solid var.$black-font;
 }
 
 .container {
@@ -28,7 +29,7 @@
 }
 
 .wrapper {
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
   display: flex;
   position: relative;

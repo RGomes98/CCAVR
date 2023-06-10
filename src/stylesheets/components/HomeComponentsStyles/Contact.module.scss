@@ -4,16 +4,24 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 4rem 0 16rem;
+  padding: 4rem 0 8rem;
   flex-direction: column;
   background-color: var.$primary-blue;
   filter: drop-shadow(var.$standard-box-shadow);
-  background-image: linear-gradient(-45deg, transparent 75%, var.$secondary-blue 75%),
-    linear-gradient(45deg, transparent 75%, var.$secondary-blue 75%),
-    linear-gradient(-135deg, transparent 75%, var.$secondary-blue 75%),
-    linear-gradient(135deg, transparent 75%, var.$secondary-blue 75%);
-  background-size: 4rem 4rem;
-  background-position: 2rem 0, 2rem 0, 0 0, 0 0;
+
+  --s: 6.25rem;
+  --s: 1.25rem;
+  --c1: hsl(204, 61%, 68%);
+  --c2: hsl(204, 61%, 52%);
+  --c: #0000 46.46%, var(--c1) 0 53.53%, #0000 0;
+  --d: calc(10 * var(--s)) calc(10 * var(--s));
+  --g: /var(--d) conic-gradient(at 40% 40%, #0000 75%, var(--c1) 0);
+
+  background: conic-gradient(at 40% 40%, #0000 75%, var(--c2) 0) calc(9 * var(--s))
+      calc(9 * var(--s)) / calc(5 * var(--s)) calc(5 * var(--s)),
+    calc(8 * var(--s)) calc(8 * var(--s)) var(--g), calc(3 * var(--s)) calc(3 * var(--s)) var(--g),
+    linear-gradient(45deg, var(--c)) 0 0 / var(--d),
+    linear-gradient(-45deg, var(--c)) 0 0 / var(--d) var(--c2);
 }
 
 .heading {
@@ -21,6 +29,7 @@
   color: var.$white;
   margin-bottom: 4rem;
   font-size: var.$section-heading-clamp;
+  filter: drop-shadow(var.$standard-text-shadow);
 }
 
 .form {
@@ -176,16 +185,59 @@
   cursor: pointer;
   max-width: 16rem;
   color: var.$white;
+  position: relative;
+  transition: all 0.5s;
   font-family: inherit;
   border-radius: 0.2rem;
   font-size: var.$regular-text;
+  background-color: var.$dark-blue;
   box-shadow: var.$standard-box-shadow;
-  background-color: var.$secondary-blue;
-  transition: background-color 0.2s ease;
 }
 
-.button:hover {
-  background-color: var.$dark-blue;
+.buttonText {
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  color: var.$white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.button::before {
+  top: 0;
+  left: 0;
+  z-index: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.3s;
+  border-radius: 0.2rem;
+  background-color: var.$primary-blue;
+}
+
+.button:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+
+.button::after {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.3s;
+  transform: scale(1.2, 1.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.button:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
 }
 
 .bar {

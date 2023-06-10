@@ -23,7 +23,9 @@ export const Navbar: React.FC = () => {
   const { isSmallerThanLimit } = useWindowSize(isAtCurumim ? 1380 : 1280, closeHiddenMenu);
   const { isScrollDownward, oldScrollYPosition } = useNavbarVisibility();
 
-  const navbarTransparency = oldScrollYPosition > 250 ? styles.transparent : '';
+  const navbarTransparency =
+    oldScrollYPosition > 250 && !isHiddenMenuOpen ? styles.transparent : '';
+
   const showNavbar = isScrollDownward
     ? styles.container
     : `${styles.container} ${styles.showNavbar}`;

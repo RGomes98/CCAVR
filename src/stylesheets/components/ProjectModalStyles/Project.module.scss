@@ -14,7 +14,7 @@
   translate: -50% -50%;
   border-radius: 0.6rem;
   flex-direction: column;
-  background-color: var.$secondary-blue;
+  background-color: var.$blue;
 }
 
 .modal[open] {
@@ -24,6 +24,11 @@
 .modal::backdrop {
   backdrop-filter: blur(1px);
   background-color: var.$light-shadow;
+}
+
+.text {
+  font-weight: 300;
+  font-size: var.$regular-heading;
 }
 
 @keyframes modalFadeIn {

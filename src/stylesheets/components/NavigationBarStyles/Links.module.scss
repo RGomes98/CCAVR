@@ -10,26 +10,52 @@
 }
 
 .navItem {
-  font-weight: 300;
+  letter-spacing: 0;
   font-size: var.$navbar-clamp;
-  transition: filter 0.2s ease, scale 0.2s ease, transform 0.2s ease;
+  transition: letter-spacing 280ms ease-in-out;
 }
 
-.navItem:hover {
-  scale: 1.01;
-  transform: translateY(-2%);
-  filter: drop-shadow(0px 0px 8px var.$transparent-white-hover);
+.navItem:hover,
+.navItem:active {
+  letter-spacing: 0.125rem;
+}
+
+.navItem::before,
+.navItem::after {
+  width: 0;
+  bottom: 0px;
+  content: ' ';
+  display: block;
+  position: relative;
+  margin: 0.25rem auto;
+  backface-visibility: hidden;
+  transition: all 280ms ease-in-out;
+  border-top: 1px solid rgba(var.$white, 0);
+}
+
+.navItem:hover::before,
+.navItem:hover::after {
+  width: 100%;
+  backface-visibility: hidden;
+  border-color: var.$black-font;
+  transition: width 350ms ease-in-out;
+}
+
+.navItem:hover::before {
+  top: 0;
+  width: 100%;
+  bottom: auto;
 }
 
 .navLink {
-  font-weight: 400;
+  font-weight: 300;
   color: var.$black-font;
   text-decoration: none;
   text-shadow: var.$light-box-shadow;
 }
 
 .secondaryWrapper {
-  gap: 2rem;
+  gap: 2.5rem;
   display: flex;
   margin-top: 1rem;
   align-items: center;
@@ -43,31 +69,35 @@
 }
 
 .socialLink {
+  width: 2rem;
   display: flex;
+  height: 1.875rem;
+  overflow: hidden;
+  position: relative;
   align-items: center;
-  transition: filter 0.3s ease;
+  flex-direction: column;
 
   svg {
     fill: var.$black;
-    filter: drop-shadow(var.$standard-box-shadow);
+    position: absolute;
+    transition: transform 0.2s ease;
+  }
+
+  :nth-child(2) {
+    fill: var.$red;
+    bottom: -1.75rem;
+    pointer-events: none;
   }
 }
 
 .socialLink:hover {
-  filter: drop-shadow(0px 0px 8px var.$transparent-white-hover);
-}
-
-.socialWrapper :nth-child(1) {
   svg {
-    height: 1.75rem;
+    transform: translateY(-100%);
   }
 }
 
-.socialWrapper :nth-child(2),
-.socialWrapper :nth-child(3) {
-  svg {
-    height: 1.85rem;
-  }
+.socialWrapper svg {
+  height: 1.85rem;
 }
 
 .donateButton {
@@ -77,17 +107,38 @@
   cursor: pointer;
   font-weight: 500;
   color: var.$white;
+  position: relative;
   font-size: inherit;
   font-family: inherit;
-  border-radius: 0.2rem;
+  background-color: var.$red;
   animation: fadeIn forwards 0.4s;
   box-shadow: var.$standard-box-shadow;
-  background-color: #ff4747;
-  transition: background-color 0.2s ease;
+}
+
+.donateButton {
+  transition: 1s ease-in-out;
+
+  svg {
+    top: 0;
+    left: 0;
+    fill: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    stroke: var.$black;
+    stroke-dashoffset: 150;
+    stroke-dasharray: 150 480;
+    transition: 1s ease-in-out;
+  }
 }
 
 .donateButton:hover {
-  background-color: var.$dark-blue;
+  transition: 0.8s ease;
+  background: var.$primary-blue;
+}
+
+.donateButton:hover svg {
+  stroke-dashoffset: -480;
 }
 
 @keyframes fadeIn {
@@ -118,12 +169,20 @@
       height: 3.5rem;
       font-size: var.$medium-text;
     }
+
+    .donateButton svg {
+      display: none;
+    }
+
+    .donateButton:hover {
+      transition: 0.5s ease-in-out;
+    }
   }
 }
 
 @media (width <= 80rem) {
   .home {
-    gap: 2rem;
+    gap: 1rem;
     flex-direction: column;
 
     .navWrapper {
@@ -143,6 +202,14 @@
       width: 100%;
       height: 3.5rem;
       font-size: var.$medium-text;
+    }
+
+    .donateButton svg {
+      display: none;
+    }
+
+    .donateButton:hover {
+      transition: 0.5s ease-in-out;
     }
   }
 }

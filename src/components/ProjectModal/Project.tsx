@@ -16,7 +16,7 @@ export const Project: React.FC<{ name: string; description: string; projectStyle
   return (
     <Fragment>
       <button className={projectStyle} onClick={() => setIsProjectModalOpen(true)}>
-        {name}
+        <span className={styles.text}>{name}</span>
       </button>
       {isProjectModalOpen && (
         <dialog className={styles.modal} ref={modalRef}>

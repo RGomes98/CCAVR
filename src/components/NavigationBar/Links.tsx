@@ -75,11 +75,13 @@ export const Links: React.FC = () => {
             href='https://www.facebook.com/CasadaCriancaedoAdolescenteOficial/'
           >
             <LogoFacebook />
+            <LogoFacebook />
           </a>
           <a
             className={styles.socialLink}
             href='https://www.instagram.com/casadacriancaedoadolescente/'
           >
+            <LogoInstagram />
             <LogoInstagram />
           </a>
           <a
@@ -87,10 +89,15 @@ export const Links: React.FC = () => {
             href='https://www.youtube.com/@casadacriancaedoadolescent351'
           >
             <LogoYoutube />
+            <LogoYoutube />
           </a>
         </div>
         <button onClick={toggleDonateModal} className={styles.donateButton}>
           DOE AGORA
+          <svg viewBox='0 0 180 60'>
+            <polyline points='179,1 179,59 1,59 1,1 179,1' />
+            <polyline points='179,1 179,59 1,59 1,1 179,1' />
+          </svg>
         </button>
         {isDonateModalOpen && <Donate />}
       </div>

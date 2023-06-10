@@ -1,13 +1,13 @@
 @use '../../variables' as var;
 
 .container {
-  gap: 3rem;
+  gap: 1.5rem;
   width: 100%;
   display: flex;
   position: relative;
   align-items: center;
   flex-direction: column;
-  padding: 2rem 2rem 3rem;
+  padding: 3.5rem 0;
   justify-content: center;
   filter: drop-shadow(var.$standard-box-shadow);
 }
@@ -49,7 +49,7 @@
   align-items: center;
 
   svg {
-    fill: var.$primary-blue;
+    fill: var.$black-font;
     transition: fill 0.2s ease;
     filter: drop-shadow(var.$standard-box-shadow);
   }
@@ -57,7 +57,7 @@
 
 .wrapper a:hover {
   svg {
-    fill: var.$dark-blue;
+    fill: var.$red;
   }
 }
 
@@ -84,55 +84,8 @@
   z-index: 1;
   font-weight: 400;
   text-align: center;
+  color: var.$black-font;
   letter-spacing: -0.04rem;
-  color: var.$primary-blue;
   font-size: var.$medium-text;
   text-shadow: var.$standard-box-shadow;
-}
-
-.cloud {
-  width: 40rem;
-  height: 30rem;
-  position: absolute;
-  border-radius: 50%;
-  background-color: inherit;
-}
-
-.cloud:nth-of-type(1) {
-  left: -9rem;
-  bottom: -8.5rem;
-}
-
-.cloud:nth-of-type(2) {
-  left: 13rem;
-  bottom: -12.5rem;
-}
-.cloud:nth-of-type(3) {
-  bottom: -12.5rem;
-}
-.cloud:nth-of-type(4) {
-  right: 13rem;
-  bottom: -11.5rem;
-}
-.cloud:nth-of-type(5) {
-  right: -8rem;
-  bottom: -8.5rem;
-}
-
-@media (width <= 95rem) {
-  .cloud:nth-of-type(3) {
-    display: none;
-  }
-}
-
-@media (width <= 75.5rem) {
-  .cloud:nth-of-type(2) {
-    display: none;
-  }
-}
-
-@media (width <= 49.0625rem) {
-  .cloud:nth-of-type(1) {
-    display: none;
-  }
 }

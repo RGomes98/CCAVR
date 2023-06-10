@@ -14,8 +14,8 @@ $secondary-blue: hsl(204, 61%, 68%);
 //Transparent Color
 $transparent-white: hsl(0, 0%, 100%, 0.3);
 $transparent-white-hover: hsl(0, 0%, 100%, 0.5);
-$transparent-blue-hover: hsl(197, 51%, 64%, 0.5);
 $transparent-white-navbar: hsl(0, 0%, 96%, 0.9);
+$transparent-blue-hover: hsl(203, 90%, 52%, 0.5);
 $transparent-secondary-blue: hsl(197, 51%, 40%, 0.3);
 
 //Font Color
@@ -34,4 +34,4 @@ $medium-box-shadow: 3px 3px 12px $medium-shadow;
 $heavy-box-shadow: 3px 3px 8px $medium-shadow;
 
 //Text Shadow
-$standard-text-shadow: 3px 3px 2px $medium-shadow;
+$standard-text-shadow: 3px 3px 2px $light-shadow;

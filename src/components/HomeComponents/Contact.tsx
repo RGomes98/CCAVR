@@ -135,7 +135,9 @@ export const Contact: React.FC = () => {
             ref={reCAPTCHARef}
             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
           />
-          <button className={styles.button}>Enviar</button>
+          <button className={styles.button}>
+            <span className={styles.buttonText}>Enviar</span>
+          </button>
         </div>
         <span className={styles.bar}></span>
         <div className={styles.adressWrapper}>

@@ -5,7 +5,7 @@
   display: flex;
   text-align: center;
   align-items: center;
-  padding: 6rem 0 14rem;
+  padding: 6rem 0 8rem;
   flex-direction: column;
 }
 
@@ -63,7 +63,7 @@
   padding: 3rem 2rem 2.5rem;
   transition: scale 0.3s ease;
   box-shadow: var.$medium-box-shadow;
-  background-color: var.$secondary-blue;
+  background-color: var.$primary-blue;
 
   svg {
     width: 6rem;

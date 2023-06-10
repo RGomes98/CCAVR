@@ -3,18 +3,22 @@
 .container {
   width: 100%;
   display: flex;
-  padding: 4rem 0;
   color: var.$white;
   position: relative;
   align-items: center;
+  padding: 4rem 0 6rem;
   flex-direction: column;
   background-color: var.$primary-blue;
   filter: drop-shadow(var.$standard-box-shadow);
-  background-image: radial-gradient(circle, transparent 1rem, var.$primary-blue 1rem),
-    linear-gradient(var.$secondary-blue 0.5rem, transparent 0.5rem),
-    linear-gradient(90deg, var.$secondary-blue 0.5rem, transparent 0.5rem);
-  background-size: 5rem 5rem;
-  background-position: 5.25rem 5.25rem, 2.5rem 2.5rem, 2.5rem 2.5rem;
+
+  --s: 6.25rem; /* control the size */
+  --_g: #0000 83%, hsl(204, 61%, 68%) 85% 99%, #0000 101%;
+
+  background: radial-gradient(27% 29% at right, var(--_g)) calc(var(--s) / 2) var(--s),
+    radial-gradient(27% 29% at left, var(--_g)) calc(var(--s) / -2) var(--s),
+    radial-gradient(29% 27% at top, var(--_g)) 0 calc(var(--s) / 2),
+    radial-gradient(29% 27% at bottom, var(--_g)) 0 calc(var(--s) / -2) hsl(204, 61%, 52%);
+  background-size: calc(2 * var(--s)) calc(2 * var(--s));
 }
 
 .textWrapper {
@@ -30,11 +34,13 @@
 .heading {
   font-weight: 400;
   font-size: var.$section-heading-clamp;
+  filter: drop-shadow(var.$standard-text-shadow);
 }
 
 .text {
   font-weight: 300;
   font-size: var.$text-clamp;
+  filter: drop-shadow(var.$standard-text-shadow);
 }
 
 .projectWrapper {
@@ -51,22 +57,48 @@
   display: flex;
   padding: 2rem;
   cursor: pointer;
-  font-weight: 300;
   color: var.$white;
   align-items: center;
   font-family: inherit;
-  border-radius: 0.4rem;
   justify-content: center;
-  font-size: var.$regular-heading;
-  box-shadow: var.$standard-box-shadow;
-  background-color: var.$secondary-blue;
-  transition: scale 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var.$heavy-box-shadow;
 }
 
-.project:hover {
-  scale: 1.03;
-  transform: translateY(-2%);
-  box-shadow: var.$medium-box-shadow;
+.project {
+  z-index: 1;
+  position: relative;
+  transition: all 0.3s;
+  display: inline-block;
+
+  &:after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    content: '';
+    z-index: -2;
+    height: 100%;
+    position: absolute;
+    background-color: var.$secondary-blue;
+  }
+
+  &:before {
+    left: 0;
+    width: 0%;
+    bottom: 0;
+    content: '';
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    transition: all 0.3s;
+    background-color: var.$transparent-blue-hover;
+  }
+
+  &:hover {
+    color: var.$white;
+    &:before {
+      width: 100%;
+    }
+  }
 }
 
 .projectWrapper a:nth-child(1) {

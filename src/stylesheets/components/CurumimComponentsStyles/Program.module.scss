@@ -37,6 +37,7 @@
 
 .text {
   text-align: justify;
+  color: var.$black-font;
   font-size: var.$text-clamp;
 }
 
@@ -71,7 +72,7 @@
   padding: 3rem 2rem 2.5rem;
   transition: scale 0.3s ease;
   box-shadow: var.$medium-box-shadow;
-  background-color: var.$secondary-blue;
+  background-color: var.$primary-blue;
 
   svg {
     width: 6rem;
