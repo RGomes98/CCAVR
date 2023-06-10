@@ -6,6 +6,7 @@ import { Youtube as LogoYoutube } from '../../components/SVGs/Youtube';
 import { usePathname } from 'next/navigation';
 
 import styles from '../../stylesheets/components/FooterStyles/Footer.module.scss';
+import Link from 'next/link';
 
 export const Footer: React.FC = () => {
   const pathname = usePathname();
@@ -16,18 +17,18 @@ export const Footer: React.FC = () => {
   return (
     <footer className={`${styles.container} ${FooterColor}`}>
       <div className={styles.wrapper}>
-        <a
+        <Link
           className={styles.link}
           href='https://www.facebook.com/CasadaCriancaedoAdolescenteOficial/'
         >
           <LogoFacebook />
-        </a>
-        <a className={styles.link} href='https://www.instagram.com/casadacriancaedoadolescente/'>
+        </Link>
+        <Link className={styles.link} href='https://www.instagram.com/casadacriancaedoadolescente/'>
           <LogoInstagram />
-        </a>
-        <a className={styles.link} href='https://www.youtube.com/@casadacriancaedoadolescent351'>
+        </Link>
+        <Link className={styles.link} href='https://www.youtube.com/@casadacriancaedoadolescent351'>
           <LogoYoutube />
-        </a>
+        </Link>
       </div>
       <p className={styles.text}>
         © {currentYear} Casa da Criança e do Adolescente. - CNPJ:01.375.045/0001-03.

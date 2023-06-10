@@ -7,6 +7,7 @@ import { useWindowSize } from '@/hooks/useWindowSize';
 
 import styles from '../../stylesheets/components/CurumimComponentsStyles/Program.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const Program = () => {
   const { isSmallerThanLimit, windowWidth } = useWindowSize(1400);
@@ -70,22 +71,22 @@ export const Program = () => {
         <div className={styles.linkWrapper}>
           <LogoDonation />
           <p className={styles.linkText}>Apoie o Programa Curumim</p>
-          <a className={styles.link} href='https://www.instagram.com/p/CgndXgnr6nm/'>
+          <Link className={styles.link} href='https://www.instagram.com/p/CgndXgnr6nm/'>
             ACESSE JÁ
             <div className={styles.arrowWrapper}>
               <LogoArrowRight />
             </div>
-          </a>
+          </Link>
         </div>
         <div className={styles.linkWrapper}>
           <LogoInstagram />
           <p className={styles.linkText}>Siga o Programa Curumim no Instagram</p>
-          <a className={styles.link} href='https://www.instagram.com/programacurumim.vr/'>
+          <Link className={styles.link} href='https://www.instagram.com/programacurumim.vr/'>
             ACESSE JÁ
             <div className={styles.arrowWrapper}>
               <LogoArrowRight />
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

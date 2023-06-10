@@ -3,6 +3,7 @@ import { Project } from '../ProjectModal/Project';
 
 import styles from '../../stylesheets/components/HomeComponentsStyles/Projects.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const Projects: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ export const Projects: React.FC = () => {
         </p>
       </div>
       <div className={styles.projectWrapper}>
-        <a className={styles.project} href='/curumim'>
+        <Link className={styles.project} href='/curumim'>
           <Image
             src='/logos/svgs/institution/logoCurumim.svg'
             alt='logo-curumim'
@@ -23,7 +24,7 @@ export const Projects: React.FC = () => {
             width={384}
             height={288}
           />
-        </a>
+        </Link>
         {projectDescription.map(({ name, description }, idx) => {
           return (
             <Project

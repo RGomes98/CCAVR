@@ -1,6 +1,8 @@
-import styles from '../../stylesheets/components/TransparencyComponentsStyles/Accounting.module.scss';
 import { ArrowRight as LogoArrowRight } from '../SVGs/ArrowRight';
 import { PDF as LogoPDF } from '../SVGs/PDF';
+
+import styles from '../../stylesheets/components/TransparencyComponentsStyles/Accounting.module.scss';
+import Link from 'next/link';
 
 export const Accounting: React.FC = () => {
   return (
@@ -57,7 +59,7 @@ export const Accounting: React.FC = () => {
           <div className={styles.linkWrapper}>
             <LogoPDF />
             <p className={styles.linkText}>Estatuto Social</p>
-            <a
+            <Link
               className={styles.link}
               href='https://drive.google.com/file/d/1-7eTFknnzt7iG5oGapsRd1mVZjQZUMnN/view?usp=sharing'
             >
@@ -65,12 +67,12 @@ export const Accounting: React.FC = () => {
               <div className={styles.arrowWrapper}>
                 <LogoArrowRight />
               </div>
-            </a>
+            </Link>
           </div>
           <div className={styles.linkWrapper}>
             <LogoPDF />
             <p className={styles.linkText}>Ata De Eleição</p>
-            <a
+            <Link
               className={styles.link}
               href='https://drive.google.com/file/d/15jeS9DiAI8tCBCKVfKKrsf7avpIxQ1Q9/view?usp=sharing'
             >
@@ -78,7 +80,7 @@ export const Accounting: React.FC = () => {
               <div className={styles.arrowWrapper}>
                 <LogoArrowRight />
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -88,7 +90,7 @@ export const Accounting: React.FC = () => {
           <div className={styles.linkWrapper}>
             <LogoPDF />
             <p className={styles.linkText}>Balanço Patrimonial</p>
-            <a
+            <Link
               className={styles.link}
               href='https://drive.google.com/drive/folders/1kTs0wMODlPdZIwHkAwtLAJBWuZcMnfQe?usp=sharing'
             >
@@ -96,12 +98,12 @@ export const Accounting: React.FC = () => {
               <div className={styles.arrowWrapper}>
                 <LogoArrowRight />
               </div>
-            </a>
+            </Link>
           </div>
           <div className={styles.linkWrapper}>
             <LogoPDF />
             <p className={styles.linkText}>Relatório de Atividades</p>
-            <a
+            <Link
               className={styles.link}
               href='https://drive.google.com/drive/folders/1jWn85htsG0iMv1SmYBPYgsqhP9pA7S9V?usp=sharing'
             >
@@ -109,12 +111,12 @@ export const Accounting: React.FC = () => {
               <div className={styles.arrowWrapper}>
                 <LogoArrowRight />
               </div>
-            </a>
+            </Link>
           </div>
           <div className={styles.linkWrapper}>
             <LogoPDF />
             <p className={styles.linkText}>Demonstrativo Financeiro</p>
-            <a
+            <Link
               className={styles.link}
               href='https://drive.google.com/drive/folders/1o92DEBIfX1xkZiNh7qnxmqzg92PFnZ5s?usp=sharing'
             >
@@ -122,12 +124,12 @@ export const Accounting: React.FC = () => {
               <div className={styles.arrowWrapper}>
                 <LogoArrowRight />
               </div>
-            </a>
+            </Link>
           </div>
           <div className={styles.linkWrapper}>
             <LogoPDF />
             <p className={styles.linkText}>Convênios e Parcerias</p>
-            <a
+            <Link
               className={styles.link}
               href='https://drive.google.com/drive/folders/1M5ZyO8YX4F1DYFsPIvEw-c86mqQQx2hZ?usp=sharing'
             >
@@ -135,12 +137,12 @@ export const Accounting: React.FC = () => {
               <div className={styles.arrowWrapper}>
                 <LogoArrowRight />
               </div>
-            </a>
+            </Link>
           </div>
           <div className={styles.linkWrapper}>
             <LogoPDF />
             <p className={styles.linkText}>Publicação E-Transparente</p>
-            <a
+            <Link
               className={styles.link}
               href='https://etransparente.org/oscs/casa-da-crianca-e-do-adolescente/'
             >
@@ -148,12 +150,12 @@ export const Accounting: React.FC = () => {
               <div className={styles.arrowWrapper}>
                 <LogoArrowRight />
               </div>
-            </a>
+            </Link>
           </div>
           <div className={styles.linkWrapper}>
             <LogoPDF />
             <p className={styles.linkText}>Prestação de Contas</p>
-            <a
+            <Link
               className={styles.link}
               href='https://drive.google.com/drive/folders/1rmMsjTU12fIxCM4_Xdpb6ez5bfku6f7g?usp=sharing'
             >
@@ -161,7 +163,7 @@ export const Accounting: React.FC = () => {
               <div className={styles.arrowWrapper}>
                 <LogoArrowRight />
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
