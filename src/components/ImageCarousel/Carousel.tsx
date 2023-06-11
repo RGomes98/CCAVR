@@ -19,7 +19,7 @@ export const Carousel: React.FC = () => {
   return (
     <div ref={carouselRef} className={styles.imageCarousel}>
       <div className={`${styles.headingWrapper} ${nunito.className}`}>
-        <h1 className={styles.heading}>Juntos, Construímos um Mundo Melhor!</h1>
+        <h1 className={styles.heading}>Juntos, Construiremos um Mundo Melhor!</h1>
         <p>
           <span className={styles.text}>
             Junte-se a nós na missão de transformar vidas e construir um futuro melhor para nossas
