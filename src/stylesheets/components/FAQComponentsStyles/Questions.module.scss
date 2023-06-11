@@ -1,0 +1,79 @@
+@use '../../variables' as var;
+
+.container {
+  gap: 4rem;
+  width: 90%;
+  display: flex;
+  padding: 6rem 0 8rem;
+  flex-direction: column;
+  color: var.$primary-blue;
+}
+
+.questionWrapper {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.expanded {
+  .button svg {
+    rotate: 0deg;
+  }
+
+  .answerWrapper {
+    grid-template-rows: 1fr;
+  }
+}
+
+.collapsed {
+  .button svg {
+    rotate: 180deg;
+  }
+}
+
+.headingWrapper {
+  gap: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  font-size: var.$faq-heading-clamp;
+}
+
+.button {
+  border: none;
+  display: flex;
+  cursor: pointer;
+  border-radius: 50%;
+  align-items: center;
+  transition: scale 0.2s;
+  justify-content: center;
+  background-color: var.$white;
+  box-shadow: var.$standard-box-shadow;
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+    fill: var.$primary-blue;
+    transition: rotate 0.3s ease;
+  }
+}
+
+.button:hover {
+  scale: 1.1;
+}
+
+.answerWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.text {
+  overflow: hidden;
+  font-weight: 300;
+  text-align: justify;
+  color: var.$black-font;
+  font-size: var.$medium-text;
+}
