@@ -74,7 +74,7 @@ export const Accounting: React.FC = () => {
             <p className={styles.linkText}>Ata De Eleição</p>
             <Link
               className={styles.link}
-              href='https://drive.google.com/file/d/15jeS9DiAI8tCBCKVfKKrsf7avpIxQ1Q9/view?usp=sharing'
+              href='https://drive.google.com/drive/folders/18SiyqddYkTf5wFP5DMny1Xc6tax6Aep_?usp=sharing'
             >
               FAZER DOWNLOAD
               <div className={styles.arrowWrapper}>

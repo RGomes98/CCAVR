@@ -44,7 +44,7 @@
 
 .wrapper {
   z-index: 1;
-  gap: 0.7rem;
+  gap: 0.8rem;
   display: flex;
   align-items: center;
 
@@ -61,17 +61,8 @@
   }
 }
 
-.wrapper :nth-child(1) {
-  svg {
-    height: 1.75rem;
-  }
-}
-
-.wrapper :nth-child(2),
-.wrapper :nth-child(3) {
-  svg {
-    height: 1.85rem;
-  }
+.wrapper .link svg {
+  height: 1.85rem;
 }
 
 .link {

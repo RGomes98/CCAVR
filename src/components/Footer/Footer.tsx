@@ -10,8 +10,8 @@ import Link from 'next/link';
 
 export const Footer: React.FC = () => {
   const pathname = usePathname();
-  const isAtHomeOrNews = pathname === '/' || pathname === '/noticias';
-  const FooterColor = isAtHomeOrNews ? styles.lightColor : styles.darkColor;
+  const isAtHome = pathname === '/';
+  const FooterColor = isAtHome ? styles.lightColor : styles.darkColor;
   const currentYear = new Date().getFullYear();
 
   return (
