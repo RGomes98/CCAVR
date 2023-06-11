@@ -7,11 +7,7 @@ export const useScrollToTop = () => {
 
   const handleScroll = () => {
     const minimunScrollHeight = 500;
-    if (scrollY >= minimunScrollHeight) {
-      setIsLowEnough(true);
-    } else {
-      setIsLowEnough(false);
-    }
+    scrollY >= minimunScrollHeight ? setIsLowEnough(true) : setIsLowEnough(false);
   };
 
   useEffect(() => {

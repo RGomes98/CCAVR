@@ -6,11 +6,11 @@ export const useNavbarVisibility = () => {
 
   const handleScroll = useCallback(() => {
     const currentScrollYPosition = window.scrollY;
-    if (oldScrollYPosition > currentScrollYPosition) {
-      setIsScrollDownward(false);
-    } else {
-      setIsScrollDownward(true);
-    }
+
+    oldScrollYPosition > currentScrollYPosition
+      ? setIsScrollDownward(false)
+      : setIsScrollDownward(true);
+
     setOldScrollYPosition(currentScrollYPosition);
   }, [oldScrollYPosition]);
 

@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
   const pathname = usePathname();
   const isAtHomeOrNews = pathname === '/' || pathname === '/noticias';
   const FooterColor = isAtHomeOrNews ? styles.lightColor : styles.darkColor;
-  const currentYear = new Date().getUTCFullYear();
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className={`${styles.container} ${FooterColor}`}>

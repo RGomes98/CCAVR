@@ -16,8 +16,11 @@ export const useWindowSize = (windowSizeLimit: number, action?: () => void) => {
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
+    window.innerWidth <= windowSizeLimit
+      ? setIsSmallerThanLimit(true)
+      : setIsSmallerThanLimit(false);
+
     window.addEventListener('resize', handleResize);
-    if (window.innerWidth <= windowSizeLimit) setIsSmallerThanLimit(true);
     return () => window.removeEventListener('resize', handleResize);
   }, [handleResize, windowSizeLimit]);
 

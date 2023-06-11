@@ -6,6 +6,8 @@ export const generateTemplate = (
   subject: string,
   content: string
 ) => {
+  const currentYear = new Date().getFullYear();
+
   return `<!DOCTYPE html>
   <html
     lang="pt-BR"
@@ -692,7 +694,7 @@ export const generateTemplate = (
                               "
                             >
                               CNPJ: 01.375.045/0001-03.<br/>
-                              © 2023 Casa da Criança e do Adolescente
+                              © ${currentYear} Casa da Criança e do Adolescente
                             </div>
                           </td>
                         </tr>

@@ -56,7 +56,7 @@ export const Navbar: React.FC = () => {
           {isHiddenMenuOpen ? <LogoClose /> : <LogoOpen />}
         </button>
       )}
-      <HiddenMenu />
+      {isSmallerThanLimit && <HiddenMenu />}
     </nav>
   );
 };
