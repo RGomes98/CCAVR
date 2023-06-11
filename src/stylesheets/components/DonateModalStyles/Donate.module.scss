@@ -3,11 +3,11 @@
 .modal {
   top: 50%;
   left: 50%;
+  gap: 1rem;
   width: 90%;
   height: 100%;
   border: none;
   display: flex;
-  overflow: hidden;
   max-width: 1000px;
   max-height: 600px;
   color: var.$white;
@@ -15,16 +15,12 @@
   border-radius: 1rem;
   align-items: center;
   translate: -50% -50%;
-  justify-content: space-around;
+  justify-content: space-between;
 
-  --s: 15rem;
+  --s: 29rem;
 
-  background: linear-gradient(135deg, #0000 18.75%, hsl(203, 90%, 35%, 0.9) 0 31.25%, #0000 0),
-    repeating-linear-gradient(
-      45deg,
-      hsl(203, 90%, 35%, 0.9) -6.25% 6.25%,
-      hsl(204, 61%, 57%, 0.9) 0 18.75%
-    );
+  background: linear-gradient(135deg, #0000 18.75%, hsl(203, 90%, 35%) 0 31.25%, #0000 0),
+    repeating-linear-gradient(45deg, hsl(203, 90%, 35%) -6.25% 6.25%, hsl(204, 61%, 57%) 0 18.75%);
   background-size: var(--s) var(--s);
 }
 
@@ -47,31 +43,31 @@
 }
 
 .primaryWrapper {
-  width: 100%;
+  height: 100%;
   display: flex;
-  max-width: 24.7rem;
-  align-items: center;
   flex-direction: column;
+  width: calc(50% - 1rem);
+  justify-content: space-between;
 }
 
 .primaryHeading {
-  font-weight: 300;
-  margin-bottom: 0.8rem;
+  font-weight: 400;
   font-size: var.$regular-heading;
 }
 
 .primaryText {
   line-height: 1.4;
   font-weight: 300;
+  margin-top: -1.5rem;
   text-align: justify;
-  margin-bottom: 4rem;
-  font-size: var.$regular-text;
+  font-size: var.$medium-text;
 }
 
 .donateDetailsWrapper {
   gap: 2rem;
   display: flex;
   max-width: 22rem;
+  align-self: center;
   text-align: center;
   flex-direction: column;
 }
@@ -99,14 +95,27 @@
 
 .secondaryWrapper {
   gap: 1.1rem;
+  height: 100%;
   display: flex;
   text-align: center;
   align-items: center;
   flex-direction: column;
+  width: calc(50% - 1rem);
+  justify-content: space-between;
 }
 
 .secondaryHeading {
-  font-weight: 300;
+  font-weight: 400;
+  font-size: var.$regular-heading;
+}
+
+.secondaryHeading,
+.text,
+.boldText,
+.detailsHeading,
+.primaryText,
+.primaryHeading {
+  filter: drop-shadow(var.$heavy-box-shadow);
 }
 
 .logoPix {
@@ -146,70 +155,27 @@
   scale: 1.15;
 }
 
-.cloud {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  background-color: var.$primary-blue;
-}
-
-.cloud {
-  z-index: -1;
-  width: 14rem;
-  height: 14rem;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var.$primary-blue;
-}
-
-.cloud:nth-of-type(1) {
-  top: -8rem;
-  left: 0rem;
-}
-
-.cloud:nth-of-type(2) {
-  top: -2rem;
-  left: -6rem;
-}
-
-.cloud:nth-of-type(3) {
-  bottom: 4rem;
-  left: -8rem;
-}
-
-.cloud:nth-of-type(4) {
-  bottom: -3rem;
-  left: -3rem;
-}
-
-.cloud:nth-of-type(5) {
-  bottom: -9rem;
-  left: 4rem;
-}
-
-.cloud:nth-of-type(6) {
-  top: -8rem;
-  right: 3rem;
-}
-
-.cloud:nth-of-type(7) {
-  top: -3rem;
-  right: -3rem;
-}
-
-.cloud:nth-of-type(8) {
-  top: 4rem;
-  right: -9rem;
-}
-
-@media (width <= 65rem) {
+@media (width <= 67.5rem) {
   .modal {
     gap: 3rem;
   }
 
-  .logoPix,
-  .primaryText,
-  .primaryHeading {
+  .primaryWrapper,
+  .secondaryWrapper {
+    width: 100%;
+  }
+
+  .primaryHeading,
+  .secondaryHeading {
+    font-size: var.$small-heading;
+  }
+
+  .primaryText {
+    margin-top: -1rem;
+    font-size: var.$medium-text;
+  }
+
+  .logoPix {
     display: none;
   }
 
@@ -218,38 +184,27 @@
   }
 }
 
-@media (width <= 44.0625rem) {
+@media (width <= 56.5625rem) {
   .modal {
     gap: 1rem;
+    overflow-y: hidden;
+    padding: 3.5rem 2rem;
     max-height: 45.625rem;
     flex-direction: column;
   }
 
-  .qrCode {
-    max-width: 16rem;
-    min-width: 14rem;
-  }
-}
-
-@media (height <= 38.125rem) {
-  .modal {
-    height: 90%;
-  }
-
-  .primaryHeading,
   .primaryText,
-  .secondaryHeading,
-  .logoPix {
+  .primaryHeading {
     display: none;
   }
 
   .qrCode {
     max-width: 14rem;
-    min-width: 12rem;
+    min-width: 10rem;
   }
 }
 
-@media (width <= 65rem) and (height <= 38.125rem) {
+@media (height <= 38.125rem) {
   .modal {
     width: 90%;
     height: 90%;
@@ -258,23 +213,30 @@
     padding: 3rem 4rem 3rem 2rem;
   }
 
-  .donateDetailsWrapper {
-    gap: 0.5rem;
-  }
-
-  .detailsHeading {
-    font-size: var.$medium-text;
-  }
-
-  .boldText {
-    font-size: var.$regular-text;
+  .primaryWrapper {
+    justify-content: center;
   }
 
   .secondaryWrapper {
     gap: 0.5rem;
+    justify-content: center;
   }
 
-  .secondaryWrapper .boldText {
-    font-size: var.$small-text;
+  .text,
+  .boldText {
+    font-size: var.$regular-text;
+  }
+
+  .logoPix,
+  .primaryText,
+  .primaryHeading,
+  .detailsHeading,
+  .secondaryHeading {
+    display: none;
+  }
+
+  .qrCode {
+    max-width: 13rem;
+    min-width: 13rem;
   }
 }

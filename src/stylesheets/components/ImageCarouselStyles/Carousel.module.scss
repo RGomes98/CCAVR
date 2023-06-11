@@ -6,6 +6,7 @@
   min-height: 85vh;
   overflow: hidden;
   position: relative;
+  align-items: center;
   padding-bottom: 10rem;
   flex-direction: column;
   background-size: cover;
@@ -26,17 +27,33 @@
     url('/images/carousel/image7.webp');
 }
 
-.logo {
+.headingWrapper {
+  gap: 1rem;
   width: 90%;
-  height: auto;
-  max-width: 24rem;
-  user-select: none;
-  transition: all 0.3s;
-  border-radius: 0.4rem;
-  margin: 6rem 0 0 8.5rem;
-  box-shadow: var.$standard-box-shadow;
-  background-color: var.$transparent-white;
-  backdrop-filter: blur(10px) drop-shadow(var.$standard-box-shadow);
+  display: flex;
+  margin-top: 8rem;
+  color: var.$white;
+  flex-direction: column;
+}
+
+.heading {
+  font-weight: 700;
+  padding: 0 0.6rem;
+  font-family: inherit;
+  word-wrap: break-word;
+  max-width: fit-content;
+  font-size: var.$carousel-heading-clamp;
+  background-color: var.$transparent-black;
+}
+
+.text {
+  font-weight: 400;
+  padding: 0 0.6rem;
+  font-family: inherit;
+  line-height: 1.875rem;
+  max-width: fit-content;
+  font-size: var.$navbar-clamp;
+  background-color: var.$transparent-black;
 }
 
 .cloud {
@@ -63,31 +80,12 @@
 }
 
 @media (height <= 53.125rem) and (width >= 52.5rem) {
-  .logo {
-    margin: 5.5rem 0 0 8.5rem;
-  }
-
   .cloud {
     height: 13.8rem;
   }
 }
 
-@media (height <= 48rem) and (width >= 52.5rem) {
-  .logo {
-    margin: 0 0 0 8.5rem;
-  }
-}
-
 @media (width <= 52.5rem) {
-  .imageCarousel {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .logo {
-    margin: unset;
-  }
-
   .cloud {
     height: 13.8rem;
   }
@@ -96,6 +94,10 @@
 @media (height <= 48rem) {
   .imageCarousel {
     padding: 4rem 0 17rem;
+  }
+
+  .headingWrapper {
+    margin-top: unset;
   }
 
   .cloud {

@@ -4,7 +4,7 @@
   right: 0;
   z-index: -1;
   width: 100%;
-  top: 8.92rem;
+  top: 8.94rem;
   display: flex;
   padding: 2rem;
   position: absolute;
@@ -12,8 +12,8 @@
   justify-content: center;
   transition: transform 0.6s;
   transform: translateX(200%);
+  border-radius: 0 0 0 0.4rem;
   background-color: var.$light-blue;
-  border-radius: 0 0 0.4rem 0.4rem;
   border-top: 1px solid var.$black-font;
 }
 
@@ -36,7 +36,7 @@
   flex-direction: column;
 }
 
-.wrapper div:last-child {
+.wrapper div:last-child:has(button) {
   gap: 2rem;
 }
 

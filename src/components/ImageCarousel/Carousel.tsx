@@ -1,38 +1,32 @@
 'use client';
 
 import { useImageCarousel } from '../../hooks/useImageCarousel';
-import { usePathname } from 'next/navigation';
+import { Nunito } from 'next/font/google';
 import { useRef } from 'react';
 
 import styles from '../../stylesheets/components/ImageCarouselStyles/Carousel.module.scss';
-import Image from 'next/image';
+
+const nunito = Nunito({
+  display: 'swap',
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
 
 export const Carousel: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   useImageCarousel(carouselRef, 8000);
-  const pathname = usePathname();
-
-  const isAtCurumim = pathname === '/curumim';
 
   return (
     <div ref={carouselRef} className={styles.imageCarousel}>
-      {isAtCurumim ? (
-        <Image
-          width={384}
-          height={384}
-          alt='logo-curumim'
-          className={styles.logo}
-          src='/logos/svgs/institution/logoCurumim.svg'
-        />
-      ) : (
-        <Image
-          width={384}
-          height={384}
-          alt='logo-cca'
-          className={styles.logo}
-          src='/logos/svgs/institution/logoCCA.svg'
-        />
-      )}
+      <div className={`${styles.headingWrapper} ${nunito.className}`}>
+        <h1 className={styles.heading}>Juntos, Construímos um Mundo Melhor!</h1>
+        <p>
+          <span className={styles.text}>
+            Junte-se a nós na missão de transformar vidas e construir um futuro melhor para nossas
+            crianças, adolescentes e jovens!
+          </span>
+        </p>
+      </div>
       <div className={styles.cloud} />
     </div>
   );

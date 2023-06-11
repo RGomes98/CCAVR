@@ -18,7 +18,7 @@
 
 .wrapper {
   display: grid;
-  gap: 0 2.6rem;
+  gap: 1rem 2.6rem;
   max-width: 90%;
   align-items: center;
   justify-content: center;
@@ -28,10 +28,14 @@
 .logo {
   width: 100%;
   height: auto;
-  padding: 0.5rem;
   max-width: 15rem;
   transition: scale 0.2s ease;
-  filter: drop-shadow(var.$medium-box-shadow);
+  filter: drop-shadow(var.$light-box-shadow);
+}
+
+.logo:nth-child(14) {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(97%) saturate(2246%) hue-rotate(132deg)
+    brightness(98%) contrast(102%) drop-shadow(var.$light-box-shadow);
 }
 
 .logo:hover {
