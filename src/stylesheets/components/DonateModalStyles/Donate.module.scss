@@ -15,13 +15,11 @@
   border-radius: 1rem;
   align-items: center;
   translate: -50% -50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   justify-content: space-between;
-
-  --s: 29rem;
-
-  background: linear-gradient(135deg, #0000 18.75%, hsl(203, 90%, 35%) 0 31.25%, #0000 0),
-    repeating-linear-gradient(45deg, hsl(203, 90%, 35%) -6.25% 6.25%, hsl(204, 61%, 57%) 0 18.75%);
-  background-size: var(--s) var(--s);
+  background-image: url('/logos/svgs/blob.svg');
 }
 
 .modal[open] {
@@ -43,29 +41,29 @@
 }
 
 .primaryWrapper {
+  gap: 0.5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   width: calc(50% - 1rem);
-  justify-content: space-between;
 }
 
 .primaryHeading {
-  font-weight: 400;
+  font-weight: 300;
   font-size: var.$regular-heading;
 }
 
 .primaryText {
   line-height: 1.4;
   font-weight: 300;
-  margin-top: -1.5rem;
   text-align: justify;
-  font-size: var.$medium-text;
+  font-size: var.$regular-text;
 }
 
 .donateDetailsWrapper {
   gap: 2rem;
   display: flex;
+  margin-top: auto;
   max-width: 22rem;
   align-self: center;
   text-align: center;
@@ -74,8 +72,8 @@
 
 .detailsHeading {
   line-height: 1;
-  font-weight: 300;
-  font-size: var.$small-heading;
+  font-weight: 400;
+  font-size: var.$regular-heading;
 }
 
 .firstDetailsWrapper,
@@ -109,22 +107,6 @@
   font-size: var.$regular-heading;
 }
 
-.secondaryHeading,
-.text,
-.boldText,
-.detailsHeading,
-.primaryText,
-.primaryHeading {
-  filter: drop-shadow(var.$heavy-box-shadow);
-}
-
-.logoPix {
-  width: 100%;
-  height: auto;
-  max-width: 15rem;
-  filter: drop-shadow(var.$heavy-box-shadow);
-}
-
 .qrCode {
   width: 100%;
   height: auto;
@@ -132,7 +114,7 @@
   min-width: 15.8125rem;
   border-radius: 0.8rem;
   background-color: var.$white;
-  box-shadow: var.$heavy-box-shadow;
+  box-shadow: var.$standard-box-shadow;
 }
 
 .closeButton {
@@ -165,18 +147,9 @@
     width: 100%;
   }
 
-  .primaryHeading,
+  .detailsHeading,
   .secondaryHeading {
     font-size: var.$small-heading;
-  }
-
-  .primaryText {
-    margin-top: -1rem;
-    font-size: var.$medium-text;
-  }
-
-  .logoPix {
-    display: none;
   }
 
   .donateDetailsWrapper {
@@ -227,7 +200,6 @@
     font-size: var.$regular-text;
   }
 
-  .logoPix,
   .primaryText,
   .primaryHeading,
   .detailsHeading,
