@@ -190,13 +190,16 @@
     justify-content: center;
   }
 
+  .donateDetailsWrapper {
+    margin-top: unset;
+  }
+
   .secondaryWrapper {
     gap: 0.5rem;
     justify-content: center;
   }
 
-  .text,
-  .boldText {
+  .secondaryWrapper .boldText {
     font-size: var.$regular-text;
   }
 
