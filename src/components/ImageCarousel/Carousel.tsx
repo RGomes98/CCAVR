@@ -2,10 +2,10 @@
 
 import { useImageCarousel } from '../../hooks/useImageCarousel';
 import { Nunito } from 'next/font/google';
+import { Waves } from '../SVGs/Waves';
 import { useRef } from 'react';
 
 import styles from '../../stylesheets/components/ImageCarouselStyles/Carousel.module.scss';
-
 const nunito = Nunito({
   display: 'swap',
   subsets: ['latin'],
@@ -27,7 +27,7 @@ export const Carousel: React.FC = () => {
           </span>
         </p>
       </div>
-      <div className={styles.cloud} />
+      <Waves />
     </div>
   );
 };

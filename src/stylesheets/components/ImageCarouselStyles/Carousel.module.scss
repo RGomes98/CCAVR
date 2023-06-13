@@ -3,11 +3,10 @@
 .imageCarousel {
   width: 100%;
   display: flex;
-  min-height: 85vh;
   overflow: hidden;
+  min-height: 105vh;
   position: relative;
   align-items: center;
-  padding-bottom: 10rem;
   flex-direction: column;
   background-size: cover;
   background-position: center;
@@ -56,18 +55,10 @@
   background-color: var.$transparent-black;
 }
 
-.cloud {
+.imageCarousel svg:last-child {
   bottom: 0;
-  width: 100%;
-  height: 17rem;
-  mask-size: cover;
+  fill: transparent;
   position: absolute;
-  mask-repeat: no-repeat;
-  animation: showCloud ease 0.6s;
-  background-color: var.$primary-blue;
-  mask-image: url('/logos/svgs/cloud.svg');
-  filter: drop-shadow(var.$standard-box-shadow);
-  -webkit-mask-image: url('/logos/svgs/cloud.svg');
 }
 
 @keyframes showCloud {
@@ -93,7 +84,7 @@
 
 @media (height <= 48rem) {
   .imageCarousel {
-    padding: 4rem 0 17rem;
+    padding: 4rem 0 30rem;
   }
 
   .headingWrapper {
