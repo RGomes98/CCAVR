@@ -43,9 +43,9 @@
 
 .navLink {
   font-weight: 300;
-  color: var.$black-font;
   text-decoration: none;
-  text-shadow: var.$light-box-shadow;
+  color: var.$black-font;
+  filter: drop-shadow(var.$standard-box-shadow);
 }
 
 .secondaryWrapper {
