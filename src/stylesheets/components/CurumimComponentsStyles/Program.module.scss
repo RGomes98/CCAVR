@@ -49,6 +49,7 @@
   max-height: 28rem;
   margin-right: 2rem;
   align-self: center;
+  filter: drop-shadow(var.$light-box-shadow);
 }
 
 .links {
