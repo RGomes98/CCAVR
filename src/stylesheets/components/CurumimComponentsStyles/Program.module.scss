@@ -63,21 +63,22 @@
   gap: 1rem;
   width: 100%;
   display: flex;
-  max-width: 24rem;
   min-width: 18rem;
+  max-width: 22rem;
   color: var.$white;
   align-items: center;
   font-family: inherit;
   border-radius: 0.4rem;
   flex-direction: column;
+  justify-content: center;
   padding: 3rem 2rem 2.5rem;
   transition: scale 0.3s ease;
   box-shadow: var.$medium-box-shadow;
   background-color: var.$primary-blue;
 
   svg {
-    width: 6rem;
-    height: 6rem;
+    width: 5.5rem;
+    height: 5.5rem;
     fill: var.$white;
   }
 }
@@ -87,7 +88,6 @@
 }
 
 .linkText {
-  max-width: 85%;
   font-weight: 300;
   line-height: 1.2;
   color: var.$white;

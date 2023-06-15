@@ -1,7 +1,7 @@
 @use '../../variables' as var;
 
 .container {
-  width: 100%;
+  width: 90%;
   display: flex;
   text-align: center;
   align-items: center;
@@ -12,7 +12,6 @@
 .videoSection {
   width: 100%;
   display: flex;
-  max-width: 90%;
   margin-bottom: 8rem;
   flex-direction: column;
   gap: var.$testimonials-gap-clamp;
@@ -36,7 +35,8 @@
 }
 
 .container > .heading {
-  max-width: 60%;
+  max-width: 70%;
+  margin-bottom: 4rem;
 }
 
 .boldHeading {
@@ -52,22 +52,24 @@
 
 .linkWrapper {
   gap: 1rem;
-  width: 90%;
+  width: 100%;
   display: flex;
-  margin-top: 4rem;
-  max-width: 24rem;
+  min-width: 18rem;
+  max-width: 22rem;
+  color: var.$white;
   align-items: center;
   font-family: inherit;
   border-radius: 0.4rem;
   flex-direction: column;
+  justify-content: center;
   padding: 3rem 2rem 2.5rem;
   transition: scale 0.3s ease;
   box-shadow: var.$medium-box-shadow;
   background-color: var.$primary-blue;
 
   svg {
-    width: 6rem;
-    height: 6rem;
+    width: 5.5rem;
+    height: 5.5rem;
     fill: var.$white;
   }
 }
