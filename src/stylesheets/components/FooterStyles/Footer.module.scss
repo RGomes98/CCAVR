@@ -1,7 +1,7 @@
 @use '../../variables' as var;
 
 .container {
-  gap: 1.5rem;
+  gap: 1rem;
   width: 100%;
   display: flex;
   padding: 3rem 0;
@@ -50,7 +50,7 @@
 
   svg {
     fill: var.$black-font;
-    transition: fill 0.2s ease;
+    transition: fill 0.3s ease;
     filter: drop-shadow(var.$standard-box-shadow);
   }
 }
@@ -78,5 +78,5 @@
   color: var.$black-font;
   letter-spacing: -0.04rem;
   font-size: var.$medium-text;
-  text-shadow: var.$standard-box-shadow;
+  filter: drop-shadow(var.$standard-box-shadow);
 }
