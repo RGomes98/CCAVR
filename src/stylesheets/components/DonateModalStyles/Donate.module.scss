@@ -63,8 +63,8 @@
 .donateDetailsWrapper {
   gap: 2rem;
   display: flex;
-  margin-top: auto;
   max-width: 22rem;
+  margin-top: 2.5rem;
   align-self: center;
   text-align: center;
   flex-direction: column;
@@ -147,6 +147,14 @@
     width: 100%;
   }
 
+  .primaryWrapper {
+    gap: 1.5rem;
+  }
+
+  .primaryHeading {
+    font-size: calc(var.$small-heading - 0.05rem);
+  }
+
   .detailsHeading,
   .secondaryHeading {
     font-size: var.$small-heading;
@@ -164,6 +172,14 @@
     padding: 3.5rem 2rem;
     max-height: 45.625rem;
     flex-direction: column;
+  }
+
+  .primaryWrapper {
+    justify-content: center;
+  }
+
+  .donateDetailsWrapper {
+    margin-top: unset;
   }
 
   .primaryText,
