@@ -30,13 +30,21 @@ export const Curumim: React.FC = () => {
     <div className={styles.container}>
       {isModalStateOpen && (
         <dialog ref={modalRef} className={styles.modal}>
-          <Image
-            width={1200}
-            height={1200}
-            alt='curumim-image'
-            className={styles.modalImage}
-            src={curumimContent[selectedImage]}
-          />
+          {curumimContent.map((image, idx) => {
+            const isImageSelected = selectedImage === idx;
+            const selectedImageStyles = isImageSelected ? styles.showImage : styles.hideImage;
+
+            return (
+              <Image
+                key={idx}
+                src={image}
+                width={1200}
+                height={1200}
+                alt='curumim-image'
+                className={`${styles.modalImage} ${selectedImageStyles}`}
+              />
+            );
+          })}
           <button id='previous' onClick={handleClick} className={styles.previousButton}>
             <LogoNavigate />
           </button>

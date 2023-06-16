@@ -42,12 +42,19 @@
 
 .modal button {
   border: none;
+  display: flex;
   cursor: pointer;
   position: absolute;
+  align-items: center;
+  justify-content: center;
   transition: scale 0.2s ease;
   background-color: transparent;
 
-  &:hover {
+  &:not(:last-of-type):hover {
+    scale: 1.3;
+  }
+
+  &:is(:last-of-type):hover {
     scale: 1.1;
   }
 
@@ -70,8 +77,20 @@
   width: 80%;
   height: auto;
   max-width: 85rem;
-  object-fit: contain;
+  position: absolute;
   border-radius: 0.4rem;
+  transition: scale 0.3s, filter 0.3s;
+}
+
+.showImage {
+  scale: 1;
+  opacity: 1;
+}
+
+.hideImage {
+  opacity: 0;
+  scale: 1.05;
+  filter: blur(5px);
 }
 
 .previousButton {
