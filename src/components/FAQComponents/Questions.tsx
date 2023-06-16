@@ -5,7 +5,7 @@ import { useState } from 'react';
 import styles from '../../stylesheets/components/FAQComponentsStyles/Questions.module.scss';
 
 export const Questions: React.FC = () => {
-  const [expandedQuestions, setExpandedQuestions] = useState<number[]>([0, 1, 2]);
+  const [expandedQuestions, setExpandedQuestions] = useState<number[]>([]);
 
   const toggleQuestion = (questionId: number) => {
     expandedQuestions.includes(questionId)
@@ -16,7 +16,7 @@ export const Questions: React.FC = () => {
   return (
     <div className={styles.container}>
       {questions.map(({ question, answer }, idx) => {
-        const isQuestionExpanded = expandedQuestions.includes(idx)
+        const isQuestionExpanded = !expandedQuestions.includes(idx)
           ? styles.expanded
           : styles.collapsed;
 
