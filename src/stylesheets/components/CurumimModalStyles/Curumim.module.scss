@@ -1,0 +1,125 @@
+@use '../../variables' as var;
+
+.container {
+  gap: 4rem;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 33rem));
+}
+
+.modal {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  translate: -50% -50%;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.modal[open] {
+  animation: modalFadeIn 0.2s ease forwards;
+}
+
+.modal::backdrop {
+  backdrop-filter: blur(1px);
+  background-color: var.$transparent-black-modal;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal button {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  transition: scale 0.2s ease;
+  background-color: transparent;
+
+  &:hover {
+    scale: 1.1;
+  }
+
+  svg {
+    width: 4.5rem;
+    height: 4.5rem;
+    fill: var.$white;
+    pointer-events: none;
+  }
+}
+
+.modal .closeButton {
+  svg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+.modalImage {
+  width: 80%;
+  height: auto;
+  max-width: 85rem;
+  object-fit: contain;
+  border-radius: 0.4rem;
+}
+
+.previousButton {
+  rotate: 180deg;
+  left: var.$curumim-positon-clamp;
+}
+
+.nextButton {
+  right: var.$curumim-positon-clamp;
+}
+
+.closeButton {
+  top: 0;
+  right: 0;
+}
+
+.showModalButton {
+  border: none;
+  cursor: pointer;
+  transition: scale 0.2s;
+  background-color: transparent;
+}
+
+.showModalButton:hover {
+  scale: 1.02;
+}
+
+.buttonImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  box-shadow: var.$standard-box-shadow;
+}
+
+@media (width <= 37.5rem) {
+  .modal > .previousButton,
+  .modal > .nextButton {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .modalImage {
+    width: 90%;
+  }
+
+  .closeButton svg {
+    max-width: 3rem;
+    max-height: 3rem;
+  }
+}

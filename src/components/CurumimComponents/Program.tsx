@@ -4,6 +4,7 @@ import { ArrowRight as LogoArrowRight } from '../SVGs/ArrowRight';
 import { Instagram as LogoInstagram } from '../SVGs/Instagram';
 import { Donation as LogoDonation } from '../SVGs/Donation';
 import { useWindowSize } from '@/hooks/useWindowSize';
+import { Curumim } from '../CurumimModal/Curumim';
 
 import styles from '../../stylesheets/components/CurumimComponentsStyles/Program.module.scss';
 import Image from 'next/image';
@@ -64,8 +65,7 @@ export const Program = () => {
         </p>
       </div>
       <h2 className={styles.heading}>Galeria de Fotos do Programa Curumim</h2>
-      <div></div>
-
+      <Curumim />
       <h2 className={styles.heading}>Apoie-nos e nos Acompanhe no Instagram</h2>
       <div className={styles.links}>
         <div className={styles.linkWrapper}>
