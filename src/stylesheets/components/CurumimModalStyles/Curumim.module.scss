@@ -108,18 +108,7 @@
 }
 
 @media (width <= 37.5rem) {
-  .modal > .previousButton,
-  .modal > .nextButton {
-    visibility: hidden;
+  .showModalButton {
     pointer-events: none;
-  }
-
-  .modalImage {
-    width: 90%;
-  }
-
-  .closeButton svg {
-    max-width: 3rem;
-    max-height: 3rem;
   }
 }
