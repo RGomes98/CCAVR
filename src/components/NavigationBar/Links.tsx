@@ -75,27 +75,27 @@ export const Links: React.FC = () => {
       </ul>
       <div className={`${styles.secondaryWrapper} ${linkStyles}`}>
         <div className={styles.socialWrapper}>
-          <Link
+          <a
             className={styles.socialLink}
             href='https://www.facebook.com/CasadaCriancaedoAdolescenteOficial/'
           >
             <LogoFacebook />
             <LogoFacebook />
-          </Link>
-          <Link
+          </a>
+          <a
             className={styles.socialLink}
             href='https://www.instagram.com/casadacriancaedoadolescente/'
           >
             <LogoInstagram />
             <LogoInstagram />
-          </Link>
-          <Link
+          </a>
+          <a
             className={styles.socialLink}
             href='https://www.youtube.com/@casadacriancaedoadolescent351'
           >
             <LogoYoutube />
             <LogoYoutube />
-          </Link>
+          </a>
         </div>
         <button onClick={toggleDonateModal} className={styles.donateButton}>
           DOE AGORA
