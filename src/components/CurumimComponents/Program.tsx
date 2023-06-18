@@ -71,22 +71,22 @@ export const Program = () => {
         <div className={styles.linkWrapper}>
           <LogoDonation />
           <p className={styles.linkText}>Apoie o Programa Curumim</p>
-          <Link className={styles.link} href='https://www.instagram.com/p/CgndXgnr6nm/'>
+          <a className={styles.link} href='https://www.instagram.com/p/CgndXgnr6nm/'>
             ACESSE JÁ
             <div className={styles.arrowWrapper}>
               <LogoArrowRight />
             </div>
-          </Link>
+          </a>
         </div>
         <div className={styles.linkWrapper}>
           <LogoInstagram />
           <p className={styles.linkText}>Siga o Programa Curumim no Instagram</p>
-          <Link className={styles.link} href='https://www.instagram.com/programacurumim.vr/'>
+          <a className={styles.link} href='https://www.instagram.com/programacurumim.vr/'>
             ACESSE JÁ
             <div className={styles.arrowWrapper}>
               <LogoArrowRight />
             </div>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

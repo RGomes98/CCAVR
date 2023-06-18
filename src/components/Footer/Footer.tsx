@@ -17,18 +17,18 @@ export const Footer: React.FC = () => {
   return (
     <footer className={`${styles.container} ${FooterColor}`}>
       <div className={styles.wrapper}>
-        <Link
+        <a
           className={styles.link}
           href='https://www.facebook.com/CasadaCriancaedoAdolescenteOficial/'
         >
           <LogoFacebook />
-        </Link>
-        <Link className={styles.link} href='https://www.instagram.com/casadacriancaedoadolescente/'>
+        </a>
+        <a className={styles.link} href='https://www.instagram.com/casadacriancaedoadolescente/'>
           <LogoInstagram />
-        </Link>
-        <Link className={styles.link} href='https://www.youtube.com/@casadacriancaedoadolescent351'>
+        </a>
+        <a className={styles.link} href='https://www.youtube.com/@casadacriancaedoadolescent351'>
           <LogoYoutube />
-        </Link>
+        </a>
       </div>
       <p className={styles.text}>
         © {currentYear} Casa da Criança e do Adolescente. - CNPJ:01.375.045/0001-03.

@@ -46,12 +46,12 @@ export const Testimonial: React.FC = () => {
       <div className={styles.linkWrapper}>
         <LogoYoutube />
         <p className={styles.linkHeading}>Casa da Criança e do Adolescente no Youtube</p>
-        <Link className={styles.link} href='https://www.youtube.com/@casadacriancaedoadolescent351'>
+        <a className={styles.link} href='https://www.youtube.com/@casadacriancaedoadolescent351'>
           ACESSE JÁ
           <div className={styles.circle}>
             <LogoArrowRight />
           </div>
-        </Link>
+        </a>
       </div>
     </div>
   );
