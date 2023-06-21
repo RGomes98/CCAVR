@@ -28,7 +28,9 @@
 .logo {
   width: 100%;
   height: auto;
+  aspect-ratio: 1;
   max-width: 15rem;
+  object-fit: contain;
   transition: scale 0.2s ease;
   filter: drop-shadow(var.$light-box-shadow);
 }

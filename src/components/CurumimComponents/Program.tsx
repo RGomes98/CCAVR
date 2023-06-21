@@ -8,34 +8,26 @@ import { Curumim } from '../CurumimModal/Curumim';
 
 import styles from '../../stylesheets/components/CurumimComponentsStyles/Program.module.scss';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export const Program = () => {
   const { isSmallerThanLimit, windowWidth } = useWindowSize(1400);
+
+  const dynamicText = ` O Programa de Curumim foi criado para atender crianças em situação de
+  vulnerabilidade social, oferecendo atividades lúdico-pedagógicas durante o contra
+  turno escolar. Nosso objetivo é oferecer um ambiente acolhedor, onde as crianças
+  possam se sentir seguras e desenvolver suas habilidades e talentos.`;
 
   return (
     <div className={styles.container}>
       <h2 className={styles.heading}>Acolhimento e Inclusão para Crianças em Risco Social</h2>
       <div className={styles.descriptionWrapper}>
         {isSmallerThanLimit
-          ? windowWidth >= 1100 && (
-              <p className={styles.text}>
-                O Programa de Curumim foi criado para atender crianças em situação de
-                vulnerabilidade social, oferecendo atividades lúdico-pedagógicas durante o contra
-                turno escolar. Nosso objetivo é oferecer um ambiente acolhedor, onde as crianças
-                possam se sentir seguras e desenvolver suas habilidades e talentos.
-              </p>
-            )
+          ? windowWidth >= 1100 && <p className={styles.text}>{dynamicText}</p>
           : null}
         <div className={styles.logoWrapper}>
           <div className={styles.textWrapper}>
             {(!isSmallerThanLimit || windowWidth < 1100) && (
-              <p className={styles.text}>
-                O Programa de Curumim foi criado para atender crianças em situação de
-                vulnerabilidade social, oferecendo atividades lúdico-pedagógicas durante o contra
-                turno escolar. Nosso objetivo é oferecer um ambiente acolhedor, onde as crianças
-                possam se sentir seguras e desenvolver suas habilidades e talentos.
-              </p>
+              <p className={styles.text}>{dynamicText}</p>
             )}
 
             <p className={styles.text}>

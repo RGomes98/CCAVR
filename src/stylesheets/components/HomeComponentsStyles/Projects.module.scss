@@ -10,6 +10,7 @@
   flex-direction: column;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: var.$primary-blue;
   filter: drop-shadow(var.$standard-box-shadow);

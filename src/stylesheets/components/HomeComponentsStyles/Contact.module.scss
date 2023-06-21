@@ -9,6 +9,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: var.$primary-blue;
   filter: drop-shadow(var.$standard-box-shadow);
   background-image: url('/logos/svgs/layered.svg');
