@@ -38,12 +38,12 @@
 }
 
 .name {
-  font-size: var.$medium-text;
+  font-size: var.$text-clamp;
 }
 
 .boldName {
   font-weight: 600;
-  font-size: var.$medium-text;
+  font-size: var.$text-clamp;
 }
 
 .statuteWrapper {
@@ -147,4 +147,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+@media (width <= 30rem) {
+  .name {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

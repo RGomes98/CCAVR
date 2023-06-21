@@ -42,14 +42,15 @@
 
 .heading {
   max-width: 90%;
+  margin: 1.5rem 0;
   font-weight: 400;
-  margin-bottom: 1rem;
-  font-size: var.$medium-heading;
+  font-size: var.$project-heading-clamp;
 }
 
 .description {
   font-weight: 300;
   text-align: justify;
+  font-size: var.$text-clamp;
 }
 
 .closeButton {
@@ -68,24 +69,4 @@
 
 .closeButton:hover {
   scale: 1.08;
-}
-
-@media (width <= 52.5rem) {
-  .heading {
-    font-size: var.$small-heading;
-  }
-
-  .description {
-    font-size: var.$regular-text;
-  }
-}
-
-@media (width <= 28.125rem) {
-  .heading {
-    font-size: var.$extra-small-heading;
-  }
-
-  .description {
-    font-size: var.$small-text;
-  }
 }

@@ -4,7 +4,7 @@
   gap: 1rem;
   width: 100%;
   display: flex;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   position: relative;
   align-items: center;
   flex-direction: column;
@@ -77,6 +77,6 @@
   text-align: center;
   color: var.$black-font;
   letter-spacing: -0.04rem;
-  font-size: var.$medium-text;
+  font-size: var.$text-clamp;
   filter: drop-shadow(var.$standard-box-shadow);
 }
