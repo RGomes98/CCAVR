@@ -28,7 +28,7 @@ export const Links: React.FC = () => {
       <ul className={`${styles.navWrapper} ${linkStyles}`}>
         {!isAtHome && (
           <li className={styles.navItem}>
-            <Link onClick={() => closeHiddenMenu()} className={styles.navLink} href='/'>
+            <Link onClick={() => closeHiddenMenu()} className={styles.navLink} href='/#top'>
               Início
             </Link>
           </li>
@@ -38,7 +38,7 @@ export const Links: React.FC = () => {
             <Link
               onClick={() => closeHiddenMenu()}
               className={styles.navLink}
-              href='/perguntas-frequentes'
+              href='/perguntas-frequentes#top'
             >
               FAQ
             </Link>
@@ -51,7 +51,11 @@ export const Links: React.FC = () => {
         </li>
         {!isAtTestimonials && (
           <li className={styles.navItem}>
-            <Link onClick={() => closeHiddenMenu()} className={styles.navLink} href='/depoimentos'>
+            <Link
+              onClick={() => closeHiddenMenu()}
+              className={styles.navLink}
+              href='/depoimentos#top'
+            >
               Depoimentos
             </Link>
           </li>
@@ -61,7 +65,7 @@ export const Links: React.FC = () => {
             <Link
               onClick={() => closeHiddenMenu()}
               className={styles.navLink}
-              href='/transparencia'
+              href='/transparencia#top'
             >
               Transparência
             </Link>

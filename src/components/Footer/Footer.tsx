@@ -6,7 +6,6 @@ import { Youtube as LogoYoutube } from '../../components/SVGs/Youtube';
 import { usePathname } from 'next/navigation';
 
 import styles from '../../stylesheets/components/FooterStyles/Footer.module.scss';
-import Link from 'next/link';
 
 export const Footer: React.FC = () => {
   const pathname = usePathname();

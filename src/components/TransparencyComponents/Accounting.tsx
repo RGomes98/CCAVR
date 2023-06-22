@@ -2,7 +2,6 @@ import { ArrowRight as LogoArrowRight } from '../SVGs/ArrowRight';
 import { PDF as LogoPDF } from '../SVGs/PDF';
 
 import styles from '../../stylesheets/components/TransparencyComponentsStyles/Accounting.module.scss';
-import Link from 'next/link';
 
 export const Accounting: React.FC = () => {
   return (

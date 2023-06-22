@@ -16,7 +16,7 @@ export const Projects: React.FC = () => {
         </p>
       </div>
       <div className={styles.projectWrapper}>
-        <Link className={styles.project} href='/curumim'>
+        <Link className={styles.project} href='/curumim#top'>
           <Image
             src='/logos/svgs/institution/logoCurumim.svg'
             alt='logo-curumim'

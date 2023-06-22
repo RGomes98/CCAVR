@@ -2,7 +2,6 @@ import { ArrowRight as LogoArrowRight } from '../SVGs/ArrowRight';
 import { Youtube as LogoYoutube } from '../SVGs/Youtube';
 
 import styles from '../../stylesheets/components/TestimonialsComponentsStyles/Testimonial.module.scss';
-import Link from 'next/link';
 
 export const Testimonial: React.FC = () => {
   const thumbnailTime = '#t=0.8';
