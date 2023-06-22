@@ -6,13 +6,29 @@
   align-items: center;
   padding: 4rem 0 8rem;
   flex-direction: column;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
   background-color: var.$primary-blue;
   filter: drop-shadow(var.$standard-box-shadow);
-  background-image: url('/logos/svgs/layered.svg');
+  // background-image: url('/logos/svgs/layered.svg');
+
+  &::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('/logos/svgs/layered.svg');
+  }
 }
 
 .heading {
