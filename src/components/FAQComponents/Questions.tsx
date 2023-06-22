@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowDropDown as LogoArrowDropDown } from '../SVGs/ArrowDropDown';
 import { questions } from '@/data/questions';
 import { useState } from 'react';

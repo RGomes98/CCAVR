@@ -1,3 +1,5 @@
+'use client';
+
 import { Fragment, useRef, useState } from 'react';
 import { Close as LogoClose } from '../SVGs/Close';
 import { useModal } from '../../hooks/useModal';

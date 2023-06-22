@@ -1,5 +1,3 @@
-'use client';
-
 import { Description } from '../components/HomeComponents/Description';
 import { Projects } from '../components/HomeComponents/Projects';
 import { Partners } from '../components/HomeComponents/Partners';

@@ -1,3 +1,5 @@
+'use client';
+
 import { useForm } from '@/hooks/useForm';
 import { cities } from '@/data/cities';
 import { useRef } from 'react';
