@@ -8,30 +8,13 @@
   align-items: center;
   padding: 4rem 0 6rem;
   flex-direction: column;
-  // background-size: cover;
-  // background-position: center;
-  // background-attachment: fixed;
-  // background-repeat: no-repeat;
-
-  position: relative;
-  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-color: var.$primary-blue;
   filter: drop-shadow(var.$standard-box-shadow);
-  // background-image: url('/logos/svgs/peaks.svg');
-
-  &::before {
-    content: '';
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    inset: 0;
-    z-index: -1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: url('/logos/svgs/peaks.svg');
-  }
+  background-image: url('/logos/svgs/peaks.svg');
 }
 
 .textWrapper {
