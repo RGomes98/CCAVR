@@ -268,6 +268,12 @@
   color: var.$dark-blue;
 }
 
+@media (width <= 47.75rem) {
+  .container {
+    background-attachment: scroll;
+  }
+}
+
 @media (width <= 43.75rem) {
   .userDetailsWrapper {
     gap: 1rem;
