@@ -117,6 +117,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  max-height: 22rem;
   border-radius: 0.4rem;
   box-shadow: var.$standard-box-shadow;
   animation: fadeImage 0.4s ease forwards;
