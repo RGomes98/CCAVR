@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   overflow: hidden;
-  min-height: 105vh;
+  min-height: 110vh;
   position: relative;
   align-items: center;
   flex-direction: column;
@@ -70,28 +70,12 @@
   }
 }
 
-@media (height <= 53.125rem) and (width >= 52.5rem) {
-  .cloud {
-    height: 13.8rem;
-  }
-}
-
-@media (width <= 52.5rem) {
-  .cloud {
-    height: 13.8rem;
-  }
-}
-
 @media (height <= 48rem) {
   .imageCarousel {
-    padding: 4rem 0 30rem;
+    padding: 4rem 0 42rem;
   }
 
   .headingWrapper {
     margin-top: unset;
-  }
-
-  .cloud {
-    height: 16.5rem;
   }
 }
