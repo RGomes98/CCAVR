@@ -51,7 +51,7 @@
   background-color: transparent;
 
   &:not(:last-of-type):hover {
-    scale: 1.3;
+    scale: 1.2;
   }
 
   &:is(:last-of-type):hover {
@@ -59,8 +59,8 @@
   }
 
   svg {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     fill: var.$white;
     pointer-events: none;
   }
@@ -76,7 +76,6 @@
 .modalImage {
   width: 80%;
   height: auto;
-  max-width: 85rem;
   position: absolute;
   border-radius: 0.4rem;
   transition: scale 0.3s, filter 0.3s;
@@ -114,16 +113,60 @@
   background-color: transparent;
 }
 
-.showModalButton:hover {
-  scale: 1.02;
-}
-
 .buttonImage {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 0.4rem;
   box-shadow: var.$standard-box-shadow;
+  animation: fadeImage 0.4s ease forwards;
+}
+
+@keyframes fadeImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loadMoreButton {
+  border: none;
+  display: flex;
+  cursor: pointer;
+  min-height: 21rem;
+  align-items: center;
+  font-family: inherit;
+  border-radius: 0.4rem;
+  transition: scale 0.2s;
+  justify-content: center;
+  background-color: var.$primary-blue;
+  box-shadow: var.$standard-box-shadow;
+}
+
+.loadMoreWrapper {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  svg {
+    width: 6rem;
+    height: 6rem;
+    fill: var.$white;
+  }
+}
+
+.loadMoreText {
+  font-weight: 300;
+  color: var.$white;
+  font-size: var.$regular-heading;
+}
+
+.showModalButton:hover,
+.loadMoreButton:hover {
+  scale: 1.02;
 }
 
 @media (width <= 37.5rem) {

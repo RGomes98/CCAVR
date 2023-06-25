@@ -1,15 +1,19 @@
 import { NavigateNext as LogoNavigate } from '../SVGs/NavigateNext';
+import { AddCircle, AddCircle as LogoAddCircle } from '../SVGs/AddCircle';
 import { curumimContent } from '@/data/curumimContent';
 import { Close as LogoClose } from '../SVGs/Close';
 import { useModal } from '@/hooks/useModal';
 import { useRef, useState } from 'react';
 
-import styles from '../../stylesheets/components/CurumimModalStyles/Curumim.module.scss';
+import styles from '../../stylesheets/components/CurumimModalStyles/CurumimModal.module.scss';
 import Image from 'next/image';
 
-export const Curumim: React.FC = () => {
+export const CurumimModal: React.FC = () => {
   const [isModalStateOpen, setIsModalStateOpen] = useState(false);
+  const [imageGallerySlice, setImageGallerySlice] = useState(5);
   const [selectedImage, setSelectedImage] = useState(0);
+
+  const isNotAtLastGalleryImage = imageGallerySlice !== curumimContent.length;
 
   const dialogRef = useRef<HTMLDialogElement>(null);
   const { modalRef } = useModal(dialogRef, isModalStateOpen);
@@ -38,8 +42,8 @@ export const Curumim: React.FC = () => {
               <Image
                 key={idx}
                 src={image}
-                width={1200}
-                height={1200}
+                width={5184}
+                height={3456}
                 alt='curumim-image'
                 className={`${styles.modalImage} ${selectedImageStyles}`}
               />
@@ -56,7 +60,7 @@ export const Curumim: React.FC = () => {
           </button>
         </dialog>
       )}
-      {curumimContent.map((image, idx) => {
+      {curumimContent.slice(0, imageGallerySlice).map((image, idx) => {
         return (
           <button
             key={idx}
@@ -76,6 +80,22 @@ export const Curumim: React.FC = () => {
           </button>
         );
       })}
+      {isNotAtLastGalleryImage && (
+        <button
+          className={styles.loadMoreButton}
+          onClick={() =>
+            setImageGallerySlice((prev) => {
+              const isFinalSlice = prev === curumimContent.length - 4;
+              return isFinalSlice ? prev + 4 : prev + 3;
+            })
+          }
+        >
+          <div className={styles.loadMoreWrapper}>
+            <AddCircle />
+            <span className={styles.loadMoreText}>Carregar Mais</span>
+          </div>
+        </button>
+      )}
     </div>
   );
 };
