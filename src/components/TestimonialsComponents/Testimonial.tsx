@@ -33,11 +33,22 @@ export const Testimonial: React.FC = () => {
           <h2 className={styles.heading}>
             Depoimento da Irmã Elizabeth Alves{' '}
             <span className={styles.boldHeading}>
-              Presidente da Casa da Criança e do Adolescente
+              Fundadora da Casa da Criança e do Adolescente
             </span>
           </h2>
           <video className={styles.video} preload='metadata' controls>
             <source src={`/videos/testimony03.mp4${thumbnailTime}`} type='video/mp4' />
+          </video>
+        </div>
+        <div className={styles.videoWrapper}>
+          <h2 className={styles.heading}>
+            Depoimento de Guaraciara Pouzada de Lavor Lopes{' '}
+            <span className={styles.boldHeading}>
+              Presidente da Casa da Criança e do Adolescente
+            </span>
+          </h2>
+          <video className={styles.video} preload='metadata' controls>
+            <source src={`/videos/testimony04.mp4${thumbnailTime}`} type='video/mp4' />
           </video>
         </div>
       </div>
