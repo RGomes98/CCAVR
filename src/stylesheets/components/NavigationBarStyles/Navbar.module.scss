@@ -27,8 +27,9 @@
 .primaryLogo {
   z-index: 1;
   width: 100%;
-  height: auto;
+  max-height: 9rem;
   max-width: 10rem;
+  min-width: 10rem;
   bottom: 0.1875rem;
   position: relative;
   filter: drop-shadow(var.$standard-box-shadow);
