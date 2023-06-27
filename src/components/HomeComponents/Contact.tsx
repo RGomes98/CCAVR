@@ -56,11 +56,11 @@ export const Contact: React.FC = () => {
             </label>
             <input
               required
+              id='phone'
               type='text'
               pattern='\d*'
-              id='phone'
-              onChange={handleChange}
               value={formData.phone}
+              onChange={handleChange}
               className={styles.detailContent}
               placeholder='Digite o número de telefone com DDD.'
             />
@@ -73,7 +73,13 @@ export const Contact: React.FC = () => {
             <label htmlFor='city' className={styles.detailText}>
               Cidade
             </label>
-            <select id='city' required onChange={handleChange} className={styles.detailContent}>
+            <select
+              id='city'
+              required
+              value={formData.city}
+              onChange={handleChange}
+              className={styles.detailContent}
+            >
               <option />
               {cities.map((city) => {
                 return (
@@ -89,7 +95,13 @@ export const Contact: React.FC = () => {
           <label htmlFor='subject' className={styles.detailText}>
             Assunto
           </label>
-          <select id='subject' required onChange={handleChange} className={styles.detailContent}>
+          <select
+            id='subject'
+            required
+            onChange={handleChange}
+            value={formData.subject}
+            className={styles.detailContent}
+          >
             <option />
             <option value='Contato'>Contato</option>
             <option value='Voluntário'>Voluntário</option>

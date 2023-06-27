@@ -101,7 +101,15 @@ export const useForm = (reCAPTCHARef: RefObject<ReCAPTCHA>) => {
     setIsLoading(false);
     statusText[status]();
 
-    setFormData((prev) => ({ ...prev, name: '', email: '', phone: '', content: '' }));
+    setFormData((prev) => ({
+      ...prev,
+      name: '',
+      email: '',
+      phone: '',
+      city: '',
+      subject: '',
+      content: '',
+    }));
     setTimeout(() => setStatusMessage(''), 5000);
   };
 
