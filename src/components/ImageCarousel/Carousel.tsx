@@ -24,9 +24,10 @@ export const Carousel: React.FC = () => {
 
         return (
           <Image
-            fill
             key={idx}
             src={image}
+            width={5184}
+            height={3456}
             alt='carousel-image'
             className={`${styles.image} ${isCurrentImage ? styles.showImage : styles.hideImage}`}
           />
