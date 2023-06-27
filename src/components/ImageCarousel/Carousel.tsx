@@ -27,6 +27,7 @@ export const Carousel: React.FC = () => {
             key={idx}
             src={image}
             fill
+            quality={100}
             // width={5184}
             // height={3456}
             alt='carousel-image'
