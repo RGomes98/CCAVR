@@ -172,9 +172,13 @@
 
 @media (width <= 37.5rem) {
   .modal button {
-    &:not(:last-of-type):hover {
+    &:not(:last-of-type) {
       display: none;
     }
+  }
+
+  .modalImage {
+    width: 90%;
   }
 
   .showModalButton {
