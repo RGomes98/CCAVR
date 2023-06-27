@@ -171,6 +171,12 @@
 }
 
 @media (width <= 37.5rem) {
+  .modal button {
+    &:not(:last-of-type):hover {
+      display: none;
+    }
+  }
+
   .showModalButton {
     pointer-events: none;
   }
