@@ -1,11 +1,13 @@
 'use client';
 
 import { useImageCarousel } from '../../hooks/useImageCarousel';
+import { carouselContent } from '@/data/carouselContent';
 import { Nunito } from 'next/font/google';
 import { Waves } from '../SVGs/Waves';
-import { useRef } from 'react';
 
 import styles from '../../stylesheets/components/ImageCarouselStyles/Carousel.module.scss';
+import Image from 'next/image';
+
 const nunito = Nunito({
   display: 'swap',
   subsets: ['latin'],
@@ -13,11 +15,23 @@ const nunito = Nunito({
 });
 
 export const Carousel: React.FC = () => {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  useImageCarousel(carouselRef, 8000);
+  const { imageIndex } = useImageCarousel(carouselContent, 8000);
 
   return (
-    <div ref={carouselRef} className={styles.imageCarousel}>
+    <div className={styles.imageCarousel}>
+      {carouselContent.map((image, idx) => {
+        const isCurrentImage = imageIndex === idx;
+
+        return (
+          <Image
+            fill
+            key={idx}
+            src={image}
+            alt='carousel-image'
+            className={`${styles.image} ${isCurrentImage ? styles.showImage : styles.hideImage}`}
+          />
+        );
+      })}
       <div className={`${styles.headingWrapper} ${nunito.className}`}>
         <h1 className={styles.heading}>Juntos, Construiremos um Mundo Melhor!</h1>
         <p>

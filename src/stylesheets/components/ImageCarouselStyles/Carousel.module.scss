@@ -8,22 +8,26 @@
   position: relative;
   align-items: center;
   flex-direction: column;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: background-image 0.8s;
 }
 
-.imageCarousel::before {
-  width: 0;
-  height: 0;
-  z-index: -5;
-  overflow: hidden;
+.image {
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
   position: absolute;
-  content: url('/images/carousel/image1.webp') url('/images/carousel/image2.webp')
-    url('/images/carousel/image3.webp') url('/images/carousel/image4.webp')
-    url('/images/carousel/image5.webp') url('/images/carousel/image6.webp')
-    url('/images/carousel/image7.webp');
+}
+
+.showImage {
+  opacity: 1;
+  filter: blur(0px);
+  transition: opacity 0.5s, filter 0.3s;
+}
+
+.hideImage {
+  opacity: 0;
+  filter: blur(5px);
+  transition: opacity 1s, filter 0.6s;
 }
 
 .headingWrapper {
@@ -72,7 +76,7 @@
 
 @media (height <= 48rem) {
   .imageCarousel {
-    padding: 4rem 0 42rem;
+    padding: 4rem 0 40rem;
   }
 
   .headingWrapper {

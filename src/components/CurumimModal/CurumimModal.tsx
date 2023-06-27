@@ -1,5 +1,5 @@
 import { NavigateNext as LogoNavigate } from '../SVGs/NavigateNext';
-import { AddCircle, AddCircle as LogoAddCircle } from '../SVGs/AddCircle';
+import { AddCircle as LogoAddCircle } from '../SVGs/AddCircle';
 import { curumimContent } from '@/data/curumimContent';
 import { Close as LogoClose } from '../SVGs/Close';
 import { useModal } from '@/hooks/useModal';
@@ -91,7 +91,7 @@ export const CurumimModal: React.FC = () => {
           }
         >
           <div className={styles.loadMoreWrapper}>
-            <AddCircle />
+            <LogoAddCircle />
             <span className={styles.loadMoreText}>Carregar Mais</span>
           </div>
         </button>

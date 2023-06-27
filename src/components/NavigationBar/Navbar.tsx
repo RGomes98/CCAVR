@@ -11,6 +11,7 @@ import { Links } from './Links';
 
 import styles from '../../stylesheets/components/NavigationBarStyles/Navbar.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const Navbar: React.FC = () => {
   const isHiddenMenuOpen = useStore((state) => state.isHiddenMenuOpen);
@@ -32,24 +33,19 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className={`${showNavbar} ${navbarTransparency}`}>
-      {isAtCurumim ? (
+      <Link href={isAtCurumim ? '/curumim#top' : '/#top'}>
         <Image
           width={160}
           height={160}
-          alt='logo-curumim'
+          alt={isAtCurumim ? 'logo-curumim' : 'logo-cca'}
           className={styles.primaryLogo}
-          src='/logos/svgs/institution/logoCurumim.svg'
+          src={
+            isAtCurumim
+              ? '/logos/svgs/institution/logoCurumim.svg'
+              : '/logos/svgs/institution/logoCCA.svg'
+          }
         />
-      ) : (
-        <Image
-          width={160}
-          height={160}
-          alt='logo-cca'
-          className={styles.primaryLogo}
-          src='/logos/svgs/institution/logoCCA.svg'
-        />
-      )}
-
+      </Link>
       {!isSmallerThanLimit && <Links />}
       {isSmallerThanLimit && (
         <button onClick={() => toggleHiddenMenu()} className={styles.hiddenButton}>
