@@ -10,10 +10,10 @@ import Image from 'next/image';
 
 export const Contact: React.FC = () => {
   const reCAPTCHARef = useRef<ReCAPTCHA>(null);
-  const { formData, formErrors, statusMessage, isLoading, isError, handleChange, handleSubmit } =
+  const { formData, formErrors, statusMessage, isLoading, isSuccess, handleChange, handleSubmit } =
     useForm(reCAPTCHARef);
 
-  const isResponseError = isError ? '' : styles.successMessage;
+  const isResponseError = isSuccess ? styles.successMessage : '';
 
   return (
     <div id='contact' className={styles.container}>

@@ -33,7 +33,7 @@ export const useForm = (reCAPTCHARef: RefObject<ReCAPTCHA>) => {
 
   const [statusMessage, setStatusMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(true);
+  const [isSuccess, setIsSuccess] = useState(false);
   const PHONE_LENGTH = 11;
 
   const handleChange = (e: React.ChangeEvent<ChangeInput>) => {
@@ -53,25 +53,25 @@ export const useForm = (reCAPTCHARef: RefObject<ReCAPTCHA>) => {
 
     const { name, email, phone, city, subject, content } = formData;
     setFormErrors({ name: false, phone: false, content: false });
-    let hasError = false;
-    setIsError(true);
+    let hasFormErrors = false;
+    setIsSuccess(false);
 
     if (!name.trim()) {
-      hasError = true;
+      hasFormErrors = true;
       setFormErrors((prev) => ({ ...prev, name: true }));
     }
 
     if (!content.trim()) {
-      hasError = true;
+      hasFormErrors = true;
       setFormErrors((prev) => ({ ...prev, content: true }));
     }
 
     if (!validatePhone(phone)) {
-      hasError = true;
+      hasFormErrors = true;
       setFormErrors((prev) => ({ ...prev, phone: true }));
     }
 
-    if (hasError) return;
+    if (hasFormErrors) return;
     const reCAPTCHAToken = await reCAPTCHARef.current?.executeAsync();
     reCAPTCHARef.current?.reset();
     setIsLoading(true);
@@ -91,7 +91,7 @@ export const useForm = (reCAPTCHARef: RefObject<ReCAPTCHA>) => {
 
     const statusText: { [index: number]: () => void } = {
       200: () => {
-        setIsError(false);
+        setIsSuccess(true);
         setStatusMessage('E-mail enviado com sucesso!');
       },
       400: () => setStatusMessage('Todos os campos são necessários!'),
@@ -101,17 +101,15 @@ export const useForm = (reCAPTCHARef: RefObject<ReCAPTCHA>) => {
     setIsLoading(false);
     statusText[status]();
 
-    setFormData((prev) => ({
-      ...prev,
-      name: '',
-      email: '',
-      phone: '',
-      city: '',
-      subject: '',
-      content: '',
-    }));
+    setFormData((prev) => {
+      return Object.keys(prev).reduce((obj, key) => {
+        obj[key] = '';
+        return obj;
+      }, {} as { [index: string]: string }) as FormData;
+    });
+
     setTimeout(() => setStatusMessage(''), 5000);
   };
 
-  return { formData, formErrors, statusMessage, isLoading, isError, handleChange, handleSubmit };
+  return { formData, formErrors, statusMessage, isLoading, isSuccess, handleChange, handleSubmit };
 };
