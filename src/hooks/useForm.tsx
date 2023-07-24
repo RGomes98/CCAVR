@@ -37,8 +37,7 @@ export const useForm = (reCAPTCHARef: RefObject<ReCAPTCHA>) => {
   const PHONE_LENGTH = 11;
 
   const handleChange = (e: React.ChangeEvent<ChangeInput>) => {
-    const { value } = e.target;
-    const { id } = e.target;
+    const { id, value } = e.target;
 
     const isPhoneOnly = id === 'phone' && value.length <= PHONE_LENGTH;
     const isNotPhone = id !== 'phone';

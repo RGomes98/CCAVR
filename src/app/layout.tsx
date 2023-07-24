@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Casa da Criança e do Adolescente',
+  title: 'Casa da Criança e do Adolescente de Volta Redonda',
   description:
     'A Casa da Criança e do Adolescente é uma organização da Sociedade Civil (OSC), fundada em 16/07/1996, de direito privado sem fins lucrativos, com Certificação de Entidade Beneficente de Assistência Social.',
 };
