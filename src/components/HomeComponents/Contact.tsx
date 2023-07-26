@@ -13,7 +13,7 @@ export const Contact: React.FC = () => {
   const { formData, formErrors, statusMessage, isLoading, isSuccess, handleChange, handleSubmit } =
     useForm(reCAPTCHARef);
 
-  const isResponseError = isSuccess ? styles.successMessage : '';
+  const isResponseSuccess = isSuccess ? styles.successMessage : '';
 
   return (
     <div id='contact' className={styles.container}>
@@ -134,7 +134,7 @@ export const Contact: React.FC = () => {
               Insira uma mensagem válida!
             </span>
             <span
-              className={`${styles.contactResponse} ${isResponseError} ${
+              className={`${styles.contactResponse} ${isResponseSuccess} ${
                 statusMessage && styles.showResponse
               }`}
             >
