@@ -14,7 +14,10 @@ type FormData = {
 
 export async function POST(req: Request) {
   const formData: { [index: string]: string } = await req.json();
-  Object.keys(formData).forEach((key) => (formData[key] = formData[key].trim()));
+  Object.keys(formData).forEach((key) => {
+    const isDataString = typeof formData[key] === 'string';
+    formData[key] = isDataString ? formData[key].trim() : '';
+  });
 
   const isFormFilled = Object.values(formData).every((value) => value);
   if (!isFormFilled) return new Response('Todos os campos são necessários!', { status: 400 });
