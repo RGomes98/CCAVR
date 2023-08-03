@@ -20,7 +20,11 @@ export async function POST(req: Request) {
   });
 
   const isFormFilled = Object.values(formData).every((value) => value);
-  if (!isFormFilled) return new Response('Todos os campos são necessários!', { status: 400 });
+  const isFormLengthValid = Object.values(formData).length === 7;
+
+  if (!isFormFilled || !isFormLengthValid) {
+    return new Response('Todos os campos são necessários!', { status: 400 });
+  }
 
   const { reCAPTCHAToken, name, email, phone, city, subject, content } = formData as FormData;
 
