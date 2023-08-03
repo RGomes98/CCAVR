@@ -11,8 +11,23 @@ export const Testimonial: React.FC = () => {
       <div className={styles.videoSection}>
         <div className={styles.videoWrapper}>
           <h2 className={styles.heading}>
-            Depoimento de Antônio Francisco Neto{' '}
-            <span className={styles.boldHeading}>Prefeito de Volta Redonda</span>
+            Ir. Elizabeth Alves <span className={styles.boldHeading}>Fundadora</span>
+          </h2>
+          <video className={styles.video} preload='metadata' controls>
+            <source src={`/videos/testimony03.mp4${thumbnailTime}`} type='video/mp4' />
+          </video>
+        </div>
+        <div className={styles.videoWrapper}>
+          <h2 className={styles.heading}>
+            Guaraciara de Lavor Lopes <span className={styles.boldHeading}>Presidente</span>
+          </h2>
+          <video className={styles.video} preload='metadata' controls>
+            <source src={`/videos/testimony04.mp4${thumbnailTime}`} type='video/mp4' />
+          </video>
+        </div>
+        <div className={styles.videoWrapper}>
+          <h2 className={styles.heading}>
+            Antônio Francisco Neto <span className={styles.boldHeading}>Prefeito</span>
           </h2>
           <video className={styles.video} preload='metadata' controls>
             <source src={`/videos/testimony01.mp4${thumbnailTime}`} type='video/mp4' />
@@ -20,9 +35,9 @@ export const Testimonial: React.FC = () => {
         </div>
         <div className={styles.videoWrapper}>
           <h2 className={styles.heading}>
-            Depoimento de Munir Francisco{' '}
+            Munir Francisco{' '}
             <span className={styles.boldHeading}>
-              Secretário de Ação Comunitária de Volta Redonda
+              Presidente da Comissão Criança e Adolescente da ALERJ
             </span>
           </h2>
           <video className={styles.video} preload='metadata' controls>
@@ -31,37 +46,12 @@ export const Testimonial: React.FC = () => {
         </div>
         <div className={styles.videoWrapper}>
           <h2 className={styles.heading}>
-            Depoimento da Irmã Elizabeth Alves{' '}
-            <span className={styles.boldHeading}>
-              Fundadora da Casa da Criança e do Adolescente
-            </span>
+            Neuza Jordão <span className={styles.boldHeading}>Cofundadora</span>
           </h2>
           <video className={styles.video} preload='metadata' controls>
-            <source src={`/videos/testimony03.mp4${thumbnailTime}`} type='video/mp4' />
+            <source src={`/videos/testimony05.mp4${thumbnailTime}`} type='video/mp4' />
           </video>
         </div>
-        <div className={styles.videoWrapper}>
-          <h2 className={styles.heading}>
-            Depoimento de Guaraciara Pouzada de Lavor Lopes{' '}
-            <span className={styles.boldHeading}>
-              Presidente da Casa da Criança e do Adolescente
-            </span>
-          </h2>
-          <video className={styles.video} preload='metadata' controls>
-            <source src={`/videos/testimony04.mp4${thumbnailTime}`} type='video/mp4' />
-          </video>
-        </div>
-      </div>
-      <h2 className={styles.heading}>Veja mais Histórias Inspiradoras em nosso Canal do YouTube</h2>
-      <div className={styles.linkWrapper}>
-        <LogoYoutube />
-        <p className={styles.linkHeading}>Casa da Criança e do Adolescente no Youtube</p>
-        <a className={styles.link} href='https://www.youtube.com/@casadacriancaedoadolescent351'>
-          ACESSE JÁ
-          <div className={styles.circle}>
-            <LogoArrowRight />
-          </div>
-        </a>
       </div>
     </div>
   );
