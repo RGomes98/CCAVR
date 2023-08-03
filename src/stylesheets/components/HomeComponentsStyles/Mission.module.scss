@@ -87,6 +87,12 @@
   bottom: 3.2rem;
 }
 
+@media (width <= 87.5rem) {
+  .wrapper {
+    max-width: 92%;
+  }
+}
+
 @media (width <= 46.875rem) {
   .heading {
     margin-bottom: 2rem;
