@@ -18,6 +18,7 @@ $big-heading: 2.8rem;
 //Clamp Font Size
 $text-clamp: clamp(1rem, 0.9135rem + 0.4324vw, 1.2rem);
 $faq-heading-clamp: clamp(1.8rem, -0.6rem + 12vw, 2.4rem);
+$carousel-text-clamp: clamp(1.2rem, 1.04rem + 0.8vw, 2rem);
 $navbar-clamp: clamp(1.2rem, -0.2769rem + 1.8462vw, 1.6rem);
 $project-button-clamp: clamp(1.4rem, 1.2286rem + 0.8571vw, 2rem);
 $section-heading-clamp: clamp(2.2rem, 1.9838rem + 1.0811vw, 3rem);
