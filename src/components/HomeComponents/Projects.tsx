@@ -2,8 +2,6 @@ import { projectDescription } from '../../data/projectDescription';
 import { Project } from '../ProjectModal/Project';
 
 import styles from '../../stylesheets/components/HomeComponentsStyles/Projects.module.scss';
-import Image from 'next/image';
-import Link from 'next/link';
 
 export const Projects: React.FC = () => {
   return (
@@ -16,15 +14,6 @@ export const Projects: React.FC = () => {
         </p>
       </div>
       <div className={styles.projectWrapper}>
-        <Link className={styles.project} href='/curumim#top'>
-          <Image
-            src='/logos/svgs/institution/logoCurumim.svg'
-            alt='logo-curumim'
-            className={styles.logoCurumim}
-            width={384}
-            height={288}
-          />
-        </Link>
         {projectDescription.map(({ name, description }, idx) => {
           return (
             <Project
