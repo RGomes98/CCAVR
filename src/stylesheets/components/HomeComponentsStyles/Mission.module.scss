@@ -3,34 +3,52 @@
 .container {
   width: 100%;
   display: flex;
-  padding: 4.5rem 0;
   position: relative;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding: 4.5rem 0 6.5rem;
 }
 
 .heading {
   font-weight: 500;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   color: var.$primary-blue;
   font-size: var.$section-heading-clamp;
 }
 
-.textWrapper {
-  max-width: 65%;
-  font-weight: 400;
-  line-height: 1.2;
-  list-style: none;
-  text-align: justify;
-}
-
 .text {
+  max-width: 80%;
   font-weight: 300;
-  margin-bottom: 3.5rem;
+  text-align: center;
+  margin-bottom: 6.5rem;
   color: var.$black-font;
   font-size: var.$text-clamp;
+}
+
+.wrapper {
+  display: grid;
+  max-width: 90%;
+  gap: 4rem 3rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 24rem));
+}
+
+.missionWrapper {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.missionHeading {
+  color: var.$black-font;
+  font-size: var.$big-text;
+}
+
+.missionText {
+  color: var.$black-font;
+  font-weight: 300;
 }
 
 .triangle {
@@ -70,23 +88,7 @@
 }
 
 @media (width <= 46.875rem) {
-  .triangle {
-    display: none;
-  }
-
   .heading {
     margin-bottom: 2rem;
-  }
-
-  .textWrapper {
-    max-width: 90%;
-  }
-
-  .text {
-    margin-bottom: 1.5rem;
-  }
-
-  .text::before {
-    display: none;
   }
 }
