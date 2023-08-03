@@ -15,7 +15,7 @@ export const Donate: React.FC = () => {
   return (
     <dialog ref={modalRef} className={styles.modal}>
       <div className={styles.primaryWrapper}>
-        <h2 className={styles.primaryHeading}>Faça parte dessa causa!</h2>
+        <h2 className={styles.primaryHeading}>Faça parte dessa Casa!</h2>
         <p className={styles.primaryText}>
           Juntos podemos fazer a diferença! Faça sua doação à Casa da Criança e do Adolescente e
           ajude a construir um mundo mais justo para nossas crianças e adolescentes.
