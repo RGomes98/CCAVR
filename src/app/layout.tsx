@@ -2,7 +2,9 @@ import { ScrollToTopArrow } from '@/components/ScrollToTop/ScrollToTopArrow';
 import { Carousel } from '@/components/ImageCarousel/Carousel';
 import { Navbar } from '@/components/NavigationBar/Navbar';
 import { Footer } from '@/components/Footer/Footer';
+import { Analytics } from '@vercel/analytics/react';
 import { Poppins } from 'next/font/google';
+import { Fragment } from 'react';
 
 import '../stylesheets/global.scss';
 
@@ -20,18 +22,21 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='pt-BR'>
-      <body className={poppins.className}>
-        <div id='root'>
-          <Navbar />
-          <Carousel />
-          <main>
-            {children}
-            <ScrollToTopArrow />
-          </main>
-          <Footer />
-        </div>
-      </body>
-    </html>
+    <Fragment>
+      <html lang='pt-BR'>
+        <body className={poppins.className}>
+          <div id='root'>
+            <Navbar />
+            <Carousel />
+            <main>
+              {children}
+              <ScrollToTopArrow />
+            </main>
+            <Footer />
+          </div>
+        </body>
+      </html>
+      <Analytics />
+    </Fragment>
   );
 }
