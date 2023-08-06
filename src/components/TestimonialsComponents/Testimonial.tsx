@@ -1,6 +1,3 @@
-import { ArrowRight as LogoArrowRight } from '../SVGs/ArrowRight';
-import { Youtube as LogoYoutube } from '../SVGs/Youtube';
-
 import styles from '../../stylesheets/components/TestimonialsComponentsStyles/Testimonial.module.scss';
 
 export const Testimonial: React.FC = () => {
