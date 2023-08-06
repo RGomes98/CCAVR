@@ -18,14 +18,12 @@ export const Links: React.FC = () => {
   const isAtTransparency = pathname === '/transparencia';
   const isAtTestimonials = pathname === '/depoimentos';
   const isAtFAQ = pathname === '/perguntas-frequentes';
-  const isAtCurumim = pathname === '/curumim';
+  const isAtNews = pathname === '/noticias';
   const isAtHome = pathname === '/';
-
-  const linkStyles = isAtCurumim ? styles.curumim : styles.home;
 
   return (
     <Fragment>
-      <ul className={`${styles.navWrapper} ${linkStyles}`}>
+      <ul className={`${styles.navWrapper} ${styles.home}`}>
         {!isAtHome && (
           <li className={styles.navItem}>
             <Link onClick={() => closeHiddenMenu()} className={styles.navLink} href='/#top'>
@@ -44,11 +42,13 @@ export const Links: React.FC = () => {
             </Link>
           </li>
         )}
-        <li className={styles.navItem}>
-          <Link onClick={() => closeHiddenMenu()} href='/#project' className={styles.navLink}>
-            Projetos
-          </Link>
-        </li>
+        {!isAtNews && (
+          <li className={styles.navItem}>
+            <Link onClick={() => closeHiddenMenu()} href='/noticias#top' className={styles.navLink}>
+              Notícias
+            </Link>
+          </li>
+        )}
         {!isAtTestimonials && (
           <li className={styles.navItem}>
             <Link
@@ -77,7 +77,7 @@ export const Links: React.FC = () => {
           </Link>
         </li>
       </ul>
-      <div className={`${styles.secondaryWrapper} ${linkStyles}`}>
+      <div className={`${styles.secondaryWrapper} ${styles.home}`}>
         <div className={styles.socialWrapper}>
           <a
             className={styles.socialLink}

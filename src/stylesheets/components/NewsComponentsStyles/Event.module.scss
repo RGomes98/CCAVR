@@ -1,0 +1,75 @@
+@use '../../variables' as var;
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.eventHeading {
+  max-width: 90%;
+  font-weight: 400;
+  text-align: center;
+  margin: 6rem 0 4rem;
+  color: var.$primary-blue;
+  font-size: var.$section-heading-clamp;
+}
+
+.eventImagesWrapper {
+  height: 100%;
+  display: flex;
+  max-width: 90%;
+  position: relative;
+  margin-bottom: 6rem;
+  align-items: center;
+  border-radius: 0.4rem;
+  box-shadow: var.$standard-box-shadow;
+}
+
+.eventImage {
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  max-height: 50rem;
+  object-fit: cover;
+  max-width: 62.5rem;
+  border-radius: 0.4rem;
+}
+
+.invisible {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.previousButton,
+.nextButton {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  transition: scale 0.2s;
+  background-color: transparent;
+
+  svg {
+    width: 4rem;
+    height: 4rem;
+    fill: var.$white;
+    pointer-events: none;
+    filter: drop-shadow(var.$heavy-box-shadow);
+  }
+}
+
+.previousButton:hover,
+.nextButton:hover {
+  scale: 1.2;
+}
+
+.previousButton {
+  left: 0rem;
+  rotate: 180deg;
+}
+
+.nextButton {
+  right: 0rem;
+}
