@@ -41,7 +41,7 @@ export const Event: React.FC<{
               key={idx}
               width={1000}
               height={800}
-              unoptimized={true}
+              quality={100}
               className={`${styles.eventImage} ${!isImageSelected ? styles.invisible : ''}`}
             />
           );
