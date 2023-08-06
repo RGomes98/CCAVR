@@ -3,11 +3,11 @@
 .container {
   width: 100%;
   display: flex;
+  padding: 4.5rem 0;
   position: relative;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 4.5rem 0 6.5rem;
 }
 
 .heading {
@@ -22,7 +22,7 @@
   max-width: 80%;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 6.5rem;
+  margin-bottom: 6rem;
   color: var.$black-font;
   font-size: var.$text-clamp;
 }
