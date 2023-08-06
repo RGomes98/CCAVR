@@ -57,10 +57,10 @@ export const Accounting: React.FC = () => {
         <div className={styles.links}>
           <div className={styles.linkWrapper}>
             <LogoPDF />
-            <p className={styles.linkText}>Estatuto Social</p>
+            <p className={styles.linkText}>Ata de Eleição</p>
             <a
               className={styles.link}
-              href='https://drive.google.com/file/d/1-7eTFknnzt7iG5oGapsRd1mVZjQZUMnN/view?usp=sharing'
+              href='https://drive.google.com/drive/folders/18SiyqddYkTf5wFP5DMny1Xc6tax6Aep_?usp=sharing'
             >
               FAZER DOWNLOAD
               <div className={styles.arrowWrapper}>
@@ -70,10 +70,10 @@ export const Accounting: React.FC = () => {
           </div>
           <div className={styles.linkWrapper}>
             <LogoPDF />
-            <p className={styles.linkText}>Ata de Eleição</p>
+            <p className={styles.linkText}>Estatuto Social</p>
             <a
               className={styles.link}
-              href='https://drive.google.com/drive/folders/18SiyqddYkTf5wFP5DMny1Xc6tax6Aep_?usp=sharing'
+              href='https://drive.google.com/file/d/1-7eTFknnzt7iG5oGapsRd1mVZjQZUMnN/view?usp=sharing'
             >
               FAZER DOWNLOAD
               <div className={styles.arrowWrapper}>
