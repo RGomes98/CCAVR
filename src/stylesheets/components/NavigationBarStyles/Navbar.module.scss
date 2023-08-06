@@ -58,6 +58,12 @@
   }
 }
 
+@media (width <= 85.375rem) {
+  .reducedPadding {
+    padding: 0 3rem;
+  }
+}
+
 @media (width <= 22.8rem) {
   .container {
     gap: 1rem;

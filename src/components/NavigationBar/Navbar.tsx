@@ -19,6 +19,7 @@ export const Navbar: React.FC = () => {
   const closeHiddenMenu = useStore((state) => state.closeHiddenMenu);
 
   const pathname = usePathname();
+  const isAtNews = pathname.includes('noticias');
   const isAtCurumim = pathname === '/curumim';
 
   const { isSmallerThanLimit } = useWindowSize(isAtCurumim ? 1500 : 1280, closeHiddenMenu);
@@ -27,12 +28,14 @@ export const Navbar: React.FC = () => {
   const navbarTransparency =
     oldScrollYPosition > 250 && !isHiddenMenuOpen ? styles.transparent : '';
 
+  const navbarReducedPadding = isAtNews ? styles.reducedPadding : '';
+
   const showNavbar = isScrollDownward
     ? styles.container
     : `${styles.container} ${styles.showNavbar}`;
 
   return (
-    <nav className={`${showNavbar} ${navbarTransparency}`}>
+    <nav className={`${showNavbar} ${navbarTransparency} ${navbarReducedPadding}`}>
       <Link href={isAtCurumim ? '/curumim#top' : '/#top'}>
         <Image
           width={160}
