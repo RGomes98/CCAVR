@@ -26,8 +26,8 @@ export const news: News = {
     },
 
     'arraia-solidario-shopping-park-sul': {
-      title: 'Arraiá Solidário Shopping Park Sul',
-      text: 'Participação da Casa da Criança e do Adolescente no Arraia Solidário do @shoppingparksul ❤️ Queríamos agradecer a oportunidade de participar deste evento pelo segundo ano consecutivo e poder angariar recursos para a continuação dos projetos da instituição. Obrigado a todos deram uma passadinha por lá e prestigiaram esse lindo evento no Shopping Park Sul. 3 dias de muita alegria, diversão,comida boa além de ajudar a nossa instituição e o @gapcgrupodeapoio 🍲🌽',
+      title: 'Arraiá Solidário - Shopping Park Sul',
+      text: 'Participação da Casa da Criança e do Adolescente no Arraia Solidário do @shoppingparksul ❤️ Queríamos agradecer a oportunidade de participar deste evento pelo segundo ano consecutivo e poder angariar recursos para a continuação dos projetos da instituição. Obrigado a todos deram uma passadinha por lá e prestigiaram esse lindo evento no Shopping Park Sul. 3 dias de muita alegria, diversão,comida boa além de ajudar a nossa instituição e o @gapcgrupodeapoio 🍲🌽.',
       images: [
         `${basePath}2023/Arraiá Solidário Shopping Park Sul/image01.webp`,
         `${basePath}2023/Arraiá Solidário Shopping Park Sul/image02.webp`,
