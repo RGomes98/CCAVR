@@ -4,7 +4,7 @@ import { news } from '@/data/news';
 
 export default function News({ params }: { params: { event: string[] } }) {
   const [year, name] = params.event;
-  const event = news[year][name];
+  const event = news[year]?.[name];
 
   if (!event) return redirect('/');
 
