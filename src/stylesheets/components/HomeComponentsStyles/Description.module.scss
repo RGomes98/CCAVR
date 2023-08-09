@@ -42,6 +42,7 @@
   font-weight: 400;
   color: var.$dark-red;
   font-family: inherit;
+  transition: color ease 0.2s;
 }
 
 .userLink:hover {
