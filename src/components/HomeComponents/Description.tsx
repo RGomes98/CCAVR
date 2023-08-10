@@ -6,13 +6,15 @@ export const Description: React.FC<{ heading: string; text: string }> = ({ headi
   const parseText = (descriptionText: string) => {
     return descriptionText.split(' ').map((word, idx) => {
       if (word.startsWith('@')) {
-        const username = word.slice(1);
+        const isLastWord = word.endsWith('.');
+        const username = !isLastWord ? word.slice(1) : word.slice(1, word.length - 1);
 
         return (
           <Fragment key={idx}>
             <a className={styles.userLink} href={`https://www.instagram.com/${username}`}>
-              {word}
-            </a>{' '}
+              @{username}
+            </a>
+            {!isLastWord ? ' ' : '.'}
           </Fragment>
         );
       }
