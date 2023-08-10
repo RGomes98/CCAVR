@@ -45,11 +45,12 @@
 
 .previousButton,
 .nextButton {
+  opacity: 0.8;
   border: none;
   cursor: pointer;
   position: absolute;
-  transition: scale 0.2s;
   background-color: transparent;
+  transition: scale 0.2s, opacity 0.2s;
 
   svg {
     width: 4rem;
@@ -63,6 +64,7 @@
 .previousButton:hover,
 .nextButton:hover {
   scale: 1.2;
+  opacity: 1;
 }
 
 .previousButton {
