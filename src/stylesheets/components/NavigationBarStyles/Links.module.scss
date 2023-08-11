@@ -5,40 +5,28 @@
   display: flex;
   list-style: none;
   align-items: center;
-  animation: fadeIn forwards 0.4s;
 }
 
 .navItem {
-  letter-spacing: 0;
-  font-size: var.$navbar-clamp;
-  transition: letter-spacing 280ms ease-in-out;
-}
-
-.navItem::before,
-.navItem::after {
-  width: 0;
-  bottom: 0px;
-  content: ' ';
-  display: block;
   position: relative;
-  margin: 0.25rem auto;
-  backface-visibility: hidden;
-  transition: all 280ms ease-in-out;
-  border-top: 1px solid rgba(var.$white, 0);
+  padding-block: 0.05rem;
+  font-size: var.$navbar-clamp;
 }
 
-.navItem:hover::before,
+.navItem::after {
+  left: 0;
+  bottom: 0;
+  scale: 0 1;
+  width: 100%;
+  content: '';
+  height: 0.15rem;
+  position: absolute;
+  transition: scale 0.25s;
+  background-color: var.$red;
+}
+
 .navItem:hover::after {
-  width: 100%;
-  backface-visibility: hidden;
-  border-color: var.$black-font;
-  transition: width 350ms ease-in-out;
-}
-
-.navItem:hover::before {
-  top: 0;
-  width: 100%;
-  bottom: auto;
+  scale: 1 1;
 }
 
 .navLink {
