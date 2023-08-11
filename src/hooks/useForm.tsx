@@ -101,10 +101,10 @@ export const useForm = (reCAPTCHARef: RefObject<ReCAPTCHA>) => {
     statusText[status]();
 
     setFormData((prev) => {
-      return Object.keys(prev).reduce((obj, key) => {
+      return Object.keys(prev).reduce<Record<string, string>>((obj, key) => {
         obj[key] = '';
         return obj;
-      }, {} as { [index: string]: string }) as FormData;
+      }, {}) as FormData;
     });
 
     setTimeout(() => setStatusMessage(''), 5000);
