@@ -20,8 +20,8 @@ export const NewsLinks: React.FC = () => {
         .map((year) => {
           return (
             <div className={styles.linksWrapper} key={year}>
-              <span className={styles.linksHeading}>Eventos de {year}</span>
               <div className={styles.linksYearWrapper}>
+                <span className={styles.linksHeading}>{year}</span>
                 {Object.keys(news[year]).map((event) => {
                   const { title } = news[year][event];
 

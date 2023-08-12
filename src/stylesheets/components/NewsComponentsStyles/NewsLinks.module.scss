@@ -27,20 +27,20 @@
   }
 }
 
-.linksHeading {
-  max-width: 90%;
-  font-weight: 400;
-  text-align: center;
-  color: var.$primary-blue;
-  font-size: var.$section-heading-clamp;
-}
-
 .linksYearWrapper {
   gap: 4rem;
   width: 100%;
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(18rem, 20rem));
+}
+
+.linksHeading {
+  font-weight: 600;
+  grid-column: 1 / -1;
+  padding-inline: 1rem;
+  color: var.$primary-blue;
+  font-size: var.$carousel-heading-clamp;
 }
 
 .linkWrapper {
