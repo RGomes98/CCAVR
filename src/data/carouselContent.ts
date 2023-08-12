@@ -1,11 +1,11 @@
 const basePath = '/images/carousel/';
 
 export const carouselContent = [
-  `${basePath}image1.webp`,
-  `${basePath}image2.webp`,
-  `${basePath}image3.webp`,
-  `${basePath}image4.webp`,
-  `${basePath}image5.webp`,
-  `${basePath}image6.webp`,
-  `${basePath}image7.webp`,
+  `${basePath}image01.webp`,
+  `${basePath}image02.webp`,
+  `${basePath}image03.webp`,
+  `${basePath}image04.webp`,
+  `${basePath}image05.webp`,
+  `${basePath}image06.webp`,
+  `${basePath}image07.webp`,
 ];
