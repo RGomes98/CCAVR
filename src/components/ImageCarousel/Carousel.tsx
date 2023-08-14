@@ -27,7 +27,6 @@ export const Carousel: React.FC = () => {
             fill
             key={idx}
             src={image}
-            sizes='100vw'
             quality={100}
             alt='carousel-image'
             priority={idx === 0 ? true : false}
