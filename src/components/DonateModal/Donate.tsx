@@ -51,7 +51,7 @@ export const Donate: React.FC = () => {
           width={285}
           height={285}
         />
-        <span className={styles.boldText}>3c456f47-80ca-41c1-bcd7-235e582400ed</span>
+        <span className={styles.boldText}>Chave PIX: (24) 98839-7130</span>
       </div>
       <button className={styles.closeButton} onClick={toggleDonateModal}>
         <LogoClose />
