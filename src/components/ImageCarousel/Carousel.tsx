@@ -24,12 +24,11 @@ export const Carousel: React.FC = () => {
 
         return (
           <Image
+            fill
             key={idx}
             src={image}
-            width={1920}
-            height={1080}
-            quality={100}
             sizes='100vw'
+            quality={100}
             alt='carousel-image'
             priority={idx === 0 ? true : false}
             className={`${styles.image} ${isCurrentImage ? styles.showImage : styles.hideImage}`}
