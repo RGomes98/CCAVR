@@ -12,6 +12,25 @@ type News = {
 
 export const news: News = {
   2023: {
+    'arraia-do-curumim-unidade-249': {
+      title: 'Arraiá do Curumim - Unidade 249',
+      text: 'No dia 11 de agosto foi realizado o nosso "Arraiá do Curumim Unidade 249"... Teve muita brincadeira, diversão, presentes, comida gostosa e lindas apresentações das nossas crianças e adolescentes. Agradecemos aos nossos amigos voluntários que nos ajudaram a realizar essa grande festança... "Um grande beijo sô" @guarallopes @prefeituravr @smacvoltaredonda.',
+      images: [
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image01.webp`,
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image02.webp`,
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image03.webp`,
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image04.webp`,
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image05.webp`,
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image06.webp`,
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image07.webp`,
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image08.webp`,
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image09.webp`,
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image10.webp`,
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image11.webp`,
+        `${basePath}2023/Arraiá do Curumim Unidade 249/image12.webp`,
+      ],
+    },
+
     'arraia-da-cidadania': {
       title: 'Arraiá da Cidadania',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas sed. Mi proin sed libero enim sed faucibus turpis in eu. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Mi bibendum neque egestas congue quisque egestas. Ultrices sagittis orci a scelerisque purus semper. Ac turpis egestas maecenas pharetra convallis posuere morbi. Risus nec feugiat in fermentum posuere urna nec tincidunt. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Suspendisse potenti nullam ac tortor.',
