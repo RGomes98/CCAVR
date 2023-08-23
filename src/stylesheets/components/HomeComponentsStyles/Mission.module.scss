@@ -33,6 +33,7 @@
   display: flex;
   max-width: 65%;
   flex-wrap: wrap;
+  margin-bottom: 3rem;
   justify-content: center;
 }
 
@@ -96,5 +97,9 @@
 
   .text {
     margin-bottom: 2.5rem;
+  }
+
+  .wrapper {
+    margin-bottom: 0;
   }
 }
