@@ -1,6 +1,10 @@
-import { redirect } from 'next/navigation';
+'use client';
+// import { redirect } from 'next/navigation';
+
+import { useRouter } from 'next/navigation';
 
 export default function NotFound() {
-  // redirect('/');
-  return <h1>Not Found</h1>;
+  const router = useRouter();
+  return router.push('/');
+  // return redirect('/');
 }
