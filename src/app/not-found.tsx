@@ -2,13 +2,12 @@
 
 import { redirect } from 'next/navigation';
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function NotFound() {
   const router = useRouter();
-  try {
+
+  useEffect(() => {
     router.push('/');
-  } catch (error) {
-    console.log(error);
-  }
-  // redirect('/');
+  }, [router]);
 }
