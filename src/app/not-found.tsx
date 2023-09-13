@@ -1,15 +1,5 @@
-'use client';
-
-// import { redirect } from 'next/navigation';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { redirect } from 'next/navigation';
 
 export default function NotFound() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.replace('/#top');
-  }, [router]);
-
-  return <></>;
+  return redirect('/');
 }
