@@ -4,6 +4,7 @@
 import { useRouter } from 'next/navigation';
 
 export default function NotFound() {
+  console.log('hi');
   const router = useRouter();
   return router.push('/');
   // return redirect('/');
