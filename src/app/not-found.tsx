@@ -5,6 +5,10 @@ import { useRouter } from 'next/navigation';
 
 export default function NotFound() {
   const router = useRouter();
-  router.push('/');
+  try {
+    router.push('/');
+  } catch (error) {
+    console.log(error);
+  }
   // redirect('/');
 }
