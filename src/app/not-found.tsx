@@ -1,12 +1,12 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { isRedirectError } from 'next/dist/client/components/redirect';
+import { redirect } from 'next/navigation';
 
 export default function NotFound() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.push('/#top');
-  }, [router]);
+  try {
+    redirect('/');
+  } catch (error) {
+    if (isRedirectError(error)) throw error;
+  }
 }
