@@ -1,4 +1,5 @@
-'use client';
+// 'use client';
+import 'server-only';
 
 import { isRedirectError } from 'next/dist/client/components/redirect';
 import { redirect } from 'next/navigation';
