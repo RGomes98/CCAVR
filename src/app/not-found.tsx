@@ -1,9 +1,12 @@
-// 'use client';
-import 'server-only';
+'use client';
 
-import { isRedirectError } from 'next/dist/client/components/redirect';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function NotFound() {
-  redirect('/');
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/#top');
+  }, [router]);
 }
