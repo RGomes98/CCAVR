@@ -19,21 +19,24 @@ export const Carousel: React.FC = () => {
 
   return (
     <div className={styles.imageCarousel}>
-      {carouselContent.map((image, idx) => {
-        const isCurrentImage = imageIndex === idx;
+      <div className={styles.imageWrapper}>
+        {carouselContent.map((image, idx) => {
+          const isCurrentImage = imageIndex === idx;
 
-        return (
-          <Image
-            fill
-            key={idx}
-            src={image}
-            quality={100}
-            alt='carousel-image'
-            priority={idx === 0 ? true : false}
-            className={`${styles.image} ${isCurrentImage ? styles.showImage : styles.hideImage}`}
-          />
-        );
-      })}
+          return (
+            <Image
+              key={idx}
+              src={image}
+              width={1920}
+              quality={100}
+              height={1080}
+              priority={true}
+              alt='carousel-image'
+              className={`${styles.image} ${isCurrentImage ? styles.showImage : styles.hideImage}`}
+            />
+          );
+        })}
+      </div>
       <div className={`${styles.headingWrapper} ${nunito.className}`}>
         <h1 className={styles.heading}>Casa da Criança e do Adolescente</h1>
         <p>

@@ -1,6 +1,9 @@
+import styles from '../../stylesheets/components/ImageCarouselStyles/Carousel.module.scss';
+
 export const Waves: React.FC = () => {
   return (
     <svg
+      className={styles.waves}
       id='visual'
       viewBox='0 0 1920 800'
       width='1920'
