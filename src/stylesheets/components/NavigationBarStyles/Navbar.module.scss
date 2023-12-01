@@ -25,6 +25,11 @@
   background-color: var.$transparent-white-navbar;
 }
 
+.homeButton {
+  all: unset;
+  cursor: pointer;
+}
+
 .primaryLogo {
   z-index: 1;
   width: 100%;

@@ -2,6 +2,7 @@
 
 import { useNavbarVisibility } from '../../hooks/useNavbarVisibility';
 import { useWindowSize } from '../../hooks/useWindowSize';
+import { useScrollToTop } from '@/hooks/useScrollToTop';
 import { Close as LogoClose } from '../SVGs/Close';
 import { Bars as LogoOpen } from '../SVGs/Bars';
 import { usePathname } from 'next/navigation';
@@ -20,10 +21,11 @@ export const Navbar: React.FC = () => {
 
   const pathname = usePathname();
   const isAtNews = pathname.includes('noticias');
-  const isAtCurumim = pathname === '/curumim';
+  const isAtHome = pathname === '/';
 
-  const { isSmallerThanLimit } = useWindowSize(isAtCurumim ? 1500 : 1280, closeHiddenMenu);
   const { isScrollDownward, oldScrollYPosition } = useNavbarVisibility();
+  const { isSmallerThanLimit } = useWindowSize(1280, closeHiddenMenu);
+  const { scrollToTop } = useScrollToTop();
 
   const navbarTransparency =
     oldScrollYPosition > 250 && !isHiddenMenuOpen ? styles.transparent : '';
@@ -36,19 +38,27 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className={`${showNavbar} ${navbarTransparency} ${navbarReducedPadding}`}>
-      <Link href={isAtCurumim ? '/curumim#top' : '/#top'}>
-        <Image
-          width={160}
-          height={160}
-          alt={isAtCurumim ? 'logo-curumim' : 'logo-cca'}
-          className={styles.primaryLogo}
-          src={
-            isAtCurumim
-              ? '/logos/svgs/institution/logoCurumim.svg'
-              : '/logos/svgs/institution/logoCCA.svg'
-          }
-        />
-      </Link>
+      {isAtHome ? (
+        <button onClick={scrollToTop} className={styles.homeButton}>
+          <Image
+            width={160}
+            height={160}
+            alt='logo-cca'
+            className={styles.primaryLogo}
+            src='/logos/svgs/institution/logoCCA.svg'
+          />
+        </button>
+      ) : (
+        <Link href='/'>
+          <Image
+            width={160}
+            height={160}
+            alt='logo-cca'
+            className={styles.primaryLogo}
+            src='/logos/svgs/institution/logoCCA.svg'
+          />
+        </Link>
+      )}
       {!isSmallerThanLimit && <Links />}
       {isSmallerThanLimit && (
         <button onClick={() => toggleHiddenMenu()} className={styles.hiddenButton}>

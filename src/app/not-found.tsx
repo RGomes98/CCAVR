@@ -7,6 +7,8 @@ export default function NotFound() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/#top');
+    router.push('/');
   }, [router]);
+
+  return null;
 }

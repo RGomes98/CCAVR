@@ -3,6 +3,7 @@ import { Carousel } from '@/components/ImageCarousel/Carousel';
 import { Navbar } from '@/components/NavigationBar/Navbar';
 import { Footer } from '@/components/Footer/Footer';
 import { Analytics } from '@vercel/analytics/react';
+import { ScrollReset } from '@/hooks/ScrollReset';
 import { Poppins } from 'next/font/google';
 import { Fragment } from 'react';
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </body>
       </html>
       <Analytics />
+      <ScrollReset />
     </Fragment>
   );
 }

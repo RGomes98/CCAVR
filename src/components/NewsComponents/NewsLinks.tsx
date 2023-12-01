@@ -31,7 +31,7 @@ export const NewsLinks: React.FC = () => {
                       <p title={title} className={styles.linkTitle}>
                         {title}
                       </p>
-                      <Link className={styles.link} href={`noticias/${year}/${event}#top`}>
+                      <Link className={styles.link} href={`noticias/${year}/${event}`}>
                         Saiba Mais
                         <div className={styles.arrowWrapper}>
                           <LogoArrowRight />
