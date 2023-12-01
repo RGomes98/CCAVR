@@ -28,11 +28,9 @@ export const Carousel: React.FC = () => {
               key={idx}
               src={image}
               width={1920}
-              quality={100}
               height={1080}
+              priority={true}
               alt='carousel-image'
-              priority={idx === 0 ? true : false}
-              loading={idx > 0 ? 'lazy' : undefined}
               className={`${styles.image} ${isCurrentImage ? styles.showImage : styles.hideImage}`}
             />
           );
