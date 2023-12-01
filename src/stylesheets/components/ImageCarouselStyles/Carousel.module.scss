@@ -80,3 +80,9 @@
     filter: blur(0px);
   }
 }
+
+@media (height <= 43.75rem) {
+  .imageCarousel {
+    padding-bottom: 50rem;
+  }
+}
