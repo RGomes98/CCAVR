@@ -13,7 +13,7 @@
   background-color: var.$light-blue;
   padding: 0 var.$navbar-padding-clamp;
   filter: drop-shadow(var.$standard-box-shadow);
-  transition: top 0.5s ease, background-color 0.2s ease;
+  transition: top 0.3s ease, background-color 0.2s ease;
 }
 
 .showNavbar {
