@@ -145,7 +145,7 @@ export const Accounting: React.FC = () => {
               className={styles.link}
               href='https://etransparente.org/oscs/casa-da-crianca-e-do-adolescente/'
             >
-              FAZER DOWNLOAD
+              ACESSE JÁ
               <div className={styles.arrowWrapper}>
                 <LogoArrowRight />
               </div>
