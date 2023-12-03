@@ -17,7 +17,7 @@ const nunito = Nunito({
 
 export const Carousel: React.FC = () => {
   const { imageIndex } = useImageCarousel(carouselContent, 8000);
-  const { isSmallerThanLimit } = useWindowSize(540);
+  const { isSmallerThanLimit } = useWindowSize(815);
 
   return (
     <div className={styles.imageCarousel}>
@@ -39,7 +39,10 @@ export const Carousel: React.FC = () => {
         })}
       </div>
       <div className={`${styles.headingWrapper} ${nunito.className}`}>
-        <h1 className={styles.heading}>Casa da Criança e do Adolescente</h1>
+        <p className={styles.headingTextWrapper}>
+          <span className={styles.headingText}>Casa da Criança e</span>
+          <span className={styles.headingText}>do Adolescente</span>
+        </p>
         <p className={styles.textWrapper}>
           <span className={styles.text}>
             Cuidando e Protegendo o {!isSmallerThanLimit && 'Nosso Futuro Comum!'}

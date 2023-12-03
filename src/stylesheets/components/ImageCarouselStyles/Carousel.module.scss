@@ -46,14 +46,17 @@
   flex-direction: column;
 }
 
-.heading {
+.headingTextWrapper {
+  display: flex;
   font-weight: 700;
   font-family: inherit;
-  word-wrap: break-word;
+  font-size: var.$carousel-heading-clamp;
+}
+
+.headingText {
   max-width: fit-content;
   padding-inline: 0.4rem;
   padding-block: 0.05rem;
-  font-size: var.$carousel-heading-clamp;
   background-color: var.$transparent-black;
 }
 
@@ -86,6 +89,13 @@
   }
   to {
     filter: blur(0px);
+  }
+}
+
+@media (width <= 50.938rem) {
+  .headingTextWrapper {
+    gap: 0.2rem;
+    flex-direction: column;
   }
 }
 
