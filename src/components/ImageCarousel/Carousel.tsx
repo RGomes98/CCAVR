@@ -2,6 +2,7 @@
 
 import { useImageCarousel } from '../../hooks/useImageCarousel';
 import { carouselContent } from '@/data/carouselContent';
+import { useWindowSize } from '@/hooks/useWindowSize';
 import { Nunito } from 'next/font/google';
 import { Waves } from '../SVGs/Waves';
 
@@ -16,6 +17,7 @@ const nunito = Nunito({
 
 export const Carousel: React.FC = () => {
   const { imageIndex } = useImageCarousel(carouselContent, 8000);
+  const { isSmallerThanLimit } = useWindowSize(540);
 
   return (
     <div className={styles.imageCarousel}>
@@ -38,8 +40,11 @@ export const Carousel: React.FC = () => {
       </div>
       <div className={`${styles.headingWrapper} ${nunito.className}`}>
         <h1 className={styles.heading}>Casa da Criança e do Adolescente</h1>
-        <p>
-          <span className={styles.text}>Cuidando e Protegendo o Nosso Futuro Comum!</span>
+        <p className={styles.textWrapper}>
+          <span className={styles.text}>
+            Cuidando e Protegendo o {!isSmallerThanLimit && 'Nosso Futuro Comum!'}
+          </span>
+          {isSmallerThanLimit && <span className={styles.text}>Nosso Futuro Comum!</span>}
         </p>
       </div>
       <Waves />
