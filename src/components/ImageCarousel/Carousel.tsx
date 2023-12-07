@@ -23,7 +23,7 @@ export const Carousel: React.FC = () => {
     <div className={styles.imageCarousel}>
       <div className={styles.imageWrapper}>
         <Image
-          quality={0}
+          quality={1}
           width={1920}
           height={1080}
           priority={false}
