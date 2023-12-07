@@ -22,6 +22,15 @@ export const Carousel: React.FC = () => {
   return (
     <div className={styles.imageCarousel}>
       <div className={styles.imageWrapper}>
+        <Image
+          quality={0}
+          width={1920}
+          height={1080}
+          priority={false}
+          alt='carousel-resizer'
+          src={carouselContent[0]}
+          className={styles.imageWrapperResizer}
+        />
         {carouselContent.map((image, idx) => {
           const isCurrentImage = imageIndex === idx;
 
@@ -31,8 +40,9 @@ export const Carousel: React.FC = () => {
               src={image}
               width={1920}
               height={1080}
-              priority={true}
+              quality={100}
               alt='carousel-image'
+              priority={idx === 0 ? true : false}
               className={`${styles.image} ${isCurrentImage ? styles.showImage : styles.hideImage}`}
             />
           );
