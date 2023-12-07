@@ -113,7 +113,7 @@
   }
 }
 
-@media (height <= 43.75rem) {
+@media ((height <= 43.75rem) and (width >= 56.25rem)) {
   .imageCarousel {
     padding-bottom: 50rem;
   }
