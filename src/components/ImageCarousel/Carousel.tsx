@@ -26,6 +26,7 @@ export const Carousel: React.FC = () => {
           quality={1}
           width={1920}
           height={1080}
+          sizes={'16px'}
           priority={false}
           alt='carousel-resizer'
           src={carouselContent[0]}
@@ -33,16 +34,18 @@ export const Carousel: React.FC = () => {
         />
         {carouselContent.map((image, idx) => {
           const isCurrentImage = imageIndex === idx;
+          const isFirstImage = idx === 0;
 
           return (
             <Image
               key={idx}
               src={image}
+              quality={85}
               width={1920}
               height={1080}
-              // quality={100}
               alt='carousel-image'
-              priority={idx === 0 ? true : false}
+              priority={isFirstImage ? true : false}
+              sizes={'(max-width: 475px) 1080px, (max-width: 1024px) 1200px, 1920px'}
               className={`${styles.image} ${isCurrentImage ? styles.showImage : styles.hideImage}`}
             />
           );
