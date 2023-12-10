@@ -61,7 +61,11 @@ export const Navbar: React.FC = () => {
       )}
       {!isSmallerThanLimit && <Links />}
       {isSmallerThanLimit && (
-        <button onClick={() => toggleHiddenMenu()} className={styles.hiddenButton}>
+        <button
+          aria-label='hidden-menu-button'
+          className={styles.hiddenButton}
+          onClick={() => toggleHiddenMenu()}
+        >
           {isHiddenMenuOpen ? <LogoClose /> : <LogoOpen />}
         </button>
       )}

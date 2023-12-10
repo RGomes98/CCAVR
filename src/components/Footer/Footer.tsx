@@ -17,15 +17,24 @@ export const Footer: React.FC = () => {
     <footer className={`${styles.container} ${FooterColor}`}>
       <div className={styles.wrapper}>
         <a
+          aria-label='facebook'
           className={styles.link}
           href='https://www.facebook.com/CasadaCriancaedoAdolescenteOficial/'
         >
           <LogoFacebook />
         </a>
-        <a className={styles.link} href='https://www.instagram.com/casadacriancaedoadolescente/'>
+        <a
+          aria-label='instagram'
+          className={styles.link}
+          href='https://www.instagram.com/casadacriancaedoadolescente/'
+        >
           <LogoInstagram />
         </a>
-        <a className={styles.link} href='https://www.youtube.com/@casadacriancaedoadolescent351'>
+        <a
+          aria-label='youtube'
+          className={styles.link}
+          href='https://www.youtube.com/@casadacriancaedoadolescent351'
+        >
           <LogoYoutube />
         </a>
       </div>
