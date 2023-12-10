@@ -11,6 +11,7 @@ export const ScrollToTopArrow: React.FC = () => {
   return (
     <button
       onClick={scrollToTop}
+      aria-label='scroll-to-top'
       className={isLowEnough ? `${styles.button} ${styles.fadeButton}` : styles.button}
     >
       <LogoCircleArrow />

@@ -76,6 +76,7 @@ export const Links: React.FC = () => {
       <div className={`${styles.secondaryWrapper} ${styles.home}`}>
         <div className={styles.socialWrapper}>
           <a
+            aria-label='facebook'
             className={styles.socialLink}
             href='https://www.facebook.com/CasadaCriancaedoAdolescenteOficial/'
           >
@@ -83,6 +84,7 @@ export const Links: React.FC = () => {
             <LogoFacebook />
           </a>
           <a
+            aria-label='instagram'
             className={styles.socialLink}
             href='https://www.instagram.com/casadacriancaedoadolescente/'
           >
@@ -90,6 +92,7 @@ export const Links: React.FC = () => {
             <LogoInstagram />
           </a>
           <a
+            aria-label='youtube'
             className={styles.socialLink}
             href='https://www.youtube.com/@casadacriancaedoadolescent351'
           >
