@@ -15,7 +15,6 @@ export const Partners: React.FC = () => {
               width={240}
               height={240}
               sizes='384px'
-              quality={100}
               src={logoPartner}
               alt='partner-logo'
               className={styles.logo}
