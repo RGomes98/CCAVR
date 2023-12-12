@@ -12,11 +12,13 @@ export const Partners: React.FC = () => {
           return (
             <Image
               key={idx}
-              className={styles.logo}
+              width={240}
+              height={240}
+              sizes='384px'
+              quality={100}
               src={logoPartner}
               alt='partner-logo'
-              width={1500}
-              height={1500}
+              className={styles.logo}
             />
           );
         })}
