@@ -12,9 +12,103 @@ type News = {
 
 export const news: News = {
   2023: {
+    'passeio-sicoob-curumim-unidade-249': {
+      title: 'Passeio Sicoob - Curumim Unidade 249',
+      text: 'Em parceria com o @sicoob na 2°feira dia 13/11, os adolescentes do Programa Curumim Unidade 249 participaram do passeio ao Banco com roda de bate papo e palestra sobre educação financeira e empreendedorismo, com direito a um belo café da manhã. Atitudes assim fazem reais mudanças na realidade dos adolescentes das favelas de Volta Redonda. Nossa gratidão ao parceiro @sicoob por acreditar em nossos adolescentes.',
+      images: [
+        `${basePath}2023/Passeio Sicoob - Curumim Unidade 249/image01.webp`,
+        `${basePath}2023/Passeio Sicoob - Curumim Unidade 249/image02.webp`,
+        `${basePath}2023/Passeio Sicoob - Curumim Unidade 249/image03.webp`,
+        `${basePath}2023/Passeio Sicoob - Curumim Unidade 249/image04.webp`,
+        `${basePath}2023/Passeio Sicoob - Curumim Unidade 249/image05.webp`,
+        `${basePath}2023/Passeio Sicoob - Curumim Unidade 249/image06.webp`,
+        `${basePath}2023/Passeio Sicoob - Curumim Unidade 249/image07.webp`,
+      ],
+    },
+
+    'dia-de-circo-curumim-unidade-249': {
+      title: 'Dia de Circo - Curumim Unidade 249',
+      text: 'No dia 05 de outubro, o grupo azul vespertino, do Programa Curumim Unidade 249, foi convidado, pelo CRÁS do bairro São Carlos, para um passeio ao circo. Foi um momento de muita diversão, as crianças amaram.',
+      images: [
+        `${basePath}2023/Dia de Circo - Curumim Unidade 249/image01.webp`,
+        `${basePath}2023/Dia de Circo - Curumim Unidade 249/image02.webp`,
+        `${basePath}2023/Dia de Circo - Curumim Unidade 249/image03.webp`,
+        `${basePath}2023/Dia de Circo - Curumim Unidade 249/image04.webp`,
+        `${basePath}2023/Dia de Circo - Curumim Unidade 249/image05.webp`,
+        `${basePath}2023/Dia de Circo - Curumim Unidade 249/image06.webp`,
+        `${basePath}2023/Dia de Circo - Curumim Unidade 249/image07.webp`,
+      ],
+    },
+
+    'doacoes-da-semana-da-crianca-curumim-unidade-249': {
+      title: 'Doações da Semana da Criança - Curumim Unidade 249',
+      text: 'O Programa Curumim Unidade 249 gostaria de agradecer aos amigos voluntários, familiares e principalmente aos nossos amigos da @academiabiggang com as doações das caixas de bombons que fizeram a felicidade das crianças e adolescentes na semana da criança. Nosso muiiito obrigado!',
+      images: [
+        `${basePath}2023/Doações da Semana da Criança - Curumim Unidade 249/image01.webp`,
+        `${basePath}2023/Doações da Semana da Criança - Curumim Unidade 249/image02.webp`,
+        `${basePath}2023/Doações da Semana da Criança - Curumim Unidade 249/image03.webp`,
+        `${basePath}2023/Doações da Semana da Criança - Curumim Unidade 249/image04.webp`,
+        `${basePath}2023/Doações da Semana da Criança - Curumim Unidade 249/image05.webp`,
+        `${basePath}2023/Doações da Semana da Criança - Curumim Unidade 249/image06.webp`,
+        `${basePath}2023/Doações da Semana da Criança - Curumim Unidade 249/image07.webp`,
+        `${basePath}2023/Doações da Semana da Criança - Curumim Unidade 249/image08.webp`,
+        `${basePath}2023/Doações da Semana da Criança - Curumim Unidade 249/image09.webp`,
+        `${basePath}2023/Doações da Semana da Criança - Curumim Unidade 249/image10.webp`,
+      ],
+    },
+
+    'semana-da-crianca-curumim-unidade-249': {
+      title: 'Semana da Criança - Curumim Unidade 249',
+      text: 'E a semana da criança não parou por aí. No dia 11/10 foi a festa das crianças e adolescentes do Programa Curumim Unidade 249, foi super divertido e eles amaram esse momento. Nesse evento, contamos com a colaboração do @sicoob e @grupocsn que fizeram a alegria neste dia com os brinquedos, oficinas de empreendedorismo e presentes, além de amigos voluntários como @amandacristina4668 e @francineleribeiro que nos presentiaram com pipoca, algodão doce e picolés. Gostaríamos de agradecer também ao @panela.sem.tampa. Nosso muito obrigado!!',
+      images: [
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image01.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image02.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image03.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image04.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image05.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image06.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image07.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image08.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image09.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image10.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image11.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image12.webp`,
+        `${basePath}2023/Semana da Criança - Curumim Unidade 249/image13.webp`,
+      ],
+    },
+
+    'doacoes-catequese-santa-cecilia': {
+      title: 'Doações da Catequese Santa Cecília',
+      text: 'Essa semana, tivemos a graça de receber Doações de leite em pó, fornecida pela @cate.quesesantacecilia. Obrigada por essa parceria, Deus abençoe vocês.',
+      images: [
+        `${basePath}2023/Doações da Catequese Santa Cecília/image01.webp`,
+        `${basePath}2023/Doações da Catequese Santa Cecília/image02.webp`,
+        `${basePath}2023/Doações da Catequese Santa Cecília/image03.webp`,
+        `${basePath}2023/Doações da Catequese Santa Cecília/image04.webp`,
+        `${basePath}2023/Doações da Catequese Santa Cecília/image05.webp`,
+        `${basePath}2023/Doações da Catequese Santa Cecília/image06.webp`,
+      ],
+    },
+
+    'mural-vozes': {
+      title: 'Mural “Vozes”',
+      text: 'Hoje construímos o nosso mural “Vozes”. Os adolescentes tiveram oportunidade de escrever sobre o que sentem, sua relação com o curumim e outros aspectos da vida. Experiência sensacional!',
+      images: [
+        `${basePath}2023/Mural Vozes/image01.webp`,
+        `${basePath}2023/Mural Vozes/image02.webp`,
+        `${basePath}2023/Mural Vozes/image03.webp`,
+        `${basePath}2023/Mural Vozes/image04.webp`,
+        `${basePath}2023/Mural Vozes/image05.webp`,
+        `${basePath}2023/Mural Vozes/image06.webp`,
+        `${basePath}2023/Mural Vozes/image07.webp`,
+        `${basePath}2023/Mural Vozes/image08.webp`,
+        `${basePath}2023/Mural Vozes/image09.webp`,
+      ],
+    },
+
     'arraia-do-curumim-unidade-249': {
       title: 'Arraiá do Curumim - Unidade 249',
-      text: 'No dia 11 de agosto foi realizado o nosso "Arraiá do Curumim Unidade 249"... Teve muita brincadeira, diversão, presentes, comida gostosa e lindas apresentações das nossas crianças e adolescentes. Agradecemos aos nossos amigos voluntários que nos ajudaram a realizar essa grande festança... "Um grande beijo sô" @guarallopes @prefeituravr @smacvoltaredonda.',
+      text: 'No dia 11 de agosto foi realizado o nosso "Arraiá do Curumim Unidade 249"... Teve muita brincadeira, diversão, presentes, comida gostosa e lindas apresentações das nossas crianças e adolescentes. Agradecemos aos nossos amigos voluntários que nos ajudaram a realizar essa grande festança... "Um grande beijo sô".',
       images: [
         `${basePath}2023/Arraiá do Curumim Unidade 249/image01.webp`,
         `${basePath}2023/Arraiá do Curumim Unidade 249/image02.webp`,
@@ -33,7 +127,7 @@ export const news: News = {
 
     'arraia-da-cidadania': {
       title: 'Arraiá da Cidadania',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas sed. Mi proin sed libero enim sed faucibus turpis in eu. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Mi bibendum neque egestas congue quisque egestas. Ultrices sagittis orci a scelerisque purus semper. Ac turpis egestas maecenas pharetra convallis posuere morbi. Risus nec feugiat in fermentum posuere urna nec tincidunt. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Suspendisse potenti nullam ac tortor.',
+      text: 'Participação da Casa da Criança e do Adolescente no Arraiá da Cidadania.',
       images: [
         `${basePath}2023/Arraiá da Cidadania/image01.webp`,
         `${basePath}2023/Arraiá da Cidadania/image02.webp`,
@@ -46,7 +140,7 @@ export const news: News = {
 
     'arraia-solidario-shopping-park-sul': {
       title: 'Arraiá Solidário - Shopping Park Sul',
-      text: 'Participação da Casa da Criança e do Adolescente no Arraia Solidário do @shoppingparksul ❤️ Queríamos agradecer a oportunidade de participar deste evento pelo segundo ano consecutivo e poder angariar recursos para a continuação dos projetos da instituição. Obrigado a todos deram uma passadinha por lá e prestigiaram esse lindo evento no Shopping Park Sul. 3 dias de muita alegria, diversão,comida boa além de ajudar a nossa instituição e o @gapcgrupodeapoio 🍲🌽.',
+      text: 'Participação da Casa da Criança e do Adolescente no Arraia Solidário do @shoppingparksul ❤️ Queríamos agradecer a oportunidade de participar deste evento pelo segundo ano consecutivo e poder angariar recursos para a continuação dos projetos da instituição. Obrigado a todos deram uma passadinha por lá e prestigiaram esse lindo evento no Shopping Park Sul. 3 dias de muita alegria, diversão, comida boa além de ajudar a nossa instituição e o @gapcgrupodeapoio 🍲🌽.',
       images: [
         `${basePath}2023/Arraiá Solidário Shopping Park Sul/image01.webp`,
         `${basePath}2023/Arraiá Solidário Shopping Park Sul/image02.webp`,
