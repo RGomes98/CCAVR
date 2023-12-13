@@ -14,7 +14,7 @@ export const Description: React.FC<{ heading: string; text: string }> = ({ headi
             <a className={styles.userLink} href={`https://www.instagram.com/${username}`}>
               @{username}
             </a>
-            {!isLastWord ? ' ' : '.'}
+            {!isLastWord ? ' ' : '. '}
           </Fragment>
         );
       }
