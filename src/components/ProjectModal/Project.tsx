@@ -13,7 +13,7 @@ export const Project: React.FC<{ name: string; description: string; projectStyle
 }) => {
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const { modalRef } = useModal(dialogRef, isProjectModalOpen);
+  const { modalRef } = useModal(dialogRef, isProjectModalOpen, setIsProjectModalOpen);
 
   return (
     <Fragment>

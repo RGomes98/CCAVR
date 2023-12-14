@@ -10,7 +10,7 @@ export const Donate: React.FC = () => {
   const isDonateModalOpen = useStore((state) => state.isDonateModalOpen);
   const toggleDonateModal = useStore((state) => state.toggleDonateModal);
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const { modalRef } = useModal(dialogRef, isDonateModalOpen);
+  const { modalRef } = useModal(dialogRef, isDonateModalOpen, toggleDonateModal);
 
   return (
     <dialog ref={modalRef} className={styles.modal}>

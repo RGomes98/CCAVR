@@ -1,15 +1,19 @@
-import { RefObject, useEffect } from 'react';
+import type { Dispatch, RefObject, SetStateAction } from 'react';
+import { useEffect } from 'react';
 
-export const useModal = (modalRef: RefObject<HTMLDialogElement>, isModalStateOpen: boolean) => {
-  const handleCancel = (e: Event) => e.preventDefault();
-
+export const useModal = (
+  modalRef: RefObject<HTMLDialogElement>,
+  isModalStateOpen: boolean,
+  setIsModalStateOpen: (() => void) | Dispatch<SetStateAction<boolean>>
+) => {
   useEffect(() => {
-    const ref = modalRef;
-    ref.current?.removeAttribute('open');
-    ref.current?.addEventListener('cancel', handleCancel);
-    isModalStateOpen ? ref.current?.showModal() : ref.current?.close();
-    return () => ref.current?.removeEventListener('cancel', handleCancel);
-  }, [modalRef, isModalStateOpen]);
+    const dialog = modalRef.current;
+    const handleClose = () => setIsModalStateOpen(false);
+    isModalStateOpen ? dialog?.showModal() : dialog?.close();
+
+    dialog?.addEventListener('close', handleClose);
+    return () => dialog?.removeEventListener('close', handleClose);
+  }, [modalRef, isModalStateOpen, setIsModalStateOpen]);
 
   return { modalRef };
 };
