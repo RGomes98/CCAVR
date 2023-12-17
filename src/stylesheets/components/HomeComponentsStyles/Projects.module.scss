@@ -59,9 +59,12 @@
 
 .project {
   z-index: 1;
+  overflow: hidden;
   position: relative;
   transition: all 0.3s;
   display: inline-block;
+  border-radius: 0.4rem;
+  background-color: transparent;
 
   &:after {
     left: 0;
@@ -71,6 +74,7 @@
     z-index: -2;
     height: 100%;
     position: absolute;
+    border-radius: 0.4rem;
     background-color: var.$secondary-blue;
   }
 
@@ -83,6 +87,7 @@
     height: 100%;
     position: absolute;
     transition: all 0.6s;
+    border-radius: 0.4rem;
     background-color: var.$transparent-white;
   }
 
