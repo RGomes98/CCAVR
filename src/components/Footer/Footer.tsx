@@ -3,6 +3,7 @@
 import { Instagram as LogoInstagram } from '../../components/SVGs/Instagram';
 import { Facebook as LogoFacebook } from '../../components/SVGs/Facebook';
 import { Youtube as LogoYoutube } from '../../components/SVGs/Youtube';
+import { useMounted } from '@/hooks/useMounted';
 import { usePathname } from 'next/navigation';
 
 import styles from '../../stylesheets/components/FooterStyles/Footer.module.scss';
@@ -12,6 +13,8 @@ export const Footer: React.FC = () => {
   const isAtHome = pathname === '/';
   const FooterColor = isAtHome ? styles.lightColor : styles.darkColor;
   const currentYear = new Date().getFullYear();
+
+  const { isMounted } = useMounted();
 
   return (
     <footer className={`${styles.container} ${FooterColor}`}>
@@ -38,9 +41,11 @@ export const Footer: React.FC = () => {
           <LogoYoutube />
         </a>
       </div>
-      <p className={styles.text}>
-        © {currentYear} Casa da Criança e do Adolescente. - CNPJ:01.375.045/0001-03.
-      </p>
+      {isMounted && (
+        <p className={styles.text}>
+          © {currentYear} Casa da Criança e do Adolescente. - CNPJ:01.375.045/0001-03.
+        </p>
+      )}
     </footer>
   );
 };
