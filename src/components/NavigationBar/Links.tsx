@@ -26,49 +26,41 @@ export const Links: React.FC = () => {
       <ul className={`${styles.navWrapper} ${styles.home}`}>
         {!isAtHome && (
           <li className={styles.navItem}>
-            <Link onClick={() => closeHiddenMenu()} className={styles.navLink} href='/'>
+            <Link onClick={closeHiddenMenu} className={styles.navLink} href='/'>
               Início
             </Link>
           </li>
         )}
         {!isAtFAQ && (
           <li className={styles.navItem}>
-            <Link
-              onClick={() => closeHiddenMenu()}
-              className={styles.navLink}
-              href='/perguntas-frequentes'
-            >
+            <Link onClick={closeHiddenMenu} className={styles.navLink} href='/perguntas-frequentes'>
               FAQ
             </Link>
           </li>
         )}
         {!isAtNews && (
           <li className={styles.navItem}>
-            <Link onClick={() => closeHiddenMenu()} href='/noticias' className={styles.navLink}>
+            <Link onClick={closeHiddenMenu} href='/noticias' className={styles.navLink}>
               Notícias
             </Link>
           </li>
         )}
         {!isAtTestimonials && (
           <li className={styles.navItem}>
-            <Link onClick={() => closeHiddenMenu()} className={styles.navLink} href='/depoimentos'>
+            <Link onClick={closeHiddenMenu} className={styles.navLink} href='/depoimentos'>
               Depoimentos
             </Link>
           </li>
         )}
         {!isAtTransparency && (
           <li className={styles.navItem}>
-            <Link
-              onClick={() => closeHiddenMenu()}
-              className={styles.navLink}
-              href='/transparencia'
-            >
+            <Link onClick={closeHiddenMenu} className={styles.navLink} href='/transparencia'>
               Transparência
             </Link>
           </li>
         )}
         <li className={styles.navItem}>
-          <Link onClick={() => closeHiddenMenu()} className={styles.navLink} href='/#contact'>
+          <Link onClick={closeHiddenMenu} className={styles.navLink} href='/#contact'>
             Contato
           </Link>
         </li>
@@ -100,7 +92,13 @@ export const Links: React.FC = () => {
             <LogoYoutube />
           </a>
         </div>
-        <button onClick={toggleDonateModal} className={styles.donateButton}>
+        <button
+          onClick={() => {
+            closeHiddenMenu();
+            toggleDonateModal();
+          }}
+          className={styles.donateButton}
+        >
           DOE AGORA
           <svg viewBox='0 0 180 60'>
             <polyline points='179,1 179,59 1,59 1,1 179,1' />
