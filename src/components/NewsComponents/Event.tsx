@@ -13,6 +13,7 @@ export const Event: React.FC<{
   eventImages: string[];
 }> = ({ eventTitle, eventText, eventImages }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const isEventImagesLessThanTwo = eventImages.length < 2;
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const { id } = e.target as HTMLButtonElement;
@@ -47,10 +48,10 @@ export const Event: React.FC<{
           );
         })}
         <button id='previous' onClick={handleClick} className={styles.previousButton}>
-          <LogoNavigate />
+          {!isEventImagesLessThanTwo && <LogoNavigate />}
         </button>
         <button id='next' onClick={handleClick} className={styles.nextButton}>
-          <LogoNavigate />
+          {!isEventImagesLessThanTwo && <LogoNavigate />}
         </button>
       </div>
     </div>

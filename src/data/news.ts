@@ -11,6 +11,32 @@ type News = {
 };
 
 export const news: News = {
+  2024: {
+    'doacoes-unimed': {
+      title: 'Doações da Unimed',
+      text: 'Hoje a casa da criança agradece a Unimed e seus cooperados pela corrente do bem, que foi feita em dezembro de 2023 para angariar recursos em benefício da instituição. Nós funcionários, diretoria e criança assistidas agradecemos a solidariedade para continuarmos todos os nosso projetos, são pessoas como vocês que fazem a diferença na sociedade, muito obrigado!. @unimedvr @hospitalunimedvr',
+      images: [`${basePath}2024/Doações Unimed/image01.webp`, `${basePath}2024/Doações Unimed/image02.webp`],
+    },
+
+    'doacoes-construtora-moov': {
+      title: 'Doações da Construtora Moov',
+      text: 'A casa da criança e adolescente agradece a construtora moov pela iniciativa do projeto solidária de doação de cestas básicas para as instituição de Volta Redonda, onde fomos uma das instituições beneficiadas. Com esse apoio temos a oportunidade de oferecer alimentos as crianças assistidas nos nossos projetos, nosso muito obrigado.  @construtora_polo',
+      images: [`${basePath}2024/Doações Moov/image01.webp`],
+    },
+
+    'posse-conselheiros-tutelares-volta-redonda': {
+      title: 'Posse dos Conselheiros Tutelares - Volta Redonda',
+      text: 'No dia 10/01/2024, a Casa da Criança e do Adolescente esteve presente na Posse dos novos conselheiros tutelares de Volta Redonda para o quadriênio 2024-2028. Contamos com a presença das coordenações técnicas dos Programas Curumim 249, Cuidar, NACA e Projeto Fiocruz.',
+      images: [`${basePath}2024/Posse Conselheiros Tutelares/image01.webp`],
+    },
+
+    'doacoes-rede-royal-supermecados': {
+      title: 'Doações da Rede de Supermecados Royal',
+      text: 'A casa da criança e do adolescente, agradece a rede royal supermercados pelo troco solidário que trará condições de alimentos saudáveis para nossas crianças assistidas. NOSSO MUITO OBRIGADO! 🤍 @royalsupervoce @karolbabadeira',
+      images: [`${basePath}2024/Doações Royal/image01.webp`],
+    },
+  },
+
   2023: {
     'passeio-sicoob-curumim-unidade-249': {
       title: 'Passeio Sicoob - Curumim Unidade 249',
