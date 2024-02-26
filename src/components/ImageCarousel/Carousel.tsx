@@ -13,6 +13,7 @@ const nunito = Nunito({
   display: 'swap',
   subsets: ['latin'],
   weight: ['400', '700'],
+  variable: '--font-nunito',
 });
 
 export const Carousel: React.FC = () => {
