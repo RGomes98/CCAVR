@@ -27,17 +27,17 @@ export const Navbar: React.FC = () => {
   const { isSmallerThanLimit } = useWindowSize(1280, closeHiddenMenu);
   const { scrollToTop } = useScrollToTop();
 
-  const navbarTransparency =
-    oldScrollYPosition > 250 && !isHiddenMenuOpen ? styles.transparent : '';
+  const navbarTransparency = oldScrollYPosition > 250 && !isHiddenMenuOpen ? styles.transparent : '';
 
   const navbarReducedPadding = isAtNews ? styles.reducedPadding : '';
 
-  const showNavbar = isScrollDownward
-    ? styles.container
-    : `${styles.container} ${styles.showNavbar}`;
+  const showNavbar = isScrollDownward ? styles.container : `${styles.container} ${styles.showNavbar}`;
 
   return (
-    <nav className={`${showNavbar} ${navbarTransparency} ${navbarReducedPadding}`}>
+    <nav
+      className={`${showNavbar} ${navbarTransparency} ${navbarReducedPadding}`}
+      data-hidden-menu={isHiddenMenuOpen}
+    >
       {isAtHome ? (
         <button onClick={scrollToTop} className={styles.homeButton}>
           <Image
