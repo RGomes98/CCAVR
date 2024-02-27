@@ -19,7 +19,6 @@ export const metadata = {
 const poppins = Poppins({
   display: 'swap',
   subsets: ['latin'],
-  variable: '--font-poppins',
   fallback: ['system-ui', 'sans-serif'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
