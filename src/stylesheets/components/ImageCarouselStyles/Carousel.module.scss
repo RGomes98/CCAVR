@@ -95,6 +95,14 @@
   background-color: var.$transparent-black;
 }
 
+.textMobile {
+  display: none;
+}
+
+.textDesktop {
+  display: inline;
+}
+
 .imageCarousel svg:last-child {
   bottom: 0;
   fill: transparent;
@@ -114,6 +122,14 @@
   .headingTextWrapper {
     gap: 0.2rem;
     flex-direction: column;
+  }
+
+  .textDesktop {
+    display: none;
+  }
+
+  .textMobile {
+    display: inline;
   }
 }
 

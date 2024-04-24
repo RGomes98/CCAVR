@@ -48,6 +48,7 @@
 
 .hiddenButton {
   border: none;
+  display: none;
   background-color: transparent;
 
   svg {
@@ -71,6 +72,12 @@
 @media (width <= 100rem) {
   .reducedPadding {
     padding: 0 3rem;
+  }
+}
+
+@media (width <= 80rem) {
+  .hiddenButton {
+    display: flex;
   }
 }
 

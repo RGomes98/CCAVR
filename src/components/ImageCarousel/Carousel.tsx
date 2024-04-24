@@ -59,9 +59,9 @@ export const Carousel: React.FC = () => {
         </p>
         <p className={styles.textWrapper}>
           <span className={styles.text}>
-            Cuidando e Protegendo o {!isSmallerThanLimit && 'Nosso Futuro Comum!'}
+            Cuidando e Protegendo o <span className={styles.textDesktop}>Nosso Futuro Comum!</span>
           </span>
-          {isSmallerThanLimit && <span className={styles.text}>Nosso Futuro Comum!</span>}
+          <span className={`${styles.text} ${styles.textMobile}`}>Nosso Futuro Comum!</span>
         </p>
       </div>
       <Waves />

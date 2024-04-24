@@ -2,7 +2,7 @@
 
 .navWrapper {
   gap: 2.5rem;
-  display: flex;
+  display: none;
   list-style: none;
   align-items: center;
 }
@@ -40,7 +40,7 @@
 
 .secondaryWrapper {
   gap: 2.5rem;
-  display: flex;
+  display: none;
   align-items: center;
   animation: fadeIn forwards 0.4s;
 }
@@ -131,6 +131,13 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (width > 80rem) {
+  .navWrapper,
+  .secondaryWrapper {
+    display: flex;
   }
 }
 
