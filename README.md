@@ -25,6 +25,6 @@ O projeto visa aprimorar a presença online da Casa da Criança e do Adolescente
 
 ![VisualIdentity](./screenshots/visual-identity.png)
 
-## Screenshots
+## Screenshot
 
 ![HomePage](./screenshots/home-page.png)
