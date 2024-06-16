@@ -1,9 +1,7 @@
 import { ScrollToTopArrow } from '@/components/ScrollToTop/ScrollToTopArrow';
 import { Carousel } from '@/components/ImageCarousel/Carousel';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Navbar } from '@/components/NavigationBar/Navbar';
 import { Footer } from '@/components/Footer/Footer';
-import { Analytics } from '@vercel/analytics/react';
 import { ScrollReset } from '@/hooks/ScrollReset';
 import { Poppins } from 'next/font/google';
 import { Fragment } from 'react';
@@ -38,8 +36,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </main>
             <Footer />
           </div>
-          <Analytics />
-          <SpeedInsights />
         </body>
       </html>
       <ScrollReset />
