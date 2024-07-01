@@ -131,7 +131,7 @@ export const Contact: React.FC = () => {
           </div>
           <div className={styles.contactMessageWrapper}>
             <span className={`${styles.errorMessage} ${formErrors.content && styles.showError}`}>
-              Insira uma mensagem válida!
+              A mensagem deve conter pelo menos 10 caracteres!
             </span>
             <span
               className={`${styles.contactResponse} ${isResponseSuccess} ${

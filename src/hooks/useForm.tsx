@@ -60,7 +60,7 @@ export const useForm = (reCAPTCHARef: RefObject<ReCAPTCHA>) => {
       setFormErrors((prev) => ({ ...prev, name: true }));
     }
 
-    if (!content.trim()) {
+    if (!(content.trim().length >= 10)) {
       hasFormErrors = true;
       setFormErrors((prev) => ({ ...prev, content: true }));
     }
