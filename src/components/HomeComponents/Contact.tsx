@@ -81,7 +81,7 @@ export const Contact: React.FC = () => {
               className={styles.detailContent}
             >
               <option />
-              {cities.map((city) => {
+              {[...cities].sort().map((city) => {
                 return (
                   <option value={city} key={city}>
                     {city}

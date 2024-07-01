@@ -45,4 +45,4 @@ export const cities = [
   'Cachoeiras de Macacu',
   'Trajano de Moraes',
   'Itaocara',
-].sort();
+] as const;

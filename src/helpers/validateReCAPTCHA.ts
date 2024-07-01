@@ -10,10 +10,10 @@ export const validateReCAPTCHA = async (token: string): Promise<boolean> => {
       `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
       { method: 'POST' }
     );
-    const { success }: Validate = await response.json();
 
+    const { success }: Validate = await response.json();
     return success;
   } catch (err) {
-    throw new Response('Ocorreu algum problema durante a validação do ReCAPTCHA.', { status: 500 });
+    throw new Error('Ocorreu algum problema durante a validação do ReCAPTCHA.');
   }
 };
