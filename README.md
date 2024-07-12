@@ -17,6 +17,20 @@ O projeto visa aprimorar a presença online da Casa da Criança e do Adolescente
 - Atualizar e melhorar identidade visual do site.
 - Criar rota no backend para autenticação de `ADMINS` antes da criação de novas notícias.
 
+## Ferramentas Utilizadas
+
+- **React.js**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Next.js**: Framework React para desenvolvimento de aplicativos web com renderização do lado do servidor (SSR) e geração de páginas estáticas.
+- **TypeScript**: Linguagem de programação que adiciona tipagem estática ao JavaScript.
+- **Prisma**: Ferramenta ORM para Node.js e TypeScript, simplificando o trabalho com bancos de dados.
+- **Zod**: Biblioteca para validação de dados em TypeScript.
+- **Zustand**: Biblioteca para gerenciamento de estado em aplicações React.
+- **Nodemailer**: Biblioteca para enviar e-mails de forma fácil e eficiente no Node.js.
+- **Vercel Blob**: Serviço de armazenamento de arquivos da Vercel, ideal para hospedar imagens e outros arquivos estáticos.
+- **SASS**: Pré-processador CSS que permite o uso de variáveis, aninhamento e outras funcionalidades avançadas.
+- **ESLint**: Ferramenta de linting para JavaScript e TypeScript, ajudando a manter um código consistente e livre de erros.
+- **React Google reCAPTCHA**: Componente React para integrar o Google reCAPTCHA, aumentando a segurança dos formulários.
+
 ## Links
 
 - **Site Institucional**: [Casa da Criança e do Adolescente](https://www.ccavr.org.br/)
