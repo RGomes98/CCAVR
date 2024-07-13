@@ -1,5 +1,6 @@
 'use client';
 
+import { clientEnv } from '@/lib/schemas/env/client.schema';
 import { useForm } from '@/hooks/useForm';
 import { cities } from '@/data/cities';
 import { useRef } from 'react';
@@ -147,7 +148,7 @@ export const Contact: React.FC = () => {
             badge='inline'
             size='invisible'
             ref={reCAPTCHARef}
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+            sitekey={clientEnv.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
           />
           <button className={styles.button}>
             <span className={styles.buttonText}>Enviar</span>

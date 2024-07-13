@@ -1,11 +1,11 @@
+import { generateEmailTemplate } from '@/helpers/generateEmailTemplate';
+import { contactSchema } from '@/lib/schemas/handlers/contact.schema';
 import { validateReCAPTCHA } from '@/helpers/validateReCAPTCHA';
 import { transporter, mailOptions } from '@/config/nodemailer';
-import { generateTemplate } from '@/utils/generateTemplate';
-import { contactSchema } from '@/lib/schemas/contactSchema';
 
-export async function POST(req: Request) {
+export async function POST(request: Request) {
   try {
-    const formData = contactSchema.safeParse(await req.json());
+    const formData = contactSchema.safeParse(await request.json());
 
     if (!formData.success) {
       const [error] = Object.values(formData.error.flatten().fieldErrors)[0];
@@ -22,7 +22,7 @@ export async function POST(req: Request) {
       replyTo: email,
       subject: subject,
       text: `Olá. Este é um e-mail de ${subject.toLowerCase()} da Casa da Criança e do Adolescente.`,
-      html: generateTemplate(name, email, phone, city, subject, content),
+      html: generateEmailTemplate(name, email, phone, city, subject, content),
       attachments: [
         {
           cid: 'logoCCA',
@@ -34,6 +34,7 @@ export async function POST(req: Request) {
 
     return new Response('E-mail enviado com sucesso!', { status: 200 });
   } catch (error) {
-    return new Response('Ocorreu algum problema durante o envio do e-mail.', { status: 500 });
+    if (!(error instanceof Error)) throw error;
+    return new Response(error.message, { status: 500 });
   }
 }

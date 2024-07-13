@@ -1,17 +1,15 @@
+import { serverEnv } from '@/lib/schemas/env/server.schema';
 import nodemailer from 'nodemailer';
 
 export const transporter = nodemailer.createTransport({
-  port: Number(process.env.MAIL_PORT),
-  host: process.env.HOST,
+  port: serverEnv.MAILER_PORT,
+  host: serverEnv.HOST,
   secure: true,
-  auth: {
-    user: process.env.EMAIL,
-    pass: process.env.EMAIL_PASS,
-  },
-  from: process.env.EMAIL,
+  auth: { user: serverEnv.EMAIL, pass: serverEnv.EMAIL_PASS },
+  from: serverEnv.EMAIL,
 });
 
 export const mailOptions = {
-  from: `Casa da Criança e do Adolescente - Mailer <${process.env.EMAIL}>`,
-  to: process.env.INSTITUTION_EMAIL,
+  from: `Casa da Criança e do Adolescente - Mailer <${serverEnv.EMAIL}>`,
+  to: serverEnv.INSTITUTION_EMAIL,
 };

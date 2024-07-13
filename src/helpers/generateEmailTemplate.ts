@@ -1,4 +1,4 @@
-export const generateTemplate = (
+export const generateEmailTemplate = (
   name: string,
   email: string,
   telephone: string,

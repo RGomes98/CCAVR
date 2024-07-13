@@ -1,4 +1,5 @@
-import { validatePhone } from '@/utils/validatePhone';
+import { clientEnv } from '@/lib/schemas/env/client.schema';
+import { validatePhone } from '@/utils/input';
 import { RefObject, useState } from 'react';
 
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -75,7 +76,7 @@ export const useForm = (reCAPTCHARef: RefObject<ReCAPTCHA>) => {
     reCAPTCHARef.current?.reset();
     setIsLoading(true);
 
-    const { status } = await fetch(process.env.NEXT_PUBLIC_API_URL as string, {
+    const { status } = await fetch(clientEnv.NEXT_PUBLIC_API_URL, {
       method: 'POST',
       body: JSON.stringify({
         reCAPTCHAToken,
