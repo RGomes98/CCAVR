@@ -26,7 +26,7 @@ const getGroupedByYearAndMonth = async () => {
 
   return news.reduce<GroupedNews>((groupedNews, news) => {
     const year = news.publishedAt.getFullYear();
-    const month = news.publishedAt.toLocaleString('default', { month: 'long' });
+    const month = news.publishedAt.toLocaleString('pt-BR', { month: 'long' });
 
     if (!groupedNews[year]) {
       groupedNews[year] = {};
