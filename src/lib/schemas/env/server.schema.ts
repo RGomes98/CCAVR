@@ -9,6 +9,7 @@ const serverEnvSchema = z.object({
   POSTGRES_URL_NO_SSL: z.string().url(),
   POSTGRES_PRISMA_URL: z.string().url(),
   POSTGRES_URL_NON_POOLING: z.string().url(),
+  BLOB_STORE_ID: z.string(),
   BLOB_READ_WRITE_TOKEN: z.string(),
   EMAIL_PASS: z.string(),
   HOST: z.string(),
