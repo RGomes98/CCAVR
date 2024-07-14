@@ -26,4 +26,4 @@ const formatErrors = (errors: ZodIssue[]) => {
   }, {});
 };
 
-export const data = { extractFormDataFiles, extractFormDataErrors, formatErrors };
+export const dataUtils = { extractFormDataFiles, extractFormDataErrors, formatErrors };
