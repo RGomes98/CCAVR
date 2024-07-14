@@ -13,9 +13,8 @@ O projeto visa aprimorar a presença online da Casa da Criança e do Adolescente
 ## To Do:
 
 - Refatorar código.
-- Migrar notícias para um serviço de database.
 - Atualizar e melhorar identidade visual do site.
-- Criar rota no backend para autenticação de `ADMINS` antes da criação de novas notícias.
+- Criar rota no backend para autenticação de `ADMINS` antes da criação, deleção e atualização de notícias.
 
 ## Ferramentas Utilizadas
 
