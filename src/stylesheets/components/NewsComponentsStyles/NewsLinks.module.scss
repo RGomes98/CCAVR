@@ -127,7 +127,7 @@
   }
 }
 
-@media (width <= 710px) {
+@media (width <= 795px) {
   .monthWrapper {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
