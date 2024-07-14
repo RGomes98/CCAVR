@@ -31,7 +31,7 @@ model Image {
   id     Int    @id @default(autoincrement())
   url    String
   newsId Int
-  news   News   @relation(fields: [newsId], references: [id])
+  news   News   @relation(fields: [newsId], references: [id], onDelete: Cascade)
 
   @@map("images")
 }
