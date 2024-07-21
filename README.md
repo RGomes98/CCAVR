@@ -29,6 +29,7 @@ O projeto visa aprimorar a presença online da Casa da Criança e do Adolescente
 - **SASS**: Pré-processador CSS que permite o uso de variáveis, aninhamento e outras funcionalidades avançadas.
 - **ESLint**: Ferramenta de linting para JavaScript e TypeScript, ajudando a manter um código consistente e livre de erros.
 - **React Google reCAPTCHA**: Componente React para integrar o Google reCAPTCHA, aumentando a segurança dos formulários.
+- **Lucia Auth**: Sistema de autenticação e autorização para proteger aplicativos web.
 
 ## Links
 
