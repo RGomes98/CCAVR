@@ -35,3 +35,22 @@ model Image {
 
   @@map("images")
 }
+
+model User {
+  id            String    @id
+  username      String    @unique
+  password_hash String
+  sessions      Session[]
+
+  @@map("users")
+}
+
+model Session {
+  id        String   @id
+  userId    String
+  expiresAt DateTime
+
+  user User @relation(references: [id], fields: [userId], onDelete: Cascade)
+
+  @@map("sessions")
+}
