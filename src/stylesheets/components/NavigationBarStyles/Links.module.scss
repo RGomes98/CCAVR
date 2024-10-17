@@ -197,10 +197,58 @@
   }
 }
 
+@media (width <= 31.25rem) {
+  .navWrapper {
+    gap: 1.25rem;
+  }
+
+  .navItem {
+    margin-block: 0;
+  }
+
+  .home {
+    .donateButton {
+      height: 3rem;
+      max-width: 20rem;
+    }
+
+    .donateButton svg {
+      transform: scaleX(1.56) scaleY(1.035);
+    }
+  }
+
+  .socialWrapper svg {
+    height: 1.5rem;
+  }
+
+  .socialLink {
+    height: 1.5rem;
+
+    &:hover {
+      svg {
+        transform: translateY(-120%);
+      }
+    }
+  }
+
+  .navLink {
+    font-size: 1.25rem;
+  }
+
+  .home {
+    .socialWrapper {
+      gap: 0.25rem;
+    }
+
+    .donateButton {
+      font-size: 1rem;
+    }
+  }
+}
+
 @media (height < 48rem) {
   .navWrapper {
     gap: 1.5rem;
-    height: 20vh;
     overflow-x: hidden;
   }
 }

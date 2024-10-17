@@ -107,3 +107,35 @@
     font-weight: 500;
   }
 }
+
+@media (width <= 31.25rem) {
+  .container {
+    padding: 4rem 0;
+  }
+
+  .heading {
+    margin-bottom: -0.35rem;
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+
+  .headingWrapper {
+    top: 3.5rem;
+  }
+
+  .missionHeading {
+    font-size: 1.35rem;
+  }
+
+  .missionText {
+    margin-bottom: 1.5rem;
+  }
+
+  .wrapper {
+    gap: 2.5rem 2rem;
+    padding-inline: 1rem;
+  }
+}

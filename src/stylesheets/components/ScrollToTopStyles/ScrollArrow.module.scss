@@ -33,3 +33,10 @@
     rotate: 270deg;
   }
 }
+
+@media (width <= 31.25rem) {
+  .button svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

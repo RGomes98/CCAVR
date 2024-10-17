@@ -44,12 +44,14 @@
   gap: 2rem;
 }
 
-@media (width <= 22.8rem) {
+@media (width <= 31.25rem) {
   .container {
-    width: 100vw;
-    top: 8.93rem;
-    height: 100vh;
+    top: 7.215rem;
     padding: 2rem;
-    max-width: unset;
+    max-width: 17.875rem;
+  }
+
+  .wrapper div:last-child:has(button) {
+    gap: 1.5rem;
   }
 }

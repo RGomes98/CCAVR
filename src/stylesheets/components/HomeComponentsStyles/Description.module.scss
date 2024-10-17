@@ -61,3 +61,18 @@
     max-width: 90%;
   }
 }
+
+@media (width <= 31.25rem) {
+  .container {
+    padding-bottom: 4rem;
+  }
+
+  .heading {
+    margin-bottom: 2rem;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}

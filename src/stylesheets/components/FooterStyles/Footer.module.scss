@@ -80,3 +80,24 @@
   font-size: var.$text-clamp;
   filter: drop-shadow(var.$standard-box-shadow);
 }
+
+@media (width <= 31.25rem) {
+  .container {
+    padding: 2rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+
+  .link:nth-child(1),
+  .link:nth-child(2) {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  .link:nth-child(3) {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}

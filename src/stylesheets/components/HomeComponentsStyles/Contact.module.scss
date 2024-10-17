@@ -139,6 +139,7 @@
 
 .errorMessage,
 .contactResponse {
+  display: none;
   opacity: 0;
   color: var.$red;
   padding: 0 0.2rem;
@@ -150,6 +151,7 @@
 .showError,
 .showResponse {
   opacity: 1;
+  display: block;
   transform: translateY(20%);
 }
 
@@ -319,5 +321,52 @@
 
   .adress {
     padding: 0 1rem;
+  }
+}
+
+@media (width <= 31.25rem) {
+  .container {
+    padding: 4rem 0;
+  }
+
+  .boldText {
+    font-size: 1.1rem;
+  }
+
+  .adress {
+    font-size: 0.75rem;
+  }
+
+  .userDetailsWrapper {
+    margin-bottom: 1rem;
+  }
+
+  .detailContent {
+    font-size: 1rem;
+  }
+
+  .detailText,
+  .messageText {
+    font-size: 1rem;
+  }
+
+  .messageText {
+    margin-bottom: 0.2rem;
+  }
+
+  .detail {
+    margin-bottom: 0;
+  }
+
+  .mailto {
+    font-size: 0.85rem;
+  }
+
+  .button {
+    order: -1;
+  }
+
+  .buttonText {
+    font-size: 1rem;
   }
 }

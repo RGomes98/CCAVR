@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
           />
         </button>
       ) : (
-        <Link href='/'>
+        <Link href='/' className={styles.homeButton}>
           <Image
             width={160}
             height={160}
