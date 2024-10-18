@@ -11,14 +11,13 @@ export const Accounting: React.FC = () => {
           <h2 className={styles.heading}>CONSELHO DIRETOR</h2>
           <div className={styles.nameWrapper}>
             <p className={styles.name}>
-              <span className={styles.boldName}>Guaraciara Pouzada de Lavor Lopes</span> -
-              Presidente
+              <span className={styles.boldName}>Guaraciara Pouzada de Lavor Lopes</span> - Presidente
             </p>
             <p className={styles.name}>
               <span className={styles.boldName}>Maria Helena Costa Mendes</span> - Vice-Presidente
             </p>
             <p className={styles.name}>
-              <span className={styles.boldName}>Ivete Marinho Fernandes</span> - 1ª Secretária
+              <span className={styles.boldName}>Michele da Silva Ribeiro</span> - 1ª Secretária
             </p>
             <p className={styles.name}>
               <span className={styles.boldName}>Solange Jacob Whehaibe</span> - 2º Secretário
@@ -27,17 +26,16 @@ export const Accounting: React.FC = () => {
               <span className={styles.boldName}>Dalmo Moreira de Paula</span> - 1º Tesoureiro
             </p>
             <p className={styles.name}>
-              <span className={styles.boldName}>Gilson Francisco Carmo de Oliveira</span> - 2º
-              Tesoureiro
+              <span className={styles.boldName}>Gilson Francisco Carmo de Oliveira</span> - 2º Tesoureiro
             </p>
           </div>
         </div>
         <div className={styles.detailWrapper}>
           <h2 className={styles.heading}>CONSELHO FISCAL</h2>
           <div className={styles.nameWrapper}>
-            <p className={styles.boldName}>Helia Lucia Dacol</p>
+            <p className={styles.boldName}>Sônia Maria Freitas</p>
             <p className={styles.boldName}>Karollyn Marta Guedes Rocha</p>
-            <p className={styles.boldName}>Rosa Maria Pinho Silva</p>
+            <p className={styles.boldName}>Eliane Cristina Fialho</p>
           </div>
         </div>
         <div className={styles.detailWrapper}>
@@ -48,7 +46,7 @@ export const Accounting: React.FC = () => {
             <p className={styles.boldName}>Maria do Carmo Carbogim Maciel</p>
             <p className={styles.boldName}>Lucimar de Caires Silva de Carvalho</p>
             <p className={styles.boldName}>Adriele Medeiros Gama</p>
-            <p className={styles.boldName}>Antônio Lopes Ferreira</p>
+            <p className={styles.boldName}>Joselito Magalhães</p>
           </div>
         </div>
       </div>
