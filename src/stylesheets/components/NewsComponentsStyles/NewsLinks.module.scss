@@ -136,3 +136,60 @@
     font-size: 1.8rem;
   }
 }
+
+@media (width <= 31.25rem) {
+  .container {
+    gap: 2.5rem;
+  }
+
+  .linksHeading {
+    font-size: 1.5rem;
+  }
+
+  .month {
+    padding-inline: 0.35rem;
+    font-size: 1.4rem;
+  }
+
+  .monthWrapper {
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .linkWrapper {
+    height: auto;
+    gap: 0.5rem;
+    white-space: nowrap;
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .linksWrapper {
+    width: 90%;
+  }
+
+  .linkWrapper > svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .linkTitle {
+    line-height: 1.35;
+    font-size: 1rem;
+  }
+
+  .link {
+    font-size: 1rem;
+  }
+
+  .arrowWrapper {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media (width <= 24.375rem) {
+  .monthWrapper {
+    grid-template-columns: 1fr;
+  }
+}

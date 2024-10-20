@@ -2,7 +2,11 @@ import { Fragment } from 'react';
 
 import styles from '../../stylesheets/components/HomeComponentsStyles/Description.module.scss';
 
-export const Description: React.FC<{ heading: string; text: string }> = ({ heading, text }) => {
+export const Description: React.FC<{ heading: string; text: string; mobileHeading?: boolean }> = ({
+  mobileHeading = false,
+  heading,
+  text,
+}) => {
   const parseText = (descriptionText: string) => {
     return descriptionText.split(' ').map((word, idx) => {
       if (word.startsWith('@')) {
@@ -28,7 +32,9 @@ export const Description: React.FC<{ heading: string; text: string }> = ({ headi
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>{heading}</h2>
+      <h2 className={styles.heading} data-mobile={mobileHeading}>
+        {heading}
+      </h2>
       <p className={styles.text}>{parseText(text)}</p>
     </div>
   );

@@ -12,7 +12,7 @@ export default async function News() {
 
   return (
     <Fragment>
-      <Description heading={descriptionHeading} text={descriptionText} />
+      <Description mobileHeading heading={descriptionHeading} text={descriptionText} />
       <NewsLinks news={news} />
     </Fragment>
   );

@@ -30,7 +30,7 @@ export const Event: React.FC<{
 
   return (
     <div className={styles.container}>
-      <Description heading={title} text={content} />
+      <Description heading={title} text={content} mobileHeading />
       <span className={styles.eventHeading}>Galeria de Mídia</span>
       <div className={styles.eventImagesWrapper}>
         {images.map(({ url, isVideo }, index) => {
