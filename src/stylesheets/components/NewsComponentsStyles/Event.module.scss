@@ -16,6 +16,14 @@
   font-size: var.$section-heading-clamp;
 }
 
+.video {
+  width: 100%;
+  height: auto;
+  max-width: 75rem;
+  border-radius: 0.4rem;
+  box-shadow: var.$standard-box-shadow;
+}
+
 .eventImagesWrapper {
   height: 100%;
   display: flex;

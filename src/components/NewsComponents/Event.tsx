@@ -11,7 +11,7 @@ import Image from 'next/image';
 export const Event: React.FC<{
   title: string;
   content: string;
-  images: ImageType[];
+  images: (ImageType & { isVideo: boolean })[];
 }> = ({ title, content, images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const isEventImagesLessThanTwo = images.length < 2;
@@ -31,12 +31,16 @@ export const Event: React.FC<{
   return (
     <div className={styles.container}>
       <Description heading={title} text={content} />
-      <span className={styles.eventHeading}>Galeria de Fotos</span>
+      <span className={styles.eventHeading}>Galeria de Mídia</span>
       <div className={styles.eventImagesWrapper}>
-        {images.map(({ url }, index) => {
+        {images.map(({ url, isVideo }, index) => {
           const isImageSelected = currentImageIndex === index;
 
-          return (
+          return isVideo ? (
+            <video className={styles.video} preload='metadata' key={index} controls>
+              <source src={url} type='video/mp4' />
+            </video>
+          ) : (
             <Image
               src={url}
               alt={url}
