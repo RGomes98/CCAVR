@@ -2,14 +2,15 @@
 
 import { ArrowRight as LogoArrowRight } from '../SVGs/ArrowRight';
 import { Newspaper as LogoNewspaper } from '../SVGs/Newspaper';
-import { useInfinityScroll } from '@/hooks/useInfinityScroll';
-import type { GroupedNews } from '@/data-access/news';
+import { useInfinityScroll } from '@/hooks/useInfinityScroll.hook';
+import type { GroupedNews } from '@/services/news.service';
 
 import styles from '../../stylesheets/components/NewsComponentsStyles/NewsLinks.module.scss';
 import Link from 'next/link';
 
-export const NewsLinks = ({ news }: { news: GroupedNews }) => {
-  const { infinitySlice } = useInfinityScroll(Object.keys(news).length);
+export const NewsLinks = ({ news }: { news: GroupedNews | null }) => {
+  const { infinitySlice } = useInfinityScroll(Object.keys(news ?? []).length);
+  if (!news) return null;
 
   return (
     <div className={styles.container}>
