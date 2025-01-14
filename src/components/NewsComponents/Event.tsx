@@ -2,8 +2,8 @@
 
 import { NavigateNext as LogoNavigate } from '../SVGs/NavigateNext';
 import { Description } from '../HomeComponents/Description';
-import type { Image as ImageType } from '@prisma/client';
 import { useState } from 'react';
+import { getNewsById } from '@/services/news.service';
 
 import styles from '../../stylesheets/components/NewsComponentsStyles/Event.module.scss';
 import Image from 'next/image';
@@ -11,7 +11,7 @@ import Image from 'next/image';
 export const Event: React.FC<{
   title: string;
   content: string;
-  images: (ImageType & { isVideo: boolean })[];
+  images: Awaited<ReturnType<typeof getNewsById>>['media'];
 }> = ({ title, content, images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const isEventImagesLessThanTwo = images.length < 2;
@@ -33,10 +33,12 @@ export const Event: React.FC<{
       <Description heading={title} text={content} mobileHeading />
       <span className={styles.eventHeading}>Galeria de Mídia</span>
       <div className={styles.eventImagesWrapper}>
-        {images.map(({ url, isVideo }, index) => {
+        {images.map(({ url, contentType }, index) => {
+          if (!contentType) return null;
+
           const isImageSelected = currentImageIndex === index;
 
-          return isVideo ? (
+          return contentType === 'video/mp4' ? (
             <video className={styles.video} preload='metadata' key={index} controls>
               <source src={url} type='video/mp4' />
             </video>
