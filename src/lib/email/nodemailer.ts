@@ -1,7 +1,7 @@
 import { serverEnv } from '@/lib/schemas/env/server.schema';
 import nodemailer from 'nodemailer';
 
-export const transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
   port: serverEnv.MAILER_PORT,
   host: serverEnv.HOST,
   secure: true,
@@ -9,7 +9,9 @@ export const transporter = nodemailer.createTransport({
   from: serverEnv.EMAIL,
 });
 
-export const mailOptions = {
+const mailOptions = {
   from: `Casa da Criança e do Adolescente - Mailer <${serverEnv.EMAIL}>`,
   to: serverEnv.INSTITUTION_EMAIL,
 };
+
+export { transporter, mailOptions };

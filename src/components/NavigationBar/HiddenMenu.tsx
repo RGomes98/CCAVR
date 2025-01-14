@@ -5,7 +5,6 @@ import styles from '../../stylesheets/components/NavigationBarStyles/HiddenMenu.
 
 export const HiddenMenu: React.FC = () => {
   const isHiddenMenuOpen = useStore((state) => state.isHiddenMenuOpen);
-
   const showHiddenMenu = isHiddenMenuOpen ? `${styles.container} ${styles.visible}` : styles.container;
 
   return (

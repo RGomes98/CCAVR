@@ -6,8 +6,8 @@ import { serverEnv } from '../schemas/env/server.schema';
 const prismaAdapter = new PrismaAdapter(prisma.session, prisma.user);
 
 export const lucia = new Lucia(prismaAdapter, {
-  sessionCookie: { expires: false, attributes: { secure: serverEnv.NODE_ENV === 'production' } },
   getUserAttributes: (attributes) => ({ username: attributes.username }),
+  sessionCookie: { expires: false, attributes: { secure: serverEnv.NODE_ENV === 'production' } },
 });
 
 declare module 'lucia' {

@@ -1,7 +1,7 @@
-import { generateEmailTemplate } from '@/helpers/generateEmailTemplate';
 import { contactSchema } from '@/lib/schemas/handlers/contact.schema';
-import { validateReCAPTCHA } from '@/helpers/validateReCAPTCHA';
-import { transporter, mailOptions } from '@/config/nodemailer';
+import { transporter, mailOptions } from '@/lib/email/nodemailer';
+import { validateReCAPTCHA } from '@/services/external.service';
+import { generateEmailTemplate } from '@/helpers/email.helper';
 
 export async function POST(request: Request) {
   try {
@@ -13,7 +13,6 @@ export async function POST(request: Request) {
     }
 
     const { reCAPTCHAToken, name, email, phone, city, subject, content } = formData.data;
-
     const isHuman = await validateReCAPTCHA(reCAPTCHAToken);
     if (!isHuman) return new Response('Tente novamente mais tarde.', { status: 403 });
 
@@ -22,7 +21,7 @@ export async function POST(request: Request) {
       replyTo: email,
       subject: subject,
       text: `Olá. Este é um e-mail de ${subject.toLowerCase()} da Casa da Criança e do Adolescente.`,
-      html: generateEmailTemplate(name, email, phone, city, subject, content),
+      html: generateEmailTemplate({ name, email, phone, city, subject, content }),
       attachments: [
         {
           cid: 'logoCCA',

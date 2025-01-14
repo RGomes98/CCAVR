@@ -1,4 +1,4 @@
-import { partnerLogo } from '../../data/partnerLogo';
+import { partnerLogo } from '../../constants/partners.const';
 
 import styles from '../../stylesheets/components/HomeComponentsStyles/Partners.module.scss';
 import Image from 'next/image';

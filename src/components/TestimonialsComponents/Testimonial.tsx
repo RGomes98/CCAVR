@@ -33,9 +33,7 @@ export const Testimonial: React.FC = () => {
         <div className={styles.videoWrapper}>
           <h2 className={styles.heading}>
             Munir Francisco{' '}
-            <span className={styles.boldHeading}>
-              Presidente da Comissão Criança e Adolescente da ALERJ
-            </span>
+            <span className={styles.boldHeading}>Presidente da Comissão Criança e Adolescente da ALERJ</span>
           </h2>
           <video className={styles.video} preload='metadata' controls>
             <source src={`/videos/testimony02.mp4${thumbnailTime}`} type='video/mp4' />

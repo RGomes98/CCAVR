@@ -2,7 +2,7 @@ import { ScrollToTopArrow } from '@/components/ScrollToTop/ScrollToTopArrow';
 import { Carousel } from '@/components/ImageCarousel/Carousel';
 import { Navbar } from '@/components/NavigationBar/Navbar';
 import { Footer } from '@/components/Footer/Footer';
-import { ScrollReset } from '@/hooks/ScrollReset';
+import { ScrollReset } from '@/hooks/ScrollReset.hook';
 import { Poppins } from 'next/font/google';
 import { Fragment } from 'react';
 

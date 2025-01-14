@@ -2,7 +2,7 @@
 
 import { Fragment, useRef, useState } from 'react';
 import { Close as LogoClose } from '../SVGs/Close';
-import { useModal } from '../../hooks/useModal';
+import { useModal } from '../../hooks/useModal.hook';
 
 import styles from '../../stylesheets/components/ProjectModalStyles/Project.module.scss';
 

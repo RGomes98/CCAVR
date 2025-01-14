@@ -1,8 +1,7 @@
 'use client';
 
-import { useNavbarVisibility } from '../../hooks/useNavbarVisibility';
-import { useWindowSize } from '../../hooks/useWindowSize';
-import { useScrollToTop } from '@/hooks/useScrollToTop';
+import { useNavbarVisibility } from '../../hooks/useNavbarVisibility.hook';
+import { useScrollToTop } from '@/hooks/useScrollToTop.hook';
 import { Close as LogoClose } from '../SVGs/Close';
 import { Bars as LogoOpen } from '../SVGs/Bars';
 import { usePathname } from 'next/navigation';
@@ -17,20 +16,16 @@ import Link from 'next/link';
 export const Navbar: React.FC = () => {
   const isHiddenMenuOpen = useStore((state) => state.isHiddenMenuOpen);
   const toggleHiddenMenu = useStore((state) => state.toggleHiddenMenu);
-  const closeHiddenMenu = useStore((state) => state.closeHiddenMenu);
 
   const pathname = usePathname();
   const isAtNews = pathname.includes('noticias');
   const isAtHome = pathname === '/';
 
   const { isScrollDownward, oldScrollYPosition } = useNavbarVisibility();
-  const { isSmallerThanLimit } = useWindowSize(1280, closeHiddenMenu);
   const { scrollToTop } = useScrollToTop();
 
   const navbarTransparency = oldScrollYPosition > 250 && !isHiddenMenuOpen ? styles.transparent : '';
-
   const navbarReducedPadding = isAtNews ? styles.reducedPadding : '';
-
   const showNavbar = isScrollDownward ? styles.container : `${styles.container} ${styles.showNavbar}`;
 
   return (
@@ -67,7 +62,6 @@ export const Navbar: React.FC = () => {
       >
         {isHiddenMenuOpen ? <LogoClose /> : <LogoOpen />}
       </button>
-
       <HiddenMenu />
     </nav>
   );

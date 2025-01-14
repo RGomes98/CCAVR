@@ -1,8 +1,8 @@
 'use client';
 
-import { useImageCarousel } from '../../hooks/useImageCarousel';
-import { carouselContent } from '@/data/carouselContent';
-import { useWindowSize } from '@/hooks/useWindowSize';
+import { useImageCarousel } from '../../hooks/useImageCarousel.hook';
+import { carouselContent } from '@/constants/carousel.const';
+import { useWindowSize } from '@/hooks/useWindowSize.hook';
 import { Nunito } from 'next/font/google';
 import { Waves } from '../SVGs/Waves';
 

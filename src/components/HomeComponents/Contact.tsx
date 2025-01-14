@@ -1,8 +1,8 @@
 'use client';
 
 import { clientEnv } from '@/lib/schemas/env/client.schema';
-import { useForm } from '@/hooks/useForm';
-import { cities } from '@/data/cities';
+import { useForm } from '@/hooks/useForm.hook';
+import { cities } from '@/constants/cities.const';
 import { useRef } from 'react';
 
 import styles from '../../stylesheets/components/HomeComponentsStyles/Contact.module.scss';

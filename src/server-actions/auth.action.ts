@@ -7,7 +7,7 @@ import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/database/prisma';
 import { lucia } from '@/lib/auth/lucia';
 
-async function login(formData: FormData) {
+async function loginAction(formData: FormData) {
   const username = usernameSchema.safeParse(formData.get('username'));
   const password = passwordSchema.safeParse(formData.get('password'));
 
@@ -25,12 +25,10 @@ async function login(formData: FormData) {
   }));
 
   if (isPasswordInvalid) return { error: 'Incorrect username or password' };
-
   const session = await lucia.createSession(user.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
-
   return redirect('/');
 }
 
-export { login };
+export { loginAction };

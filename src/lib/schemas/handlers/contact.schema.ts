@@ -1,4 +1,4 @@
-import { cities } from '@/data/cities';
+import { cities } from '@/constants/cities.const';
 import { z } from 'zod';
 
 export const contactSchema = z.object({

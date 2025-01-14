@@ -1,4 +1,4 @@
-export const validatePhone = (phone: string): boolean => {
+function validatePhone(phone: string) {
   const validDDD = Array.from({ length: 100 })
     .map((_, index) => index)
     .filter((number) => !(number < 11 || !Boolean(number % 10)))
@@ -13,4 +13,6 @@ export const validatePhone = (phone: string): boolean => {
   if (/^(\d)\1+$/.test(cleanedPhone)) return false;
 
   return true;
-};
+}
+
+export { validatePhone };

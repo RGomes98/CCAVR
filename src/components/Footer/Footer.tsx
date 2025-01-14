@@ -3,7 +3,7 @@
 import { Instagram as LogoInstagram } from '../../components/SVGs/Instagram';
 import { Facebook as LogoFacebook } from '../../components/SVGs/Facebook';
 import { Youtube as LogoYoutube } from '../../components/SVGs/Youtube';
-import { useMounted } from '@/hooks/useMounted';
+import { useMounted } from '@/hooks/useMounted.hook';
 import { usePathname } from 'next/navigation';
 
 import styles from '../../stylesheets/components/FooterStyles/Footer.module.scss';

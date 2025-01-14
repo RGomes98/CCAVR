@@ -1,7 +1,7 @@
 'use client';
 
 import { CircleArrowRight as LogoCircleArrow } from '../SVGs/CircleArrowRight';
-import { useScrollToTop } from '../../hooks/useScrollToTop';
+import { useScrollToTop } from '../../hooks/useScrollToTop.hook';
 
 import styles from '../../stylesheets/components/ScrollToTopStyles/ScrollArrow.module.scss';
 

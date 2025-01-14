@@ -5,9 +5,8 @@ export const Mission: React.FC = () => {
     <div className={styles.container}>
       <h2 className={styles.heading}>Nossa Missão</h2>
       <p className={styles.text}>
-        Acolher e atender de forma individual e sigilosa crianças e adolescentes encaminhadas pelos
-        órgãos do Sistema de Garantia de Direitos, de nossos outros programas e por procura
-        espontânea.
+        Acolher e atender de forma individual e sigilosa crianças e adolescentes encaminhadas pelos órgãos do
+        Sistema de Garantia de Direitos, de nossos outros programas e por procura espontânea.
       </p>
       <div className={styles.wrapper}>
         <span className={styles.missionHeading}>Visão</span>

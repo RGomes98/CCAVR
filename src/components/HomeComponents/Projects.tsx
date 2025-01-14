@@ -1,4 +1,4 @@
-import { projectDescription } from '../../data/projectDescription';
+import { projectDescription } from '../../constants/projects.const';
 import { Project } from '../ProjectModal/Project';
 
 import styles from '../../stylesheets/components/HomeComponentsStyles/Projects.module.scss';
@@ -9,20 +9,13 @@ export const Projects: React.FC = () => {
       <div className={styles.textWrapper}>
         <h2 className={styles.heading}>Projetos que Transformam Vidas</h2>
         <p className={styles.text}>
-          A Casa da Criança e do Adolescente mantém diversos projetos que se complementam e
-          asseguram tratamento adequado às crianças e aos adolescentes.
+          A Casa da Criança e do Adolescente mantém diversos projetos que se complementam e asseguram
+          tratamento adequado às crianças e aos adolescentes.
         </p>
       </div>
       <div className={styles.projectWrapper}>
         {projectDescription.map(({ name, description }, idx) => {
-          return (
-            <Project
-              key={idx}
-              name={name}
-              description={description}
-              projectStyle={styles.project}
-            />
-          );
+          return <Project key={idx} name={name} description={description} projectStyle={styles.project} />;
         })}
       </div>
     </div>

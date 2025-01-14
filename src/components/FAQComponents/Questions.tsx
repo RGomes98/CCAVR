@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowDropDown as LogoArrowDropDown } from '../SVGs/ArrowDropDown';
-import { questions } from '@/data/questions';
+import { questions } from '@/constants/questions.const';
 import { useState } from 'react';
 
 import styles from '../../stylesheets/components/FAQComponentsStyles/Questions.module.scss';
@@ -18,9 +18,7 @@ export const Questions: React.FC = () => {
   return (
     <div className={styles.container}>
       {questions.map(({ question, answer }, idx) => {
-        const isQuestionExpanded = !expandedQuestions.includes(idx)
-          ? styles.expanded
-          : styles.collapsed;
+        const isQuestionExpanded = !expandedQuestions.includes(idx) ? styles.expanded : styles.collapsed;
 
         return (
           <div className={`${styles.questionWrapper} ${isQuestionExpanded}`} key={idx}>
