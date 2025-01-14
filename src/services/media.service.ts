@@ -8,7 +8,7 @@ type GetMediaType = {
 
 async function getMediaType({ id, url, newsId }: GetMediaType) {
   try {
-    const response = await fetch(url, { method: 'HEAD' });
+    const response = await fetch(url, { method: 'HEAD', signal: AbortSignal.timeout(5000) });
     const contentType = mimeTypesSchema.parse(response.headers.get('content-type'));
     return { id, url, newsId, contentType };
   } catch (error) {
