@@ -1,4 +1,5 @@
 import styles from '../../stylesheets/components/TestimonialsComponentsStyles/Testimonial.module.scss';
+import { getBlobFileURL } from '@/utils/blob.util';
 
 export const Testimonial: React.FC = () => {
   const thumbnailTime = '#t=0.8';
@@ -11,7 +12,7 @@ export const Testimonial: React.FC = () => {
             Ir. Elizabeth Alves <span className={styles.boldHeading}>Fundadora</span>
           </h2>
           <video className={styles.video} preload='metadata' controls>
-            <source src={`/videos/testimony03.mp4${thumbnailTime}`} type='video/mp4' />
+            <source src={`${getBlobFileURL('testimony03.mp4')}${thumbnailTime}`} type='video/mp4' />
           </video>
         </div>
         <div className={styles.videoWrapper}>
@@ -19,7 +20,7 @@ export const Testimonial: React.FC = () => {
             Guaraciara de Lavor Lopes <span className={styles.boldHeading}>Presidente</span>
           </h2>
           <video className={styles.video} preload='metadata' controls>
-            <source src={`/videos/testimony04.mp4${thumbnailTime}`} type='video/mp4' />
+            <source src={`${getBlobFileURL('testimony04.mp4')}${thumbnailTime}`} type='video/mp4' />
           </video>
         </div>
         <div className={styles.videoWrapper}>
@@ -27,7 +28,7 @@ export const Testimonial: React.FC = () => {
             Antônio Francisco Neto <span className={styles.boldHeading}>Prefeito</span>
           </h2>
           <video className={styles.video} preload='metadata' controls>
-            <source src={`/videos/testimony01.mp4${thumbnailTime}`} type='video/mp4' />
+            <source src={`${getBlobFileURL('testimony01.mp4')}${thumbnailTime}`} type='video/mp4' />
           </video>
         </div>
         <div className={styles.videoWrapper}>
@@ -36,7 +37,7 @@ export const Testimonial: React.FC = () => {
             <span className={styles.boldHeading}>Presidente da Comissão Criança e Adolescente da ALERJ</span>
           </h2>
           <video className={styles.video} preload='metadata' controls>
-            <source src={`/videos/testimony02.mp4${thumbnailTime}`} type='video/mp4' />
+            <source src={`${getBlobFileURL('testimony02.mp4')}${thumbnailTime}`} type='video/mp4' />
           </video>
         </div>
         <div className={styles.videoWrapper}>
@@ -44,7 +45,7 @@ export const Testimonial: React.FC = () => {
             Neuza Jordão <span className={styles.boldHeading}>Cofundadora</span>
           </h2>
           <video className={styles.video} preload='metadata' controls>
-            <source src={`/videos/testimony05.mp4${thumbnailTime}`} type='video/mp4' />
+            <source src={`${getBlobFileURL('testimony05.mp4')}${thumbnailTime}`} type='video/mp4' />
           </video>
         </div>
       </div>
