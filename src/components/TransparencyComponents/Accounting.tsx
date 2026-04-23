@@ -14,7 +14,7 @@ const termsData = [
     publicationDate: '10/09/2024',
     status: 'Concluído',
     totalValue: '650.000,00',
-    unitPrices: null,
+    unitPrices: '54.166,66',
     seiProcess: 'Processo Administrativo n. 18.999/2024',
     validity: '10/09/2024 a 10/09/2025',
     termExtractLink: 'https://etransparente.org/wp-content/uploads/2025/02/TERMO-DE-FOMENTO-EVOLUIR.pdf',
@@ -28,7 +28,7 @@ const termsData = [
     publicationDate: '24/05/2022',
     status: 'Ativo',
     totalValue: '5.910.268,32',
-    unitPrices: null,
+    unitPrices: '123.130,59',
     seiProcess: 'SEI-310005/000346/2021',
     validity: '21/05/2022 a 21/05/2026',
     termExtractLink:
@@ -72,7 +72,7 @@ const termsData = [
     publicationDate: '04/04/2024',
     status: 'Ativo',
     totalValue: '1.793.801,16',
-    unitPrices: null,
+    unitPrices: '49.827,81',
     seiProcess: 'SEI-310005/001088/2023',
     validity: '25/03/2024 a 31/03/2027',
     termExtractLink:
@@ -109,7 +109,7 @@ const termsData = [
     publicationDate: '31/03/2025',
     status: 'Ativo',
     totalValue: '1.345.350,87',
-    unitPrices: null,
+    unitPrices: '49.827,81',
     seiProcess: 'SEI-310005/001088/2023',
     validity: '21/03/2025 a 31/03/2027',
     termExtractLink:
@@ -178,8 +178,8 @@ export const Accounting: React.FC = () => {
                     <span className={styles.boldName}>Valor Total:</span> R$ {term.totalValue}
                   </p>
                   <p>
-                    <span className={styles.boldName}>Preços unitários:</span>{' '}
-                    {term.unitPrices ? `R$ ${term.unitPrices}` : 'A consultar'} (valor mensal)
+                    <span className={styles.boldName}>Preços unitários:</span> {`R$ ${term.unitPrices}`}{' '}
+                    (valor mensal)
                   </p>
                   <p>
                     <span className={styles.boldName}>Processo SEI:</span> {term.seiProcess}
