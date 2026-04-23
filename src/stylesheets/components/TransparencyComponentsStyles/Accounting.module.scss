@@ -11,11 +11,84 @@
   color: var.$primary-blue;
 }
 
+.primaryLogo {
+  margin-bottom: -2rem;
+}
+
+.divider {
+  width: 80%;
+  border: none;
+  border-top: 2px solid var.$light-grey;
+  margin: 1rem 0;
+}
+
+.mainHeading {
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+  font-size: var.$section-heading-clamp;
+  color: var.$dark-blue;
+}
+
+.heading {
+  font-weight: 500;
+  letter-spacing: -0.05rem;
+  font-size: var.$section-heading-clamp;
+  color: var.$primary-blue;
+}
+
+.subHeading {
+  font-weight: 600;
+  font-size: var.$medium-text;
+  color: var.$dark-blue;
+}
+
+.addendumGroup .subHeading {
+  margin-bottom: 0.5rem;
+}
+
+.boldName {
+  font-weight: 600;
+  font-size: var.$text-clamp;
+}
+
+.sectionWrapper {
+  gap: 2rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.entityDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  color: var.$black-font;
+  text-align: left;
+  width: 100%;
+  max-width: 900px;
+  background-color: var.$light-blue;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var.$light-box-shadow;
+
+  p {
+    font-size: var.$text-clamp;
+    line-height: 1.5;
+  }
+}
+
+.spacingTop {
+  margin-top: 1.5rem;
+}
+
 .councilWrapper {
   gap: 4rem;
   width: 90%;
   display: flex;
   flex-direction: column;
+  text-align: left;
+  max-width: 900px;
 }
 
 .detailWrapper {
@@ -24,29 +97,20 @@
   flex-direction: column;
 }
 
-.heading {
-  font-weight: 400;
-  letter-spacing: -0.1rem;
-  font-size: var.$transparency-heading-clamp;
-}
-
 .nameWrapper {
-  gap: 0.6rem;
+  gap: 0.8rem;
   display: flex;
   color: var.$black-font;
   flex-direction: column;
+  padding-left: 1rem;
+  border-left: 3px solid var.$secondary-blue;
 }
 
 .name {
   font-size: var.$text-clamp;
 }
 
-.boldName {
-  font-weight: 600;
-  font-size: var.$text-clamp;
-}
-
-.statuteWrapper {
+.agreementsWrapper {
   gap: 3.5rem;
   width: 90%;
   display: flex;
@@ -54,20 +118,165 @@
   flex-direction: column;
 }
 
-.statuteWrapper .links {
+.termCardsContainer {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.statuteWrapper .linkWrapper {
+  flex-direction: column;
+  gap: 4rem;
   width: 100%;
-  max-width: 20rem;
-  min-width: 18rem;
+  max-width: 1100px;
 }
 
-.statuteWrapper .linkText {
-  gap: 0.2rem;
+.termCard {
+  background-color: var.$white;
+  border: 1px solid var.$light-grey;
+  border-radius: 0.5rem;
+  padding: 3rem;
+  box-shadow: var.$standard-box-shadow;
+  text-align: left;
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.termTitle {
+  font-size: var.$project-heading-clamp;
+  color: var.$dark-blue;
+  border-bottom: 2px solid var.$secondary-blue;
+  padding-bottom: 1rem;
+}
+
+.termDetailsLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: var.$black-font;
+  background-color: var.$light-blue;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.termTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  p {
+    font-size: var.$text-clamp;
+  }
+}
+
+.termDetailsLayout .termTextGroup:nth-child(2) {
+  margin-bottom: 2rem;
+}
+
+.addendumGroup {
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var.$grey;
+}
+
+.addendumItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid var.$green;
+}
+
+.actionLink {
+  margin-top: 0.5rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var.$primary-blue;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: var.$text-clamp;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var.$dark-blue;
+      text-decoration: underline;
+    }
+  }
+}
+
+.smallPdfIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var.$primary-blue;
+}
+
+.documentsHeading {
+  font-size: var.$regular-heading;
+  color: var.$primary-blue;
+  margin-top: 1rem;
+  font-weight: 500;
+  border-top: 1px solid var.$light-grey;
+  padding-top: 2rem;
+}
+
+.termLinksGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.smallLinkWrapper {
+  gap: 0.8rem;
+  height: 16rem;
+  display: flex;
+  color: var.$white;
+  align-items: center;
+  border-radius: 0.4rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+  transition: scale 0.3s ease;
+  box-shadow: var.$light-box-shadow;
+  background-color: var.$primary-blue;
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var.$white;
+  }
+
+  &:hover {
+    scale: 1.03;
+  }
+}
+
+.smallLinkText {
+  font-weight: 500;
+  text-wrap: pretty;
+  line-height: 1.2;
+  color: var.$white;
+  font-size: var.$regular-text;
+}
+
+.docHint {
+  font-size: var.$extra-small-text;
+  color: var.$light-blue;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.docHintWhite {
+  font-size: var.$extra-small-text;
+  color: var.$light-grey;
+  font-weight: 300;
+}
+
+.statuteWrapper {
+  gap: 3.5rem;
+  width: 90%;
+  display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -92,23 +301,25 @@
   transition: scale 0.3s ease;
   box-shadow: var.$medium-box-shadow;
   background-color: var.$primary-blue;
-}
 
-.linkWrapper {
   svg {
     width: 3.5rem;
     height: 3.5rem;
     fill: var.$white;
   }
+
+  &:hover {
+    scale: 1.03;
+  }
 }
 
-.linkWrapper:hover {
-  scale: 1.03;
+.termPDF {
+  margin-top: auto;
 }
 
 .linkText {
   max-width: 85%;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.2;
   color: var.$white;
   font-size: var.$big-text;
@@ -118,11 +329,12 @@
   gap: 0.6rem;
   display: flex;
   color: inherit;
-  font-weight: 500;
+  font-weight: 600;
   align-items: center;
   font-family: inherit;
   text-decoration: none;
   font-size: var.$medium-text;
+  margin-top: auto;
 }
 
 .arrowWrapper {
@@ -141,19 +353,34 @@
   }
 }
 
-.accountingWrapper {
-  gap: 3.5rem;
-  width: 90%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+@media (width <= 48rem) {
+  .termCard {
+    padding: 1.5rem;
+  }
+
+  .termDetailsLayout {
+    padding: 1.5rem;
+  }
+
+  .entityDetails {
+    padding: 1.5rem;
+  }
 }
 
 @media (width <= 30rem) {
   .name {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    justify-content: center;
+  }
+
+  .termLinksGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading,
+  .mainHeading,
+  .documentsHeading {
+    text-align: center;
   }
 }
