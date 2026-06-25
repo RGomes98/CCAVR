@@ -17,7 +17,8 @@ const termsData = [
     unitPrices: '54.166,66',
     seiProcess: 'Processo Administrativo n. 18.999/2024',
     validity: '10/09/2024 a 10/09/2025',
-    termExtractLink: 'https://etransparente.org/wp-content/uploads/2025/02/TERMO-DE-FOMENTO-EVOLUIR.pdf',
+    termExtractLink:
+      'https://drive.google.com/drive/folders/1OSlkc-VQfV5pj__cmG8-z7_SOD25Vp_Q?usp=drive_link',
     addendums: [],
     documents: [],
   },
@@ -27,40 +28,44 @@ const termsData = [
     noticeData: 'Edital de Chamamento Público FIA/RJ nº 005/2021',
     publicationDate: '24/05/2022',
     status: 'Ativo',
-    totalValue: '5.910.268,32',
+    totalValue: '7.387.835,40',
     unitPrices: '123.130,59',
     seiProcess: 'SEI-310005/000346/2021',
-    validity: '21/05/2022 a 21/05/2026',
+    validity: '21/05/2022 a 21/05/2027',
     termExtractLink:
-      'https://etransparente.org/wp-content/uploads/2023/09/TERMO_DE_COLABORACAO___782_20223893470-1-23.IDC-Casa-da-Crianca-e-do-Adolescente-1.pdf',
+      'https://drive.google.com/drive/folders/1kaVus1W7txZ7_g2I56iHWprlWE2smtUz?usp=drive_link',
     addendums: [
       {
         totalValue: '1.477.567,08',
         seiProcess: 'SEI-310005/000263/2022',
         extractLink:
-          'https://etransparente.org/wp-content/uploads/2025/07/TERMO-ADITIVO-E-DE-COLABORACAO-782-2022-NACA-IDC.pdf',
+          'https://drive.google.com/drive/folders/1YwpX5K6nYaJSR07gddu2b05ERK5EfP38?usp=drive_link',
       },
     ],
     documents: [
       {
+        name: 'Plano de Trabalho',
+        link: 'https://drive.google.com/drive/folders/1CH9k4qYns44RzifAPIR3vqQ6i6XZIYpQ?usp=drive_link',
+      },
+      {
         name: 'Relatório de Execução Físico-Financeira',
-        link: 'https://etransparente.org/wp-content/uploads/2026/04/aradrelfisicofinancorrente.pdf',
+        link: 'https://drive.google.com/drive/folders/1W44NCOJqqaCc3mwC6aE4Kibc85E9igkU?usp=drive_link',
       },
       {
         name: 'Demonstrativo Execução Receita/Despesa',
-        link: 'https://etransparente.org/wp-content/uploads/2026/04/aradrelexecrecdesp-1.pdf',
+        link: 'https://drive.google.com/drive/folders/1i1okhF1bkY6W5ulsnt6Kh7BSCd9sTqCj?usp=drive_link',
       },
       {
         name: 'Relação de pagamentos',
-        link: 'https://etransparente.org/wp-content/uploads/2026/04/IDC-RELACAO-DE-PAGAMENTOS-NACA-15.04.2026.pdf',
+        link: 'https://drive.google.com/drive/folders/18EhkChKKRzBQ2VOGctus6ynBZqycgisd?usp=drive_link',
       },
       {
         name: 'Extrato bancário completo',
-        link: 'https://etransparente.org/wp-content/uploads/2026/04/NACA_EXTRATO_BANCARIO_MAIO22_A_MAR26.pdf',
+        link: 'https://drive.google.com/drive/folders/11qKek9TP_G8VHlK_6Dltiz0P-1r_eL5-?usp=drive_link',
       },
       {
         name: 'Relação de bens adquiridos',
-        link: 'https://etransparente.org/wp-content/uploads/2026/04/aadrelbensadquiridos-1.pdf',
+        link: 'https://drive.google.com/drive/folders/1vbX85eVCmpJ_x_i0_-12nhKFXOyeQeKd?usp=drive_link',
       },
     ],
   },
@@ -76,28 +81,32 @@ const termsData = [
     seiProcess: 'SEI-310005/001088/2023',
     validity: '25/03/2024 a 31/03/2027',
     termExtractLink:
-      'https://etransparente.org/wp-content/uploads/2024/11/1008___CASA_DA_CRIANCA_E_DO_ADOLESCENTE___TERMO_E_PUBLICACAO-SEM-DADOS-1.pdf',
+      'https://drive.google.com/drive/folders/1CHxwniNS3JwDGcPaCRxuQ2_yUryjsUda?usp=drive_link',
     addendums: [],
     documents: [
       {
+        name: 'Plano de Trabalho',
+        link: 'https://drive.google.com/drive/folders/1vuwXD6uksUBL_X4wTAmuC_55iifa2jqn?usp=drive_link',
+      },
+      {
         name: 'Relatório de Execução Físico-Financeira',
-        link: 'https://etransparente.org/wp-content/uploads/2025/04/RELATORIO-FISICO-FINANCEIRO-CORRENTE-1.pdf',
+        link: 'https://drive.google.com/drive/folders/1vEQ7R1AcGQI5tNRuZ604weeR302rOQCm?usp=drive_link',
       },
       {
         name: 'Demonstrativo Execução Receita/Despesa',
-        link: 'https://etransparente.org/wp-content/uploads/2025/04/DEMONSTRATIVO-DA-EXECUCAO-DA-RECEITA-E-DESPESA-1.pdf',
+        link: 'https://drive.google.com/drive/folders/131RN5R0fJF_rxPeEtIj133w7modyZA_1?usp=drive_link',
       },
       {
         name: 'Relação de pagamentos',
-        link: 'https://etransparente.org/wp-content/uploads/2025/04/RELACAO-DE-PAGAMENTOS-CONV-1008-1.pdf',
+        link: 'https://drive.google.com/drive/folders/1ovxPUm0hoDEfsv69v3-MO0CemCBzlDi7?usp=drive_link',
       },
       {
         name: 'Extrato bancário completo',
-        link: 'https://etransparente.org/wp-content/uploads/2025/04/EXTRATO-CURUMIM-249-19.01.2024-ATE-04.04.2025.pdf',
+        link: 'https://drive.google.com/drive/folders/1QX-lpO0qcDUp0_IHmYEhyi6cBePCSE-Q?usp=drive_link',
       },
       {
         name: 'Relação de bens adquiridos',
-        link: 'https://etransparente.org/wp-content/uploads/2025/04/RELACAO-DE-BENS_compressed.pdf',
+        link: 'https://drive.google.com/drive/folders/1l2snmuuqCdlnBBjthF7i7bTkbL7mWBs5?usp=drive_link',
       },
     ],
   },
@@ -113,28 +122,74 @@ const termsData = [
     seiProcess: 'SEI-310005/001088/2023',
     validity: '21/03/2025 a 31/03/2027',
     termExtractLink:
-      'https://etransparente.org/wp-content/uploads/2025/05/TERMO-1008.1137-CURUMIM-249-IDC.pdf',
+      'https://drive.google.com/drive/folders/1sLPC2pWPzDfD03igMQMSt0XMBxTXXcJm?usp=drive_link',
     addendums: [],
     documents: [
       {
+        name: 'Plano de Trabalho',
+        link: 'https://drive.google.com/drive/folders/1J2FK9xsskIG_yhY7emkbTnjRNy10HyDV?usp=drive_link',
+      },
+      {
         name: 'Relatório de Execução Físico-Financeira',
-        link: 'https://etransparente.org/wp-content/uploads/2026/03/aadrelfisicofinanceirocorrpcf-1.pdf',
+        link: 'https://drive.google.com/drive/folders/1X8GTmwHPRCEGbqY4OGsDSREhOKp6Syko?usp=drive_link',
       },
       {
         name: 'Demonstrativo Execução Receita/Despesa',
-        link: 'https://etransparente.org/wp-content/uploads/2026/03/aradrelexecrecdesp-4-IDC.pdf',
+        link: 'https://drive.google.com/drive/folders/1vYHXmAEm_Gu-QNOZf4Sn4XOnhA0G-HI-?usp=drive_link',
       },
       {
         name: 'Relação de pagamentos',
-        link: 'https://etransparente.org/wp-content/uploads/2026/03/Relacao-de-pagamentos.pdf',
+        link: 'https://drive.google.com/drive/folders/1AuZfTrFf7Xw8aTffm6mmH4FFyWWEIL5I?usp=drive_link',
       },
       {
         name: 'Extrato bancário completo',
-        link: 'https://etransparente.org/wp-content/uploads/2026/03/EXTRATO-BANCARIO-0368888-7-MAIO24-A-30.03.2026.pdf',
+        link: 'https://drive.google.com/drive/folders/1OjQm0grUuPzoQImvSSz3PKYDt_3WvTlY?usp=drive_link',
       },
       {
         name: 'Relação de bens adquiridos',
-        link: 'https://etransparente.org/wp-content/uploads/2026/03/aadrelbensadquiridos-30.03.2026.pdf',
+        link: 'https://drive.google.com/drive/folders/1RfJ90bqAhzf98_1cSpNtZJNOxkuwFqAU?usp=drive_link',
+      },
+    ],
+  },
+  {
+    id: 'termo-1137-1008-2023-sempi',
+    number: '1137-1008/2023',
+    noticeData:
+      'Programa de Atenção à Criança e ao Adolescente em Situação de Risco - Projeto Curumim - Secretaria de Estado Da Mulher de Políticas Inclusivas - SEMPI',
+    termDescription: '2º TERMO ADITIVO AO TERMO DE COLABORAÇÃO Nº 1008/2023',
+    publicationDate: '12/06/2026',
+    status: 'Ativo',
+    totalValue: '498.278,10',
+    unitPrices: '49.827,81',
+    seiProcess: 'SEI-310005/001088/2023',
+    validity: '11/06/2025 a 31/03/2027',
+    termExtractLink:
+      'https://drive.google.com/drive/folders/1fqG3aOL5dKHxHA3Z0qOIWYap7jc2M72-?usp=drive_link',
+    addendums: [],
+    documents: [
+      {
+        name: 'Plano de Trabalho',
+        link: 'https://drive.google.com/drive/folders/189jvQAyq-wOE9ygWYb8Xzw8RdJQdQxy3?usp=drive_link',
+      },
+      {
+        name: 'Relatório de Execução Físico-Financeira',
+        link: 'https://drive.google.com/drive/folders/1J7ymMGbQGtBFF2dxs9-RHfYsp3vmduE8?usp=drive_link',
+      },
+      {
+        name: 'Demonstrativo Execução Receita/Despesa',
+        link: 'https://drive.google.com/drive/folders/1Xk6UzJUr35p8ZAblAMv3n9qMg__NbB0k?usp=drive_link',
+      },
+      {
+        name: 'Relação de pagamentos',
+        link: 'https://drive.google.com/drive/folders/1zI_cXpEPvCmYPHUX0sK_LK7__IPR_Cmx?usp=drive_link',
+      },
+      {
+        name: 'Extrato bancário completo',
+        link: 'https://drive.google.com/drive/folders/12eQmaI7ZyZzEo7n58aLi1uiZjCcjhoBN?usp=drive_link',
+      },
+      {
+        name: 'Relação de bens adquiridos',
+        link: 'https://drive.google.com/drive/folders/1OHQGzKOlu9PHBxu8ufhZd582zO83UYJN?usp=drive_link',
       },
     ],
   },
@@ -171,6 +226,7 @@ export const Accounting: React.FC = () => {
 
                 <div className={styles.termTextGroup}>
                   <p className={styles.subHeading}>Dados do Termo:</p>
+                  {term?.termDescription && <p>{term.termDescription}</p>}
                   <p>
                     <span className={styles.boldName}>Situação do termo:</span> {term.status}
                   </p>
@@ -328,10 +384,10 @@ export const Accounting: React.FC = () => {
         <div className={styles.links}>
           <div className={styles.linkWrapper}>
             <LogoPDF />
-            <p className={styles.linkText}>Balanço Contábil 2024</p>
+            <p className={styles.linkText}>Balanços Contábeis</p>
             <a
               className={styles.link}
-              href='https://etransparente.org/wp-content/uploads/listing-uploads/balano-contbil-lei-estadual-5981/2025/06/BALANCO-PATRIMONIAL-2024-CCA-site-1.pdf'
+              href='https://drive.google.com/drive/folders/1kTs0wMODlPdZIwHkAwtLAJBWuZcMnfQe?usp=drive_link'
               target='_blank'
               rel='noreferrer'
             >
@@ -347,7 +403,7 @@ export const Accounting: React.FC = () => {
             <p className={styles.linkText}>Ata de Eleição</p>
             <a
               className={styles.link}
-              href='https://drive.google.com/drive/folders/18SiyqddYkTf5wFP5DMny1Xc6tax6Aep_?usp=sharing'
+              href='https://drive.google.com/drive/folders/18SiyqddYkTf5wFP5DMny1Xc6tax6Aep_?usp=drive_link'
               target='_blank'
               rel='noreferrer'
             >
@@ -363,7 +419,7 @@ export const Accounting: React.FC = () => {
             <p className={styles.linkText}>Estatuto Social</p>
             <a
               className={styles.link}
-              href='https://drive.google.com/file/d/1-7eTFknnzt7iG5oGapsRd1mVZjQZUMnN/view?usp=sharing'
+              href='https://drive.google.com/drive/folders/13dqlUFU1TgKLxHD60xekRaWYIFS31uUy?usp=drive_link'
               target='_blank'
               rel='noreferrer'
             >
@@ -379,7 +435,7 @@ export const Accounting: React.FC = () => {
             <p className={styles.linkText}>Relatório de Atividades</p>
             <a
               className={styles.link}
-              href='https://drive.google.com/drive/folders/1jWn85htsG0iMv1SmYBPYgsqhP9pA7S9V?usp=sharing'
+              href='https://drive.google.com/drive/folders/1jWn85htsG0iMv1SmYBPYgsqhP9pA7S9V?usp=drive_link'
               target='_blank'
               rel='noreferrer'
             >
@@ -395,7 +451,7 @@ export const Accounting: React.FC = () => {
             <p className={styles.linkText}>Demonstrativo Financeiro</p>
             <a
               className={styles.link}
-              href='https://drive.google.com/drive/folders/1o92DEBIfX1xkZiNh7qnxmqzg92PFnZ5s?usp=sharing'
+              href='https://drive.google.com/drive/folders/1o92DEBIfX1xkZiNh7qnxmqzg92PFnZ5s?usp=drive_link'
               target='_blank'
               rel='noreferrer'
             >
@@ -411,7 +467,7 @@ export const Accounting: React.FC = () => {
             <p className={styles.linkText}>Convênios e Parcerias</p>
             <a
               className={styles.link}
-              href='https://drive.google.com/drive/folders/1M5ZyO8YX4F1DYFsPIvEw-c86mqQQx2hZ?usp=sharing'
+              href='https://drive.google.com/drive/folders/1M5ZyO8YX4F1DYFsPIvEw-c86mqQQx2hZ?usp=drive_link'
               target='_blank'
               rel='noreferrer'
             >
@@ -443,7 +499,7 @@ export const Accounting: React.FC = () => {
             <p className={styles.linkText}>Prestação de Contas</p>
             <a
               className={styles.link}
-              href='https://drive.google.com/drive/folders/1rmMsjTU12fIxCM4_Xdpb6ez5bfku6f7g?usp=sharing'
+              href='https://drive.google.com/drive/u/2/folders/1rmMsjTU12fIxCM4_Xdpb6ez5bfku6f7g'
               target='_blank'
               rel='noreferrer'
             >
